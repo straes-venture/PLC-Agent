@@ -12,6 +12,8 @@ from util.common import (
     parse_unit_and_revision_from_filename,
     ensure_dir,
 )
+import util.logger as logger
+
 
 RSS_DIR = r"C:\PLC_Agent\rss"
 EXPORTS_DIR = r"C:\PLC_Agent\exports"
@@ -19,13 +21,9 @@ REPORTS_DIR = r"C:\PLC_Agent\reports"
 TEMPLATE_PATH = r"C:\PLC_Agent\templates\Auto_Parse.RO0"
 
 
-def dbg(msg: str):
-    print(f"[AGENT] {msg}", flush=True)
-
-
 def process_rss_file(rss_path: str):
     unit, revision = parse_unit_and_revision_from_filename(rss_path)
-    dbg(f"=== {os.path.basename(rss_path)} -> {unit} {revision} ===")
+    logger.dbg(f"[AGENT] === {os.path.basename(rss_path)} -> {unit} {revision} ===")
 
     rss_hash = sha256_file(rss_path)
 
@@ -42,7 +40,7 @@ def process_rss_file(rss_path: str):
     try:
         # --- PRINT REPORT ---
         pdf_path = os.path.join(REPORTS_DIR, f"{unit}_{revision}.report.pdf")
-        dbg(f"Using report template: {TEMPLATE_PATH}")
+        logger.dbg(f"[AGENT] Using report template: {TEMPLATE_PATH}")
         print_report(
             app=app,
             main_win=main_win,
@@ -65,10 +63,10 @@ def process_rss_file(rss_path: str):
             out_dir=ladder_out_dir
         )
 
-        dbg(f"Completed {unit} {revision}")
+        logger.dbg(f"[AGENT] Completed {unit} {revision}")
 
     except Exception as e:
-        dbg(f"FAILED {unit} {revision}: {e}")
+        logger.dbg(f"[AGENT] FAILED {unit} {revision}: {e}")
         raise
 
     finally:
@@ -88,14 +86,14 @@ def main():
     ]
 
     if not rss_files:
-        dbg("No RSS files found.")
+        logger.dbg("[AGENT] No RSS files found.")
         return
 
     for rss in rss_files:
         try:
             process_rss_file(rss)
         except Exception:
-            dbg("Aborting current file; continuing safely.")
+            logger.dbg("[AGENT] Aborting current file; continuing safely.")
 
 
 if __name__ == "__main__":

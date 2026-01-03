@@ -12,6 +12,11 @@ from util.common import parse_unit_and_revision_from_filename
 import python.open_program as open_program
 import python.print_report as print_report
 
+# Add: import unified logger so we can route all module logs into the UI
+import util.logger as logger
+
+import python.hide_console  # module executes and hides console on import
+
 
 # ------------------------------------------------------------------
 # Native Windows Folder Picker (STA COM)
@@ -67,7 +72,7 @@ def _browse_for_folder_blocking(title="Select RSS Folder"):
     bi = BROWSEINFO()
     bi.hwndOwner = None
     bi.pidlRoot = None
-    bi.pszDisplayName = display
+    bi.pszDisplayName = ctypes.cast(display, wintypes.LPWSTR)
     bi.lpszTitle = title
     bi.ulFlags = _BIF_RETURNONLYFSDIRS | _BIF_NEWDIALOGSTYLE
     bi.lpfn = None
@@ -79,7 +84,8 @@ def _browse_for_folder_blocking(title="Select RSS Folder"):
         _ole32.CoUninitialize()
         return None
 
-    ok = _shell32.SHGetPathFromIDListW(pidl, buf)
+    # Cast the output buffer as LPWSTR when passing to SHGetPathFromIDListW
+    ok = _shell32.SHGetPathFromIDListW(pidl, ctypes.cast(buf, wintypes.LPWSTR))
     _ole32.CoTaskMemFree(pidl)
     _ole32.CoUninitialize()
 
@@ -136,15 +142,24 @@ class PLCUI(tk.Tk):
         tree_frame = ttk.LabelFrame(right, text="RSS Files")
         tree_frame.pack(fill="both", expand=True)
 
-        columns = ("unit", "revision", "status")
+        # NOTE: add a hidden 'filename' column so we store the original filename
+        columns = ("unit", "revision", "status", "filename")
         self.tree = ttk.Treeview(tree_frame, columns=columns, show="headings", selectmode="extended")
+        # Only display the human columns; keep filename available in values
+        self.tree["displaycolumns"] = ("unit", "revision", "status")
+
         for col, text, w in [
             ("unit", "Unit", 240),
             ("revision", "Revision", 120),
             ("status", "Status", 120),
+            ("filename", "Filename", 0),
         ]:
             self.tree.heading(col, text=text)
-            self.tree.column(col, width=w, anchor="w")
+            # make filename non-stretching and effectively hidden
+            if col == "filename":
+                self.tree.column(col, width=0, stretch=False)
+            else:
+                self.tree.column(col, width=w, anchor="w")
 
         yscroll = ttk.Scrollbar(tree_frame, orient="vertical", command=self.tree.yview)
         self.tree.configure(yscrollcommand=yscroll.set)
@@ -217,7 +232,8 @@ class PLCUI(tk.Tk):
         for f in sorted(files):
             unit, rev = parse_unit_and_revision_from_filename(f)
             if unit and rev:
-                self.tree.insert("", "end", values=(unit, rev, "NEW"))
+                # store original filename in the hidden 'filename' value
+                self.tree.insert("", "end", values=(unit, rev, "NEW", f))
 
         self.log_line("Scan complete")
 
@@ -237,17 +253,23 @@ class PLCUI(tk.Tk):
 
     def _run_items(self, items):
         def worker():
+            # Route all module logs to the UI text widget
+            logger.set_debug_sink(self.log_line)
+
             open_program.set_debug_sink(self.log_line)
             print_report.set_debug_sink(self.log_line)
             self.log_line("Debug sinks enabled")
 
             for item in items:
-                unit, rev, _ = self.tree.item(item)["values"]
-                fname = f"{unit}_{rev}.RSS"
+                vals = self.tree.item(item)["values"]
+                unit, rev, _, fname = vals
                 full = os.path.join(self.rss_dir.get(), fname)
 
                 try:
                     self.log_line(f"Processing {fname}")
+                    if not os.path.isfile(full):
+                        self.log_line(f"ERROR {fname}: file not found at {full}")
+                        continue
                     process_rss_file(full)
                     self.tree.set(item, "status", "PROCESSED")
                 except Exception as e:

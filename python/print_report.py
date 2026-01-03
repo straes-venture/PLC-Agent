@@ -3,6 +3,7 @@ import re
 import time
 from pywinauto import Desktop
 from pywinauto.keyboard import send_keys
+import win32print
 
 
 SETTLE = 0.25
@@ -43,6 +44,24 @@ def _type(win, seq: str, label: str = ""):
     else:
         _dbg(f"[KEY] {seq}")
     win.type_keys(seq)
+
+# ------------------------------------------------------------
+# Printer helpers
+# ------------------------------------------------------------
+
+def _find_installed_printer(name: str):
+    flags = win32print.PRINTER_ENUM_LOCAL | win32print.PRINTER_ENUM_CONNECTIONS
+    for _, _, pname, _ in win32print.EnumPrinters(flags):
+        if pname and pname.lower() == name.lower():
+            return pname
+    return None
+
+def _set_default_printer(printer_name: str):
+    found = _find_installed_printer(printer_name)
+    if not found:
+        raise RuntimeError(f"Printer not found: {printer_name}")
+    win32print.SetDefaultPrinter(found)
+    _dbg(f"[PRINT] Default printer set to: {found}")
 
 # ------------------------------------------------------------
 # Template path resolver (RO0 vs R00 defense)
@@ -208,33 +227,54 @@ def run(app, main_win, pdf_out_path: str, template_path: str) -> str:
     if os.path.exists(pdf_out_path):
         os.remove(pdf_out_path)
 
-    apply_report_template(main_win, template_path)
+    original_printer = None
+    try:
+        try:
+            original_printer = win32print.GetDefaultPrinter()
+        except Exception:
+            _dbg("[PRINT] Unable to read current default printer")
 
-    main_win.set_focus()
-    time.sleep(0.2)
+        # Ensure target printer exists and set it as default for this operation
+        try:
+            _set_default_printer(PDF_PRINTER)
+        except Exception as e:
+            raise RuntimeError(f"Failed to set printer to '{PDF_PRINTER}': {e}")
 
-    _dbg("[PRINT] Ctrl+R (Print)")
-    _key("^r", "Ctrl+R")
-    time.sleep(0.6)
+        apply_report_template(main_win, template_path)
 
-    print_dlg = _find_print_dialog(timeout=15)
-    print_dlg.set_focus()
-    time.sleep(0.2)
+        main_win.set_focus()
+        time.sleep(0.2)
 
-    _dbg("[PRINT] Confirm Print dialog")
-    _key("{ENTER}", "Enter")
-    time.sleep(0.6)
+        _dbg("[PRINT] Ctrl+R (Print)")
+        _key("^r", "Ctrl+R")
+        time.sleep(0.6)
 
-    save_dlg = _find_file_dialog_open_or_save(timeout=25)
-    save_dlg.set_focus()
-    time.sleep(0.2)
+        print_dlg = _find_print_dialog(timeout=15)
+        print_dlg.set_focus()
+        time.sleep(0.2)
 
-    _dbg("[PRINT] Saving PDF")
-    _set_file_dialog_filename(save_dlg, pdf_out_path)
-    _key("{ENTER}", "Enter")
+        _dbg("[PRINT] Confirm Print dialog")
+        _key("{ENTER}", "Enter")
+        time.sleep(0.6)
 
-    _dbg("[PRINT] Waiting for PDF to stabilize")
-    _wait_for_file_stable(pdf_out_path)
+        save_dlg = _find_file_dialog_open_or_save(timeout=25)
+        save_dlg.set_focus()
+        time.sleep(0.2)
 
-    _dbg("[PRINT] Report print complete")
-    return pdf_out_path
+        _dbg("[PRINT] Saving PDF")
+        _set_file_dialog_filename(save_dlg, pdf_out_path)
+        _key("{ENTER}", "Enter")
+
+        _dbg("[PRINT] Waiting for PDF to stabilize")
+        _wait_for_file_stable(pdf_out_path)
+
+        _dbg("[PRINT] Report print complete")
+        return pdf_out_path
+    finally:
+        # restore original default printer if we changed it
+        try:
+            if original_printer:
+                win32print.SetDefaultPrinter(original_printer)
+                _dbg(f"[PRINT] Restored default printer: {original_printer}")
+        except Exception:
+            _dbg("[PRINT] Failed to restore default printer (ignored)")

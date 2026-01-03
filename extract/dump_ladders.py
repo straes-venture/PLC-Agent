@@ -2,6 +2,7 @@ import os
 import time
 import pyperclip
 from pywinauto.keyboard import send_keys
+import util.logger as logger
 
 
 SETTLE = 0.25
@@ -35,7 +36,7 @@ def dump_ladders_from_snapshot(snapshot: dict, out_dir: str):
         lad_num = lad["number"]
         lad_name = lad["name"]
 
-        print(f"[DUMP] LAD {lad_num} — {lad_name}", flush=True)
+        logger.dbg(f"[DUMP] LAD {lad_num} — {lad_name}")
 
         # Go To ladder
         send_keys("^g")
@@ -64,7 +65,7 @@ def dump_ladders_from_snapshot(snapshot: dict, out_dir: str):
         text = pyperclip.paste()
 
         if not text.strip():
-            print(f"[WARN] Empty clipboard for LAD {lad_num}", flush=True)
+            logger.dbg(f"[WARN] Empty clipboard for LAD {lad_num}")
             continue
 
         fname = f"LAD{lad_num:03d}.raw.txt"

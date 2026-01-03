@@ -13,14 +13,27 @@ try:
 except Exception:
     pdfplumber = None
 
+# Use unified logger so messages go to the UI when a sink is installed
+import util.logger as logger
 
-def dbg(msg: str):
-    print(f"[SNAPSHOT] {msg}", flush=True)
+# Close Acrobat if it is holding the PDF (best-effort)
+def _ensure_acrobat_closed():
+    try:
+        from python.close_apps import close_acrobat
+        try:
+            close_acrobat()
+        except Exception:
+            pass
+    except Exception:
+        pass
 
 
 def extract_pdf_text(pdf_path: str) -> str:
+    # Ensure Acrobat is not holding the file
+    _ensure_acrobat_closed()
+
     if fitz:
-        dbg("Extracting PDF text using PyMuPDF")
+        logger.dbg("[SNAPSHOT] Extracting PDF text using PyMuPDF")
         doc = fitz.open(pdf_path)
         out = []
         for page in doc:
@@ -28,7 +41,7 @@ def extract_pdf_text(pdf_path: str) -> str:
         return "\n".join(out)
 
     if pdfplumber:
-        dbg("Extracting PDF text using pdfplumber")
+        logger.dbg("[SNAPSHOT] Extracting PDF text using pdfplumber")
         out = []
         with pdfplumber.open(pdf_path) as pdf:
             for page in pdf.pages:
@@ -164,7 +177,7 @@ def _parse_memory(lines):
 
 
 def digest_program_snapshot(pdf_path: str, unit: str, revision: str, rss_hash: str, out_dir: str) -> dict:
-    dbg(f"Digesting snapshot from {os.path.basename(pdf_path)}")
+    logger.dbg(f"[SNAPSHOT] Digesting snapshot from {os.path.basename(pdf_path)}")
 
     text = extract_pdf_text(pdf_path)
     lines = text.splitlines()
@@ -174,7 +187,7 @@ def digest_program_snapshot(pdf_path: str, unit: str, revision: str, rss_hash: s
     debug_path = os.path.join(out_dir, "_debug_extracted_report.txt")
     with open(debug_path, "w", encoding="utf-8", errors="replace") as f:
         f.write(text)
-    dbg(f"Wrote extracted text → {debug_path}")
+    logger.dbg(f"[SNAPSHOT] Wrote extracted text → {debug_path}")
 
     snapshot = {
         "identity": {
@@ -205,13 +218,13 @@ def digest_program_snapshot(pdf_path: str, unit: str, revision: str, rss_hash: s
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(snapshot, f, indent=2)
 
-    dbg(f"Wrote snapshot → {out_path}")
+    logger.dbg(f"[SNAPSHOT] Wrote snapshot → {out_path}")
 
     # ✅ CLEANUP: delete PDF after successful extraction
     try:
         os.remove(pdf_path)
-        dbg(f"Deleted source PDF → {pdf_path}")
+        logger.dbg(f"[SNAPSHOT] Deleted source PDF → {pdf_path}")
     except Exception as e:
-        dbg(f"WARNING: Failed to delete PDF ({pdf_path}): {e}")
+        logger.dbg(f"[SNAPSHOT] WARNING: Failed to delete PDF ({pdf_path}): {e}")
 
     return snapshot
