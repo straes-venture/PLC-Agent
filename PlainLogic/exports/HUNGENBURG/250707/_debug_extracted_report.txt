@@ -1,0 +1,6385 @@
+RSLogix 500 Project Report
+HUNGENBURG 250707.RSS
+Processor Information
+Processor Type: Bul.1766 MicroLogix 1400 Series B
+Processor Name: HUNGER
+Total Memory Used: 8841 Instruction Words Used - 9621 Data Table Words Used
+Total Memory Left: 3593 Instruction Words Left
+Program Files: 31
+Data Files: 68
+Program ID: 7568
+Page 1 Saturday, January 03, 2026 - 15:05:18
+HUNGENBURG 250707.RSS
+I/O Configuration
+0 Bul.1766 MicroLogix 1400 Series B
+1 1762-IF4 Analog 4 Chan. Input
+2 1762-IF4 Analog 4 Chan. Input
+3 1762-IQ8 8-Input 10/30 VDC
+4
+5
+6
+7
+Page 1 Saturday, January 03, 2026 - 15:05:18
+HUNGENBURG 250707.RSS
+Channel Configuration
+CHANNEL 0 (SYSTEM) - Driver: Modbus RTU Slave
+CHANNEL 0 (SYSTEM) - Driver: Modbus RTU Slave Edit Resource/Owner Timeout: 60
+CHANNEL 0 (SYSTEM) - Driver: Modbus RTU Slave Passthru Link ID: 1
+CHANNEL 0 (SYSTEM) - Driver: Modbus RTU Slave Write Protected: No
+CHANNEL 0 (SYSTEM) - Driver: Modbus RTU Slave Comms Servicing Selection: Yes
+CHANNEL 0 (SYSTEM) - Driver: Modbus RTU Slave Message Servicing Selection: Yes
+CHANNEL 0 (SYSTEM) - Driver: Modbus RTU Slave 1st AWA Append Character: \d
+CHANNEL 0 (SYSTEM) - Driver: Modbus RTU Slave 2nd AWA Append Character: \a
+Node : 1 (decimal)
+Baud: 9600
+Parity: NONE
+File Number for Coils: 0
+File Number for Contacts: 0
+File Number for Input Registers: 0
+File Number for Holding Registers: 35
+Expanded: No
+Control Line : No Handshaking (485 Network)
+InterCharacter Timeout(x1 ms): 5
+Pre Transmit Delay(x1 ms): 5
+CHANNEL 1 (SYSTEM) - Driver: Ethernet
+CHANNEL 1 (SYSTEM) - Driver: Ethernet Edit Resource/Owner Timeout: 60
+CHANNEL 1 (SYSTEM) - Driver: Ethernet Passthru Link ID: 1
+CHANNEL 1 (SYSTEM) - Driver: Ethernet Write Protected: No
+CHANNEL 1 (SYSTEM) - Driver: Ethernet Comms Servicing Selection: Yes
+CHANNEL 1 (SYSTEM) - Driver: Ethernet Message Servicing Selection: Yes
+Hardware Address: 5C:88:16:9D:EA:25
+IP Address: 10.102.38.31
+Subnet Mask: 255.255.255.0
+Gateway Address: 10.102.38.1
+Msg Connection Timeout (x 1mS): 1500
+Msg Reply Timeout (x mS): 3000
+Inactivity Timeout (x Min): 5
+Bootp Enable: No
+Dhcp Enable No
+SMTP Enable: No
+SNMP Enable: No
+HTTP Enable: Yes
+Auto Negotiate Enable: Yes
+DNP3 over IP Enable: No
+Modbus TCP Enable: Yes
+Disable EtherNet/IP Incoming Connection: No
+Disable Duplicate IP Address Detection: No
+Port Speed Enable: 10/100 Mbps Full Duplex/Half Duplex
+Contact:
+Location:
+Extend Area: No
+Enable Access Control for Master IP addresses: No
+Coil Base File Number: 0
+Contact Base File Number: 0
+Input Register Base File Number: 0
+Holding Register Base File Number: 0
+Client IP Address 0: 0.0.0.0
+Client IP Address 1: 0.0.0.0
+Client IP Address 2: 0.0.0.0
+Client IP Address 3: 0.0.0.0
+Client IP Address 4: 0.0.0.0
+Local TCP Port: 502
+Diagnostic File Number: 19
+CHANNEL 2 (SYSTEM) - Driver: DF1 Full Duplex
+CHANNEL 2 (SYSTEM) - Driver: DF1 Full Duplex Edit Resource/Owner Timeout: 60
+CHANNEL 2 (SYSTEM) - Driver: DF1 Full Duplex Passthru Link ID: 1
+CHANNEL 2 (SYSTEM) - Driver: DF1 Full Duplex Write Protected: No
+Page 1 Saturday, January 03, 2026 - 15:05:19
+HUNGENBURG 250707.RSS
+Channel Configuration
+CHANNEL 2 (SYSTEM) - Driver: DF1 Full Duplex Comms Servicing Selection: Yes
+CHANNEL 2 (SYSTEM) - Driver: DF1 Full Duplex Message Servicing Selection: Yes
+CHANNEL 2 (SYSTEM) - Driver: DF1 Full Duplex 1st AWA Append Character: \d
+CHANNEL 2 (SYSTEM) - Driver: DF1 Full Duplex 2nd AWA Append Character: \a
+Source ID: 1 (decimal)
+Baud: 19200
+Parity: NONE
+Control Line : No Handshaking
+Error Detection: CRC
+Embedded Responses: Auto Detect
+Duplicate Packet Detect: Yes
+ACK Timeout(x20 ms): 50
+NAK Retries: 3
+ENQ Retries: 3
+Page 2 Saturday, January 03, 2026 - 15:05:19
+HUNGENBURG 250707.RSS
+Program File List
+Name Number Type Rungs Debug Bytes
+[SYSTEM] 0 SYS 0 No 0
+1 SYS 0 No 0
+MAIN 2 LADDER 29 No 282
+TIME 3 LADDER 6 No 1025
+INITIALIZE 4 LADDER 4 No 69
+PRESETS 5 LADDER 5 No 99
+PERMISSIVE 6 LADDER 17 No 2885
+START 7 LADDER 18 No 592
+SHUNT 8 LADDER 3 No 176
+SUB 9 LADDER 15 No 1829
+IO DI MAP 11 LADDER 24 No 371
+IO AI MAP 12 LADDER 13 No 183
+IO DO MAP 13 LADDER 15 No 662
+IO AO MAP 14 LADDER 3 No 123
+COMM VFD1 21 LADDER 7 No 424
+COMM VFD2 22 LADDER 7 No 424
+COMM MEAS 23 LADDER 13 No 1035
+COMM SMADA 24 LADDER 109 No 6889
+COMM CUST 25 LADDER 28 No 926
+ALM FORCES 31 LADDER 2 No 66
+ALM PRE 32 LADDER 9 No 537
+ALM DIGITL 33 LADDER 34 No 12142
+ALM ANALOG 34 LADDER 34 No 35205
+ALM ARESET 35 LADDER 3 No 329
+CTRL LOOP1 41 LADDER 15 No 2077
+CTRL LOOP2 42 LADDER 14 No 950
+MEAS SAMPL 50 LADDER 2 No 166
+MEAS PRVR 51 LADDER 9 No 1361
+MEAS GRIND 52 LADDER 9 No 816
+MEAS RVP 53 LADDER 7 No 633
+USER PERM 254 LADDER 20 No 1332
+Page 1 Saturday, January 03, 2026 - 15:05:19
+HUNGENBURG 250707.RSS
+Data File List
+Name Number Type Scope Debug Words Elements Last
+OUTPUT 0 O Global No 18 6 O:5
+INPUT 1 I Global No 69 23 I:22
+STATUS 2 S Global No 0 66 S:65
+BINARY 3 B Global No 10 10 B3:9
+TIMER 4 T Global No 90 30 T4:29
+COUNTER 5 C Global No 30 10 C5:9
+CONTROL 6 R Global No 3 1 R6:0
+INTEGER 7 N Global No 50 50 N7:49
+FLOAT 8 F Global No 100 50 F8:49
+IO 9 N Global No 40 40 N9:39
+MB DIAG 19 N Global No 80 80 N19:79
+COMM RUN 20 N Global No 30 30 N20:29
+COMM RUN 21 T Global No 30 10 T21:9
+COMM RUN 22 C Global No 96 32 C22:31
+COMM RUN 23 MG Global No 750 30 MG23:29
+COMM RUN 24 RI Global No 600 30 RI24:29
+COMM VFD1 25 N Global No 20 20 N25:19
+COMM VFD2 26 N Global No 20 20 N26:19
+COMM ROC 27 N Global No 120 120 N27:119
+COMM ROC 28 N Global No 241 241 N28:240
+COMM ROC 29 F Global No 360 180 F29:179
+SMADA TEST 30 B Global No 11 11 B30:10
+SMADA BITS 31 B Global No 4 4 B31:3
+SMADA FLTS 32 F Global No 120 60 F32:59
+SMADA STRG 33 ST Global No 672 16 ST33:15
+SMADAWRITE 34 N Global No 1 1 N34:0
+COMM CUST 35 N Global No 254 254 N35:253
+COMM CUST 36 F Global No 10 5 F36:4
+COMM CUST2 37 N Global No 160 160 N37:159
+CTRL LOOPS 40 N Global No 4 4 N40:3
+CTRL LOOPS 41 T Global No 6 2 T41:1
+CTRL LOOPS 42 F Global No 120 60 F42:59
+MEAS RUN 50 N Global No 10 10 N50:9
+MEAS RUN 51 F Global No 200 100 F51:99
+MEAS RUN 52 T Global No 60 20 T52:19
+MEAS RUN 53 ST Global No 1890 45 ST53:44
+AD BITS 200 B Global No 32 32 B200:31
+AD TMRS 201 T Global No 96 32 T201:31
+AA IN RAW 210 N Global No 32 32 N210:31
+AA IN MIN 211 N Global No 32 32 N211:31
+AA IN MAX 212 N Global No 32 32 N212:31
+AA OUT MIN 213 F Global No 64 32 F213:31
+AA OUT MAX 214 F Global No 64 32 F214:31
+AA OUT VAL 215 F Global No 64 32 F215:31
+AA BITS 216 B Global No 32 32 B216:31
+AA BITS 217 B Global No 32 32 B217:31
+AA BITS 218 B Global No 32 32 B218:31
+AA HH SP 219 F Global No 64 32 F219:31
+AA HH TMR 220 T Global No 96 32 T220:31
+AA H SP 221 F Global No 64 32 F221:31
+AA H TMR 222 T Global No 96 32 T222:31
+AA L SP 223 F Global No 64 32 F223:31
+AA L TMR 224 T Global No 96 32 T224:31
+AA LL SP 225 F Global No 64 32 F225:31
+AA LL TMR 226 T Global No 96 32 T226:31
+AA OOR H 227 N Global No 32 32 N227:31
+AA OOR L 228 N Global No 32 32 N228:31
+AA OOR TMR 229 T Global No 96 32 T229:31
+USERS 240 ST Global No 420 10 ST240:9
+USER PWDS 241 ST Global No 420 10 ST241:9
+USER CODES 242 N Global No 10 10 N242:9
+USER LOGIN 243 N Global No 13 13 N243:12
+USER LOGIN 244 ST Global No 168 4 ST244:3
+USERLOGOUT 245 T Global No 9 3 T245:2
+USER LOGIN 246 L Global No 6 3 L246:2
+Page 1 Saturday, January 03, 2026 - 15:05:20
+HUNGENBURG 250707.RSS
+Data File List
+Name Number Type Scope Debug Words Elements Last
+RTC VALUES 248 N Global No 18 18 N248:17
+RTC STRING 249 ST Global No 126 3 ST249:2
+USER LOGIN 250 ST Global No 840 20 ST250:19
+Page 2 Saturday, January 03, 2026 - 15:05:20
+HUNGENBURG 250707.RSS
+Data File O0 (bin) -- OUTPUT
+Offset 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0
+O:0.0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 Bul.1766 MicroLogix 1400 Series B
+O:0.1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 Bul.1766 MicroLogix 1400 Series B
+O:0.2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 Bul.1766 MicroLogix 1400 Series B
+O:0.3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 Bul.1766 MicroLogix 1400 Series B
+O:0.4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 Bul.1766 MicroLogix 1400 Series B-Analog O
+O:0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 Bul.1766 MicroLogix 1400 Series B-Analog O
+Page 1 (Radix Binary) Saturday, January 03, 2026 - 15:05:20
+HUNGENBURG 250707.RSS
+Data File I1 (bin) -- INPUT
+Offset 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0
+I:0.0 0 0 0 0 0 0 0 1 0 1 1 0 0 0 1 0 Bul.1766 MicroLogix 1400 Series B
+I:0.1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 Bul.1766 MicroLogix 1400 Series B
+I:0.2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 Bul.1766 MicroLogix 1400 Series B
+I:0.3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 Bul.1766 MicroLogix 1400 Series B
+I:0.4 0 0 0 0 0 0 1 1 0 1 0 1 1 0 0 1 Bul.1766 MicroLogix 1400 Series B-Analog I
+I:0.5 0 0 0 0 0 0 1 1 0 0 1 0 1 1 1 1 Bul.1766 MicroLogix 1400 Series B-Analog I
+I:0.6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 Bul.1766 MicroLogix 1400 Series B-Analog I
+I:0.7 0 0 0 0 0 0 1 1 1 0 0 1 1 0 0 0 Bul.1766 MicroLogix 1400 Series B-Analog I
+I:1.0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 1762-IF4 - Analog 4 Chan. Input
+I:1.1 0 0 1 0 1 0 0 0 1 1 1 0 0 0 0 1 1762-IF4 - Analog 4 Chan. Input
+I:1.2 0 0 0 1 1 0 0 0 0 1 1 0 1 0 1 1 1762-IF4 - Analog 4 Chan. Input
+I:1.3 0 0 1 0 1 0 0 1 0 1 0 0 1 1 1 1 1762-IF4 - Analog 4 Chan. Input
+I:1.4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1762-IF4 - Analog 4 Chan. Input
+I:1.5 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1762-IF4 - Analog 4 Chan. Input
+I:1.6 1 0 1 0 0 1 0 1 1 0 0 1 0 1 1 1 1762-IF4 - Analog 4 Chan. Input
+I:2.0 0 0 0 1 1 0 0 0 0 0 1 1 1 1 0 1 1762-IF4 - Analog 4 Chan. Input
+I:2.1 0 0 0 1 1 0 0 0 0 1 0 1 1 1 0 1 1762-IF4 - Analog 4 Chan. Input
+I:2.2 0 0 0 1 1 0 0 0 1 0 0 1 1 0 1 0 1762-IF4 - Analog 4 Chan. Input
+I:2.3 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 1762-IF4 - Analog 4 Chan. Input
+I:2.4 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1762-IF4 - Analog 4 Chan. Input
+I:2.5 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 1762-IF4 - Analog 4 Chan. Input
+I:2.6 1 0 1 0 0 1 1 0 1 1 1 0 1 1 1 0 1762-IF4 - Analog 4 Chan. Input
+I:3.0 0 0 0 0 0 0 1 1 1762-IQ8 - 8-Input 10/30 VDC
+Page 1 (Radix Binary) Saturday, January 03, 2026 - 15:05:21
+HUNGENBURG 250707.RSS
+Data File S2 (hex) -- STATUS
+Main
+Processor Mode S:1/0 - S:1/4 = Remote Run
+On Power up Go To Run (Mode Behavior) S:1/12 = 0
+First Pass S:1/15 = No
+Free Running Clock S:4 = 1111-1100-0010-1100
+Proc
+OS Catalog Number S:57 = 1400 User Program Type S:63 = 9108h
+OS Series S:58 = B Compiler Revision Number S:64 =
+OS FRS S:59 =
+Processor Catalog Number S:60 =
+Processor Series S:61 = C
+Processor FRN S:62 =
+Scan Times
+Maximum (x10 ms) S:22 = 154
+Watchdog (x10 ms) S:3 (high byte) = 10
+Last 100 uSec Scan Time S:35 = 113
+Scan Toggle Bit S:33/9 = 1
+Math
+Math Overflow Selected S:2/14 = 0 Math Register (lo word) S:13 = 0
+Overflow Trap S:5/0 = 0 Math Register (high word) S:14-S:13 = 0
+Carry S:0/0 = 0 Math Register (32 Bit) S:14-S:13 = 0
+Overflow S:0/1 = 0
+Zero Bit S:0/2 = 1
+Sign Bit S:0/3 = 0
+Chan 0
+Processor Mode S:1/0- S:1/4 = Remote Run
+Node Address S:15 (low byte) = 0 Outgoing Msg Cmd Pending S:33/2 = 0
+Baud Rate S:15 (high byte) = ?
+Channel Mode S:33/3 = 0
+Comms Active S:33/4 = 0
+Incoming Cmd Pending S:33/0 = 0
+Msg Reply Pending S:33/1 = 0
+Debug
+Suspend Code S:7 = 0
+Suspend File S:8 = 0
+Errors
+Fault Override At Power Up S:1/8 = 0 Fault Routine S:29 = 0
+Startup Protection Fault S:1/9 = 0 Major Error S:6 = 0h
+Major Error Halt S:1/13 = 0
+Overflow Trap S:5/0 = 0 Error Description:
+Control Register Error S:5/2 = 0
+Major Error Executing User Fault Rtn. S:5/3 = 0
+Battery Low S:5/11 = 0
+Input Filter Selection Modified S:5/13 = 0
+ASCII String Manipulation error S:5/15 = 0
+Protection
+Deny Future Access S:1/14 = No
+Data File Overwrite Protection Lost S:36/10 = False
+Mem Module
+Memory Module Loaded On Boot S:5/8 = 0
+Password Mismatch S:5/9 = 0
+Load Memory Module On Memory Error S:1/10 = 0
+Load Memory Module Always S:1/11 = 0
+On Power up Go To Run (Mode Behavior) S:1/12 = 0
+Program Compare S:2/9 = 0
+Data File Overwrite Protection Lost S:36/10 = 0
+Page 1 Saturday, January 03, 2026 - 15:05:21
+HUNGENBURG 250707.RSS
+Data File S2 (hex) -- STATUS
+Forces
+Forces Enabled S:1/5 = Yes
+Forces Installed S:1/6 = No
+Page 2 Saturday, January 03, 2026 - 15:05:21
+HUNGENBURG 250707.RSS
+Data File B3 (bin) -- BINARY
+Offset 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0 (Symbol) Description
+B3:0 1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 Various Control Bits
+B3:1 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 Permissive Bits
+B3:2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 Maintenance Bits
+B3:3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 Start Sequence Bits
+B3:4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 Stop Sequence Bits
+B3:5 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1 0 Run Options
+B3:6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B3:7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B3:8 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B3:9 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 Various Control Bits
+Page 1 (Radix Binary) Saturday, January 03, 2026 - 15:05:21
+HUNGENBURG 250707.RSS
+Data File T4 -- TIMER
+Offset EN TT DN BASE PRE ACC (Symbol) Description
+T4:0 0 0 0 1.0 sec 2 0 (ACK_HOLD_TMR) ACK Hold on Timer
+T4:1 0 0 0 1.0 sec 30000 0 (MAINT_MODE_TMR) Maintenance Mode Off Timer
+T4:2 0 0 0 1.0 sec 2 2 Initialize
+T4:3 0 0 0 1.0 sec 10 0 (PERM_DEBOUNCE) Permissive Debounce
+T4:4 0 0 0 1.0 sec 900 0 (AC_POWER_LOCKOUT) AC Power Fail Lockout
+T4:5 0 0 0 1.0 sec 30 0 (LL_SUCTION_RESTART) LL Suction Restart Delay
+T4:6 1 1 0 1.0 sec 3600 382 (LL_SUCTION_RESET) LL Suction Reset Counter
+T4:7 0 0 0 1.0 sec 30 0 (HH_BSW_RESTART) HH BSW Restart Delay
+T4:8 1 1 0 1.0 sec 3600 382 (HH_BSW_RESET) HH BSW Reset Counter
+T4:9 0 0 0 1.0 sec 45 0 (SUMP_LATCH_ON) Sump Latch On
+T4:10 0 0 0 1.0 sec 1000 0 SIM Mode Reset Timer
+T4:11 0 0 0 1.0 sec 25 0 PIT-102 Arm Tmr
+T4:12 0 0 0 1.0 sec 25 0 PIT-103 ARM Tmr
+T4:13 0 0 0 1.0 sec 1 1 Charge Pump Hold
+T4:14 1 0 1 1.0 sec 3 3 Shunt ARM Delay Tmr (Keeps Shunt Latched & Armed during a Shunt
+T4:15 0 0 0 1.0 sec 2 0 SHUNT ARM UNLATCH DELAY Tmr (2sec) Allows Shunt Trip to Occur b
+T4:16 0 0 0 1.0 sec 30 0 LACT STARTUP PURGE (30 sec) Timer
+T4:17 0 0 0 1.0 sec 10 0 FT-101 OOR ARM Tmr (10 Sec) [Arm OOR 10 sec after P-102 Run Cmd
+T4:18 0 0 0 1.0 sec 90 0 FT-101 ARM Tmr (90 Sec Max) [Arm ALM/SD after Startup Delay]
+T4:19 0 0 0 1.0 sec 300 0 (SUMP_PIT_NOT_EMPTY_1) Sump Pit Not Empty SD Re-Alarm to SCADA
+T4:20 0 0 0 1.0 sec 30 0 (SUMP_PIT_NOT_EMPTY_2) Sump Pit Not Empty SD Re-Alarm to SCADA
+T4:21 0 0 0 1.0 sec 180 0 (SUMP_PMP_RUN_POST_SD) Timed P-103 Sump Pump RUN after Sump Pit
+T4:22 1 1 0 1.0 sec 32000 10268 Heartbeat (FRC 0- 32000)
+T4:23 0 0 0 .01 sec 0 0
+T4:24 0 0 0 .01 sec 0 0
+T4:25 0 0 0 .01 sec 0 0
+T4:26 0 0 0 .01 sec 0 0
+T4:27 0 0 0 .01 sec 0 0
+T4:28 0 0 0 .01 sec 0 0
+T4:29 0 0 0 1.0 sec 0 0
+Page 1 Saturday, January 03, 2026 - 15:05:22
+HUNGENBURG 250707.RSS
+Data File C5 -- COUNTER
+Offset CU CD DN OV UN UA PRE ACC (Symbol) Description
+C5:0 0 0 0 0 0 0 5 0
+C5:1 0 0 0 0 0 0 5 0 (LL_SUCTION_RETRIES) LL Suction Retry Counter
+C5:2 0 0 0 0 0 0 5 0 (HH_BSW_RETRIES) HH BSW Retry Counter
+C5:3 0 0 0 0 0 0 6 0 (SUMP_PIT_SD_ALARM) LSH-301 Sump Pit Not Empty Re-Alarm to SCAD
+C5:4 0 0 0 0 0 0 0 0
+C5:5 0 0 0 0 0 0 0 0
+C5:6 0 0 0 0 0 0 0 0
+C5:7 0 0 0 0 0 0 0 0
+C5:8 0 0 0 0 0 0 0 0
+C5:9 0 0 0 0 0 0 0 0
+Page 1 Saturday, January 03, 2026 - 15:05:22
+HUNGENBURG 250707.RSS
+Data File R6 -- CONTROL
+Offset EN EU DN EM ER UL IN FD LEN POS (Symbol) Description
+R6:0 0 0 0 0 0 0 0 0 0 0
+Page 1 Saturday, January 03, 2026 - 15:05:22
+HUNGENBURG 250707.RSS
+Data File N7 (dec) -- INTEGER
+Offset 0 1 2 3 4 5 6 7 8 9
+N7:0 0 0 0 0 0 0 0 0 0 0
+N7:10 0 0 0 0 0 0 0 0 0 0
+N7:20 0 0 0 0 0 0 0 0 0 0
+N7:30 0 0 0 0 0 0 0 0 0 0
+N7:40 0 0 0 0 0 0 0 0 0 1
+Page 1 (Radix Decimal) Saturday, January 03, 2026 - 15:05:23
+HUNGENBURG 250707.RSS
+Data File F8 -- FLOAT
+Offset 0 1 2 3 4
+F8:0 25 80 1000 6000 10
+F8:5 30 182.2393 0.7764515 182.1 0.7770455
+F8:10 0 0 0 0 0
+F8:15 10270 66.75 0 0 0
+F8:20 0 0 0 0 0
+F8:25 0 0 0 0 0
+F8:30 0 0 0 0 0
+F8:35 0 0 0 0 0
+F8:40 0 0 0 0 0
+F8:45 0 0 0 0 0
+Page 1 Saturday, January 03, 2026 - 15:05:23
+HUNGENBURG 250707.RSS
+Data File N9 (dec) -- IO
+Offset 0 1 2 3 4 5 6 7 8 9
+N9:0 354 56 0 289 0 0 0 0 0 0
+N9:10 857 816 0 920 12 10466 6251 10575 6205 6237
+N9:20 6298 10 6 5 7 6 16 8 0 0
+N9:30 0 0 0 0 0 0 0 0 0 0
+Page 1 (Radix Decimal) Saturday, January 03, 2026 - 15:05:23
+HUNGENBURG 250707.RSS
+Data File N19 (dec) -- MB DIAG
+Offset 0 1 2 3 4 5 6 7 8 9
+N19:0 0 0 0 0 0 0 0 0 0 16
+N19:10 0 0 0 0 0 0 0 0 0 0
+N19:20 0 0 0 0 0 0 0 0 0 0
+N19:30 0 0 0 0 0 0 0 0 0 0
+N19:40 30871 0 30832 0 0 0 0 0 3 16
+N19:50 0 0 0 0 0 0 0 -14065 30871 20600
+N19:60 0 0 0 0 0 0 0 0 0 0
+N19:70 0 0 0 0 0 0 0 0 0 0
+Page 1 (Radix Decimal) Saturday, January 03, 2026 - 15:05:23
+HUNGENBURG 250707.RSS
+Data File N20 (dec) -- COMM RUN
+Offset 0 1 2 3 4 5 6 7 8 9
+N20:0 0 2 0 4 5 6 7 0 1 0
+N20:10 0 2 0 4 5 6 7 0 1 0
+N20:20 0 2 3 4 5 6 0 0 1 1280
+Page 1 (Radix Decimal) Saturday, January 03, 2026 - 15:05:24
+HUNGENBURG 250707.RSS
+Data File T21 -- COMM RUN
+Offset EN TT DN BASE PRE ACC (Symbol) Description
+T21:0 1 1 0 .01 sec 100 77 (COMM_VFD1_LOOP_WAIT) COMM VFD1 Loop Wait
+T21:1 1 1 0 .01 sec 100 59 (COMM_VFD2_LOOP_WAIT) COMM VFD2 Loop Wait
+T21:2 1 1 0 .01 sec 50 10 (COMM_ROC_LOOP_WAIT) COMM ROC Loop Wait
+T21:3 1 1 0 1.0 sec 30 0 (COMM_ROC_HTBT_TMOUT) COMM ROC Heartbeat Stale
+T21:4 0 0 0 .01 sec 0 0
+T21:5 0 0 0 .01 sec 0 0
+T21:6 0 0 0 .01 sec 0 0
+T21:7 0 0 0 .01 sec 0 0
+T21:8 0 0 0 .01 sec 0 0
+T21:9 0 0 0 .01 sec 0 0
+Page 1 Saturday, January 03, 2026 - 15:05:24
+HUNGENBURG 250707.RSS
+Data File C22 -- COMM RUN
+Offset CU CD DN OV UN UA PRE ACC (Symbol) Description
+C22:0 0 0 0 0 0 0 0 0
+C22:1 0 0 0 0 0 0 5 0 COMM VFD1 State 1
+C22:2 0 0 0 0 0 0 5 0 COMM VFD1 State 2
+C22:3 0 0 0 0 0 0 5 0 COMM VFD1 State 3
+C22:4 0 0 0 0 0 0 5 0 COMM VFD1 State 4
+C22:5 0 0 0 0 0 0 5 0 COMM VFD1 State 5
+C22:6 0 0 0 0 0 0 5 0 COMM VFD1 State 6
+C22:7 0 0 0 0 0 0 5 0 COMM VFD1 State 7
+C22:8 0 0 0 0 0 0 0 0
+C22:9 0 0 0 0 0 0 0 0
+C22:10 0 0 0 0 0 0 0 0
+C22:11 0 0 0 0 0 0 5 0 COMM VFD2 State 1
+C22:12 0 0 0 0 0 0 5 0 COMM VFD2 State 2
+C22:13 0 0 0 0 0 0 5 0 COMM VFD2 State 3
+C22:14 0 0 0 0 0 0 5 0 COMM VFD2 State 4
+C22:15 0 0 0 0 0 0 5 0 COMM VFD2 State 5
+C22:16 0 0 0 0 0 0 5 0 COMM VFD2 State 6
+C22:17 0 0 0 0 0 0 5 0 COMM VFD2 State 7
+C22:18 0 0 0 0 0 0 0 0
+C22:19 0 0 0 0 0 0 0 0
+C22:20 0 0 0 0 0 0 0 0
+C22:21 0 0 0 0 0 0 5 0 COMM ROC State 1
+C22:22 0 0 0 0 0 0 5 0 COMM ROC State 2
+C22:23 0 0 0 0 0 0 5 0 COMM ROC State 3
+C22:24 0 0 0 0 0 0 5 0 COMM ROC State 4
+C22:25 0 0 0 0 0 0 5 0 COMM ROC State 5
+C22:26 0 0 0 0 0 0 5 0 COMM ROC State 6
+C22:27 0 0 0 0 0 0 5 0 COMM ROC State 7
+C22:28 0 0 0 0 0 0 0 0
+C22:29 0 0 0 0 0 0 0 0
+C22:30 0 0 0 0 0 0 0 0
+C22:31 0 0 0 0 0 0 0 0
+Page 1 Saturday, January 03, 2026 - 15:05:24
+HUNGENBURG 250707.RSS
+Data File MG23 -- COMM RUN
+Offset IA RBL LBN RBN CHN NOD MTO NB TFT TFN ELE SEL BK UC TO CO
+MG23:0 0 0 0 0 257 255 2 10 0 0 0 0 0 0 0 0
+MG23:1 26498 0 0 0 257 0 19 3 0 2000 0 0 0 0 0 0
+MG23:2 26516 0 0 0 257 0 19 10 0 2100 0 0 0 0 0 0
+MG23:3 0 0 0 0 0 0 0 10 0 0 0 0 0 0 0 0
+MG23:4 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+MG23:5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+MG23:6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+MG23:7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+MG23:8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+MG23:9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+MG23:10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+MG23:11 26538 0 0 0 257 0 19 3 0 2000 0 0 0 0 0 0
+MG23:12 26556 0 0 0 257 0 19 10 0 2100 0 0 0 0 0 0
+MG23:13 0 0 0 0 257 0 19 10 0 2100 0 0 0 0 0 0
+MG23:14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+MG23:15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+MG23:16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+MG23:17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+MG23:18 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+MG23:19 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+MG23:20 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+MG23:21 26576 0 0 0 257 1 19 120 0 1 0 0 0 0 0 0
+MG23:22 26816 0 0 0 257 1 19 80 0 121 0 0 0 0 0 0
+MG23:23 27016 0 0 0 257 1 19 10 0 121 0 0 0 0 0 0
+MG23:24 27036 0 0 0 257 1 19 52 0 131 0 0 0 0 0 0
+MG23:25 27140 0 0 0 257 1 19 2 0 183 0 0 0 0 0 0
+MG23:26 27144 0 0 0 257 1 19 8 0 185 0 0 0 0 0 0
+MG23:27 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+MG23:28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+MG23:29 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Page 1 Saturday, January 03, 2026 - 15:05:24
+HUNGENBURG 250707.RSS
+Data File RI24 -- COMM RUN
+Offset STY IP IOIS IOI0 IOI1 IOI2 IOI3 IOI4 ACPS ACP0 ACP1 ACP2 AC
+RI24:0 0 0.0.0.0 0 0 0 0 0 0 0 0 0 0
+RI24:1 14 10.102.38.34 0 0 0 0 0 0 0 0 0 0
+RI24:2 14 10.102.38.34 0 0 0 0 0 0 0 0 0 0
+RI24:3 0 0.0.0.0 0 0 0 0 0 0 0 0 0 0
+RI24:4 0 0.0.0.0 0 0 0 0 0 0 0 0 0 0
+RI24:5 0 0.0.0.0 0 0 0 0 0 0 0 0 0 0
+RI24:6 0 0.0.0.0 0 0 0 0 0 0 0 0 0 0
+RI24:7 0 0.0.0.0 0 0 0 0 0 0 0 0 0 0
+RI24:8 0 0.0.0.0 0 0 0 0 0 0 0 0 0 0
+RI24:9 0 0.0.0.0 0 0 0 0 0 0 0 0 0 0
+RI24:10 0 0.0.0.0 0 0 0 0 0 0 0 0 0 0
+RI24:11 14 10.102.38.35 0 0 0 0 0 0 0 0 0 0
+RI24:12 14 10.102.38.35 0 0 0 0 0 0 0 0 0 0
+RI24:13 0 0.0.0.0 0 0 0 0 0 0 0 0 0 0
+RI24:14 0 0.0.0.0 0 0 0 0 0 0 0 0 0 0
+RI24:15 0 0.0.0.0 0 0 0 0 0 0 0 0 0 0
+RI24:16 0 0.0.0.0 0 0 0 0 0 0 0 0 0 0
+RI24:17 0 0.0.0.0 0 0 0 0 0 0 0 0 0 0
+RI24:18 0 0.0.0.0 0 0 0 0 0 0 0 0 0 0
+RI24:19 0 0.0.0.0 0 0 0 0 0 0 0 0 0 0
+RI24:20 0 0.0.0.0 0 0 0 0 0 0 0 0 0 0
+RI24:21 14 10.102.38.33 0 0 0 0 0 0 0 0 0 0
+RI24:22 14 10.102.38.33 0 0 0 0 0 0 0 0 0 0
+RI24:23 14 10.102.38.33 0 0 0 0 0 0 0 0 0 0
+RI24:24 14 10.102.38.33 0 0 0 0 0 0 0 0 0 0
+RI24:25 14 10.102.38.33 0 0 0 0 0 0 0 0 0 0
+RI24:26 14 10.102.38.33 0 0 0 0 0 0 0 0 0 0
+RI24:27 0 0.0.0.0 0 0 0 0 0 0 0 0 0 0
+RI24:28 0 0.0.0.0 0 0 0 0 0 0 0 0 0 0
+RI24:29 0 0.0.0.0 0 0 0 0 0 0 0 0 0 0
+Page 1 Saturday, January 03, 2026 - 15:05:25
+HUNGENBURG 250707.RSS
+Data File N25 (dec) -- COMM VFD1
+Offset 0 1 2 3 4 5 6 7 8 9
+N25:0 0 0 65 1515 0 0 0 0 0 0
+N25:10 65 20545 0 0 0 0 0 0 0 743
+Page 1 (Radix Decimal) Saturday, January 03, 2026 - 15:05:25
+HUNGENBURG 250707.RSS
+Data File N26 (dec) -- COMM VFD2
+Offset 0 1 2 3 4 5 6 7 8 9
+N26:0 0 0 0 4545 0 0 0 0 0 0
+N26:10 65 20545 0 0 0 0 0 0 0 678
+Page 1 (Radix Decimal) Saturday, January 03, 2026 - 15:05:25
+HUNGENBURG 250707.RSS
+Data File N27 (dec) -- COMM ROC
+Offset 0 1 2 3 4 5 6 7 8 9
+N27:0 0 16752 0 16576 0 16704 0 16608 0 16608
+N27:10 8192 17661 -17574 16416 23700 16998 -13107 16988 0 0
+N27:20 -22325 -16756 -10082 17074 5281 17057 26406 17076 19004 17072
+N27:30 0 0 0 0 15207 17080 27527 -16968 0 0
+N27:40 0 0 0 0 0 0 3681 16166 -6012 14679
+N27:50 0 0 0 0 0 0 14418 16917 14713 17273
+N27:60 18202 17597 7629 17878 -30073 18859 0 0 0 0
+N27:70 0 0 5742 16915 5044 17269 -1545 17593 6670 17875
+N27:80 16497 18856 0 0 0 0 0 0 5742 16915
+N27:90 5010 17269 -2327 17593 6354 17875 16383 18856 0 0
+N27:100 0 0 0 0 0 0 0 0 0 0
+N27:110 0 0 0 0 0 0 0 0 0 0
+Page 1 (Radix Decimal) Saturday, January 03, 2026 - 15:05:26
+HUNGENBURG 250707.RSS
+Data File N28 (dec) -- COMM ROC
+Offset 0 1 2 3 4 5 6 7 8 9
+N28:0 0 16960 0 0 0 0 0 17004 0 0
+N28:10 -32768 17545 18455 16256 0 0 0 16256 0 0
+N28:20 0 16256 0 0 0 16256 0 0 0 16256
+N28:30 0 0 0 16256 0 0 0 16256 0 0
+N28:40 0 16256 0 0 0 16256 0 0 0 16256
+N28:50 0 0 0 16256 0 0 0 16256 0 0
+N28:60 0 16256 18350 16661 -13107 15692 0 16984 0 16906
+N28:70 0 17032 0 0 0 0 0 0 0 0
+N28:80 0 0 0 0 0 0 0 0 0 0
+N28:90 0 0 0 0 0 0 0 0 0 0
+N28:100 0 16960 0 0 0 0 0 17004 0 0
+N28:110 -32768 17545 18455 16256 0 0 0 16256 0 0
+N28:120 0 16256 0 0 0 16256 0 0 0 16256
+N28:130 0 0 0 16256 0 0 0 16256 0 0
+N28:140 0 16256 0 0 0 16256 0 0 0 16256
+N28:150 0 0 0 16256 0 0 0 16256 0 0
+N28:160 0 16256 18350 16661 -13107 15692 0 16984 0 16906
+N28:170 0 17028 0 0 0 0 0 0 0 0
+N28:180 0 0 0 0 0 0 0 0 0 0
+N28:190 0 0 0 0 0 0 0 0 0 0
+N28:200 0 0 0 0 0 0 0 0 0 0
+N28:210 0 0 0 0 0 0 0 0 0 0
+N28:220 0 0 0 0 0 0 0 0 0 0
+N28:230 0 0 0 0 0 0 0 0 0 0
+N28:240 0
+Page 1 (Radix Decimal) Saturday, January 03, 2026 - 15:05:26
+HUNGENBURG 250707.RSS
+Data File F29 -- COMM ROC
+Offset 0 1 2 3 4
+F29:0 20 6 12 7 7
+F29:5 2025 2.506469 57.59431 55.2 0
+F29:10 -0.2747253 89.42308 80.54029 90.20146 88.14499
+F29:15 0 0 92.11602 -0.09004884 0
+F29:20 0 0 0 0.6486569 0.0002059062
+F29:25 0 0 0 37.305 249.2245
+F29:30 1514.222 6851.725 1405265 0 0
+F29:35 0 36.7719 245.077 1487.811 6755.257
+F29:40 1378318 0 0 0 36.7719
+F29:45 245.0764 1487.716 6755.103 1378304 0
+F29:50 0 0 0 0 0
+F29:55 0 0 0 0 0
+F29:60 52 0 0 59 0
+F29:65 1100 1.0022 0 1 0
+F29:70 1 0 1 0 1
+F29:75 0 1 0 1 0
+F29:80 1 0 1 0 1
+F29:85 0 1 0 1 0
+F29:90 1 9.33 0.05 54 34.5
+F29:95 68 0 0 0 0
+F29:100 54 0 0 59 0
+F29:105 1100 1.0022 0 1 0
+F29:110 1 0 1 0 1
+F29:115 0 1 0 1 0
+F29:120 1 0 1 0 1
+F29:125 0 1 0 1 0
+F29:130 1 9.33 0.05 54 34.5
+F29:135 66 0 0 0 0
+F29:140 22 1100 0 0 0
+F29:145 0 0 0 0 0
+F29:150 0 0 0 0 0
+F29:155 0 0 0 0 0
+F29:160 0 0 0 0 0
+F29:165 0 0 0 0 0
+F29:170 0 0 0 0 0
+F29:175 0 0 0 0 0
+Page 1 Saturday, January 03, 2026 - 15:05:26
+HUNGENBURG 250707.RSS
+Data File B30 (bin) -- SMADA TEST
+Offset 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0 (Symbol) Description
+B30:0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B30:1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B30:2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B30:3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B30:4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B30:5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B30:6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B30:7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B30:8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B30:9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B30:10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Page 1 (Radix Binary) Saturday, January 03, 2026 - 15:05:27
+HUNGENBURG 250707.RSS
+Data File B31 (bin) -- SMADA BITS
+Offset 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0 (Symbol) Description
+B31:0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B31:1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 1
+B31:2 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0
+B31:3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+Page 1 (Radix Binary) Saturday, January 03, 2026 - 15:05:27
+HUNGENBURG 250707.RSS
+Data File F32 -- SMADA FLTS
+Offset 0 1 2 3 4
+F32:0 0 0 36.7719 245.077 1487.811
+F32:5 6755.257 1378318 36.7719 245.0764 1487.716
+F32:10 6755.103 1378304 89.42308 -0.2747253 10297
+F32:15 57.61108 0 0 57.61108 57.61108
+F32:20 0 0.0002059062 0 20 10
+F32:25 2.500608 0 0 0 0
+F32:30 0 0 4.04908 -0.09004884 0
+F32:35 0 9.33 9.33 0 0
+F32:40 0 0 0 0 2.065484
+F32:45 1.224365 9.597 0 -0.1529055 0
+F32:50 0 0 0 1.067134 -0.4223823
+F32:55 2.646988 0 0 0 0
+Page 1 Saturday, January 03, 2026 - 15:05:27
+HUNGENBURG 250707.RSS
+Data File ST33 -- SMADA STRG
+Offset LEN String Text (Symbol) Description
+ST33:0 0
+ST33:1 0
+ST33:2 0
+ST33:3 0
+ST33:4 0
+ST33:5 0
+ST33:6 0
+ST33:7 0
+ST33:8 0
+ST33:9 0
+ST33:10 0
+ST33:11 0
+ST33:12 0
+ST33:13 0
+ST33:14 0
+ST33:15 0
+Page 1 Saturday, January 03, 2026 - 15:05:27
+HUNGENBURG 250707.RSS
+Data File N34 (dec) -- SMADAWRITE
+Offset 0 1 2 3 4 5 6 7 8 9
+N34:0 3
+Page 1 (Radix Decimal) Saturday, January 03, 2026 - 15:05:28
+HUNGENBURG 250707.RSS
+Data File N35 (dec) -- COMM CUST -- Cust IO via Modbus RTU
+Offset 0 1 2 3 4 5 6 7 8 9
+N35:0 3169 3 0 0 0 0 1 1 0 0
+N35:10 28 1 1 0 0 0 0 0 0 0
+N35:20 -18435 16284 5742 16915 5044 17269 -1545 17593 6670 17875
+N35:30 16497 18856 -2327 17593 0 0 27527 -16968 -10082 17074
+N35:40 21973 16998 -13107 16988 12514 16388 -26664 16264 23419 16416
+N35:50 30 0 900 0 0 0 0 0 0 0
+N35:60 14418 16917 14713 17273 18202 17597 7629 17878 -30073 18859
+N35:70 5742 16915 5010 17269 -2327 17593 6354 17875 16383 18856
+N35:80 0 0 0 0 0 0 0 0 0 0
+N35:90 0 0 0 0 0 0 0 0 0 1
+N35:100 1242 16995 1242 16995 8595 17116 22101 18347 -14538 17181
+N35:110 0 16928 1108 0 1109 0 1211 0 1303 0
+N35:120 1302 0 1302 0 608 0 5 0 5 0
+N35:130 5 0 5 0 0 0 0 0 0 0
+N35:140 0 170 -21866 0 0 0 0 0 0 0
+N35:150 0 0 0 0 0 0 0 0 0 0
+N35:160 0 0 0 0 0 0 0 0 0 0
+N35:170 0 0 0 0 0 0 0 0 0 0
+N35:180 0 0 0 0 0 0 0 0 0 0
+N35:190 0 0 0 0 0 0 0 0 0 0
+N35:200 0 0 0 0 0 0 0 0 0 0
+N35:210 0 0 0 0 0 0 0 0 0 0
+N35:220 0 0 0 0 0 0 0 0 0 0
+N35:230 0 0 0 0 0 0 0 0 0 0
+N35:240 0 0 0 0 0 0 0 0 0 0
+N35:250 0 0 0 0
+Page 1 (Radix Decimal) Saturday, January 03, 2026 - 15:05:28
+HUNGENBURG 250707.RSS
+Data File F36 -- COMM CUST
+Offset 0 1 2 3 4
+F36:0 0 0 0 0 0
+Page 1 Saturday, January 03, 2026 - 15:05:28
+HUNGENBURG 250707.RSS
+Data File N37 (dec) -- COMM CUST2 -- Cust2 IO via Modbus RTU - CHAN 2
+Offset 0 1 2 3 4 5 6 7 8 9
+N37:0 0 0 0 0 0 0 0 0 0 0
+N37:10 0 0 0 0 0 0 0 0 0 0
+N37:20 0 0 0 0 0 0 0 0 0 0
+N37:30 0 0 0 0 0 0 0 0 0 0
+N37:40 0 0 0 0 0 0 0 0 0 0
+N37:50 0 0 0 0 0 0 0 0 0 0
+N37:60 0 0 0 0 0 0 0 0 0 0
+N37:70 0 0 0 0 0 0 0 0 0 0
+N37:80 0 0 0 0 0 0 0 0 0 0
+N37:90 0 0 0 0 0 0 0 0 0 0
+N37:100 0 0 0 0 0 0 0 0 0 0
+N37:110 0 0 0 0 0 0 0 0 0 0
+N37:120 0 0 0 0 0 0 0 0 0 0
+N37:130 0 0 0 0 0 0 0 0 0 0
+N37:140 0 0 0 0 0 0 0 0 0 0
+N37:150 0 0 0 0 0 0 0 0 0 0
+Page 1 (Radix Decimal) Saturday, January 03, 2026 - 15:05:29
+HUNGENBURG 250707.RSS
+Data File N40 (dec) -- CTRL LOOPS
+Offset 0 1 2 3 4 5 6 7 8 9
+N40:0 0 0 0 0
+Page 1 (Radix Decimal) Saturday, January 03, 2026 - 15:05:29
+HUNGENBURG 250707.RSS
+Data File T41 -- CTRL LOOPS
+Offset EN TT DN BASE PRE ACC (Symbol) Description
+T41:0 0 0 0 1.0 sec 2 0 (STW1_WAIT_TMR) STW1 Wait Timer
+T41:1 0 0 0 1.0 sec 1 0 (STW2_WAIT_TMR) STW2 Wait Timer
+Page 1 Saturday, January 03, 2026 - 15:05:29
+HUNGENBURG 250707.RSS
+Data File F42 -- CTRL LOOPS
+Offset 0 1 2 3 4
+F42:0 1100 0 -1100 1100 10
+F42:5 0.05 10 66 10 10
+F42:10 11 55 110 165 220
+F42:15 1 5 10 15 20
+F42:20 1 2 2 3 4
+F42:25 0.01 0.05 0.25 1 3
+F42:30 35 2.065484 -32.93452 32.93452 0.1
+F42:35 0.01 30 66 30 30
+F42:40 1.75 2.625 3.5 5.25 7
+F42:45 5 7.5 10 15 20
+F42:50 1 1 2 2 3
+F42:55 0.01 0.05 0.25 1 3
+Page 1 Saturday, January 03, 2026 - 15:05:29
+HUNGENBURG 250707.RSS
+Data File N50 (dec) -- MEAS RUN
+Offset 0 1 2 3 4 5 6 7 8 9
+N50:0 0 4 0 0 0 0 0 0 0 0
+Page 1 (Radix Decimal) Saturday, January 03, 2026 - 15:05:30
+HUNGENBURG 250707.RSS
+Data File F51 -- MEAS RUN
+Offset 0 1 2 3 4
+F51:0 0 1405265 0 0.9 0
+F51:5 1100 1.0022 0 1 0
+F51:10 1 0 1 0 1
+F51:15 0 1 0 1 0
+F51:20 1 0 1 0 1
+F51:25 0 1 0 1 0
+F51:30 1 0.05 54 34.5 66
+F51:35 1100 1.0032 0 1 0
+F51:40 1 0 1 0 1
+F51:45 0 1 0 1 0
+F51:50 1 0 1 0 1
+F51:55 0 1 0 1 0
+F51:60 1 0.05 52.4 34.5 51
+F51:65 1100 1.0008 0 1 0
+F51:70 1 0 1 0 1
+F51:75 0 1 0 1 0
+F51:80 1 0 1 0 1
+F51:85 0 1 0 1 0
+F51:90 1 0.05 53.2 34.5 92
+F51:95 9.33 9.597 9.831 0 0
+Page 1 Saturday, January 03, 2026 - 15:05:30
+HUNGENBURG 250707.RSS
+Data File T52 -- MEAS RUN
+Offset EN TT DN BASE PRE ACC (Symbol) Description
+T52:0 0 0 0 .01 sec 25 0 (SAMPLER_ON)
+T52:1 0 0 0 .01 sec 100 0 (SAMPLER_LOOP)
+T52:2 0 0 0 .01 sec 0 0
+T52:3 0 0 0 1.0 sec 5 0 Flowrate Order Error Hold
+T52:4 0 0 0 1.0 sec 5 0 Flowrate Minimum Error Hold
+T52:5 0 0 0 1.0 sec 5 0 Proving Name or Company or Witness too short
+T52:6 0 0 0 1.0 sec 5 0 Proving Submitted Success
+T52:7 0 0 0 .01 sec 0 0
+T52:8 0 0 0 1.0 sec 5 0 Grind Out Name or Company or Witness too short
+T52:9 0 0 0 1.0 sec 5 0 Grind Out Values Outside Min/Max
+T52:10 0 0 0 1.0 sec 5 0 Grind Out Submitted Success
+T52:11 0 0 0 .01 sec 100 0 Grind Out Batch End Cmd
+T52:12 0 0 0 .01 sec 100 0 Grind Out Recalculate Cmd
+T52:13 0 0 0 .01 sec 0 0
+T52:14 0 0 0 1.0 sec 5 0 RVP Name or Company or Witness too short
+T52:15 0 0 0 1.0 sec 5 0 RVP Value Outside Min/Max
+T52:16 0 0 0 1.0 sec 5 0 RVP Submitted Success
+T52:17 0 0 0 .01 sec 0 0
+T52:18 0 0 0 .01 sec 0 0
+T52:19 0 0 0 .01 sec 0 0
+Page 1 Saturday, January 03, 2026 - 15:05:30
+HUNGENBURG 250707.RSS
+Data File ST53 -- MEAS RUN
+Offset LEN String Text (Symbol) Description
+ST53:0 0
+ST53:1 0
+ST53:2 0
+ST53:3 4 Cody
+ST53:4 3 SPL
+ST53:5 4 none
+ST53:6 18 5/08/2025 16:54:28
+ST53:7 3 Ben
+ST53:8 3 SPL
+ST53:9 4 none
+ST53:10 18 11/08/2024 9:33:38
+ST53:11 6 Arnold
+ST53:12 3 SPL
+ST53:13 4 none
+ST53:14 18 9/25/2024 11:43:06
+ST53:15 0
+ST53:16 0
+ST53:17 0
+ST53:18 4 Mike
+ST53:19 3 Vol
+ST53:20 7 2.01.23
+ST53:21 17 2/01/2023 9:11:14
+ST53:22 4 mike
+ST53:23 3 vol
+ST53:24 7 1.03.23
+ST53:25 17 1/03/2023 8:56:32
+ST53:26 6 Todd B
+ST53:27 3 SAS
+ST53:28 4 none
+ST53:29 17 8/05/2020 9:20:06
+ST53:30 4 Jake
+ST53:31 3 SPL
+ST53:32 7 6/13/25
+ST53:33 4 Jake
+ST53:34 3 SPL
+ST53:35 7 6/13/25
+ST53:36 18 6/13/2025 14:11:38
+ST53:37 4 Jake
+ST53:38 3 SPL
+ST53:39 7 5/21/25
+ST53:40 18 5/21/2025 12:13:48
+ST53:41 7 Charles
+ST53:42 3 SPL
+ST53:43 3 n/a
+ST53:44 18 4/17/2025 13:02:58
+Page 1 Saturday, January 03, 2026 - 15:05:31
+HUNGENBURG 250707.RSS
+Data File B200 (bin) -- AD BITS
+Offset 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0 (Symbol) Description
+B200:0 0 1 0 0 1 0 0 0 0 0 1 0 1 0 1 1
+B200:1 0 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0
+B200:2 0 1 0 0 1 0 0 0 0 0 1 0 0 0 1 0
+B200:3 0 1 0 0 1 0 0 0 0 0 0 0 1 0 1 1
+B200:4 0 1 0 0 1 0 0 0 0 0 1 0 1 0 1 1
+B200:5 0 0 0 0 1 0 0 0 0 0 0 1 1 0 1 0
+B200:6 0 0 0 0 1 0 0 0 0 0 0 1 1 0 1 0
+B200:7 0 1 0 0 1 0 0 0 0 0 0 0 0 0 1 0
+B200:8 0 1 0 0 1 0 0 0 0 0 0 0 1 0 1 1
+B200:9 0 1 0 0 1 0 0 0 0 0 0 1 1 0 1 0
+B200:10 0 0 0 0 1 0 0 0 0 0 0 1 1 0 1 0
+B200:11 0 0 0 0 1 0 0 0 0 0 0 1 1 0 1 0
+B200:12 0 0 0 0 1 0 0 0 0 0 0 1 1 0 1 0
+B200:13 0 1 0 0 1 0 0 0 0 0 0 0 1 0 1 1
+B200:14 0 1 0 0 1 0 0 0 0 0 0 0 1 0 1 1
+B200:15 0 0 0 0 1 0 0 0 0 0 0 1 1 0 1 0
+B200:16 0 0 0 0 1 0 0 0 0 0 0 1 1 0 1 0
+B200:17 0 0 0 0 1 0 0 0 0 0 0 1 1 0 1 0
+B200:18 0 0 0 0 1 0 0 0 0 0 0 1 1 0 1 0
+B200:19 0 1 0 0 1 0 0 0 0 0 0 0 0 0 1 0
+B200:20 0 1 0 0 1 0 0 0 0 0 0 0 0 0 1 0
+B200:21 0 0 0 0 1 0 0 0 0 0 0 1 1 0 1 0
+B200:22 0 0 0 0 1 0 0 0 0 0 0 1 1 0 1 0
+B200:23 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+B200:24 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+B200:25 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+B200:26 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+B200:27 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+B200:28 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+B200:29 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+B200:30 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+B200:31 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+Page 1 (Radix Binary) Saturday, January 03, 2026 - 15:05:31
+HUNGENBURG 250707.RSS
+Data File T201 -- AD TMRS
+Offset EN TT DN BASE PRE ACC (Symbol) Description
+T201:0 0 0 0 1.0 sec 0 0 DIG TMR ESD Input
+T201:1 0 0 0 1.0 sec 1 0 DIG TMR Site Permissive
+T201:2 0 0 0 1.0 sec 30 0 DIG TMR Divert Valve
+T201:3 0 0 0 1.0 sec 300 0 DIG TMR Sump Pit
+T201:4 0 0 0 1.0 sec 5 0 DIG TMR Sample Pot
+T201:5 0 0 0 1.0 sec 1 0 DIG TMR Exhaust Fan SW
+T201:6 0 0 0 1.0 sec 300 0 DIG TMR Sump Pump Running
+T201:7 0 0 0 1.0 sec 60 0 DIG TMR SDV-104 Closed
+T201:8 0 0 0 1.0 sec 60 0 DIG TMR SDV-104 Open
+T201:9 0 0 0 1.0 sec 5 0 DIG TMR AC Power
+T201:10 0 0 0 1.0 sec 5 0 DIG TMR COMM ROC
+T201:11 0 0 0 1.0 sec 5 0 DIG TMR LL Suction
+T201:12 0 0 0 1.0 sec 5 0 DIG TMR SMADA Permissive
+T201:13 0 0 0 1.0 sec 5 0 DIG TMR Terminal Permissive
+T201:14 0 0 0 1.0 sec 1 0 DIG TMR VFD1 Fault
+T201:15 0 0 0 1.0 sec 5 0 DIG TMR VFD1 Comm Fault
+T201:16 0 0 0 1.0 sec 5 0 DIG TMR VFD2 Fault
+T201:17 0 0 0 1.0 sec 5 0 DIG TMR VFD2 Comm Fault
+T201:18 0 0 0 1.0 sec 5 0 DIG TMR
+T201:19 0 0 0 1.0 sec 5 0 DIG TMR
+T201:20 0 0 0 1.0 sec 5 0 DIG TMR
+T201:21 0 0 0 1.0 sec 20 0 DIG TMR
+T201:22 0 0 0 1.0 sec 10 0 DIG TMR
+T201:23 0 0 0 1.0 sec 5 0 DIG TMR
+T201:24 0 0 0 1.0 sec 5 0 DIG TMR
+T201:25 0 0 0 1.0 sec 5 0 DIG TMR
+T201:26 0 0 0 1.0 sec 5 0 DIG TMR
+T201:27 0 0 0 1.0 sec 5 0 DIG TMR
+T201:28 0 0 0 1.0 sec 5 0 DIG TMR
+T201:29 0 0 0 1.0 sec 5 0 DIG TMR
+T201:30 0 0 0 1.0 sec 5 0 DIG TMR
+T201:31 0 0 0 1.0 sec 5 0 DIG TMR
+Page 1 Saturday, January 03, 2026 - 15:05:31
+HUNGENBURG 250707.RSS
+Data File N210 (dec) -- AA IN RAW
+Offset 0 1 2 3 4 5 6 7 8 9
+N210:0 0 858 815 0 0 10466 10575 0 952 6237
+N210:10 0 0 0 6299 0 0 0 0 0 0
+N210:20 0 0 0 0 0 0 0 0 0 0
+N210:30 0 0
+Page 1 (Radix Decimal) Saturday, January 03, 2026 - 15:05:31
+HUNGENBURG 250707.RSS
+Data File N211 (dec) -- AA IN MIN
+Offset 0 1 2 3 4 5 6 7 8 9
+N211:0 0 812 813 0 0 6250 6250 6250 820 6341
+N211:10 0 6250 0 6266 0 0 0 0 0 0
+N211:20 0 0 0 0 0 0 0 0 0 0
+N211:30 0 0
+Page 1 (Radix Decimal) Saturday, January 03, 2026 - 15:05:32
+HUNGENBURG 250707.RSS
+Data File N212 (dec) -- AA IN MAX
+Offset 0 1 2 3 4 5 6 7 8 9
+N212:0 0 4080 4080 0 0 31200 31200 31200 4080 31200
+N212:10 0 31200 0 31200 0 0 0 0 0 0
+N212:20 0 0 0 0 0 0 0 0 0 0
+N212:30 0 0
+Page 1 (Radix Decimal) Saturday, January 03, 2026 - 15:05:32
+HUNGENBURG 250707.RSS
+Data File F213 -- AA OUT MIN
+Offset 0 1 2 3 4
+F213:0 0 0 0 0 0
+F213:5 -5 -5 -5 0 0
+F213:10 0 0 0 0 0
+F213:15 0 0 0 0 0
+F213:20 0 0 0 0 0
+F213:25 0 0 0 0 0
+F213:30 0 0
+Page 1 Saturday, January 03, 2026 - 15:05:32
+HUNGENBURG 250707.RSS
+Data File F214 -- AA OUT MAX
+Offset 0 1 2 3 4
+F214:0 7000 150 2000 66 66
+F214:5 30 30 30 100 100
+F214:10 5 300 200 2000 0
+F214:15 0 0 0 0 0
+F214:20 0 0 0 0 0
+F214:25 0 0 0 0 0
+F214:30 0 0
+Page 1 Saturday, January 03, 2026 - 15:05:33
+HUNGENBURG 250707.RSS
+Data File F215 -- AA OUT VAL
+Offset 0 1 2 3 4
+F215:0 0 2.065484 1.224365 0 0
+F215:5 0.9114227 1.067134 -0.1557112 4.04908 -0.4183596
+F215:10 -0.09004884 -0.2747253 89.42308 2.646988 0
+F215:15 0 0 0 0 0
+F215:20 0 0 0 0 0
+F215:25 0 0 0 0 0
+F215:30 0 0
+Page 1 Saturday, January 03, 2026 - 15:05:33
+HUNGENBURG 250707.RSS
+Data File B216 (bin) -- AA BITS
+Offset 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0 (Symbol) Description
+B216:0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 1
+B216:1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1
+B216:2 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1
+B216:3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+B216:4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+B216:5 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1
+B216:6 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1
+B216:7 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1
+B216:8 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 1
+B216:9 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 1
+B216:10 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 1
+B216:11 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1
+B216:12 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1
+B216:13 0 0 0 0 0 0 1 1 1 1 1 0 0 0 1 1
+B216:14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B216:15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B216:16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B216:17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B216:18 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B216:19 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B216:20 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B216:21 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B216:22 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B216:23 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B216:24 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B216:25 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B216:26 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B216:27 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B216:28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B216:29 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B216:30 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B216:31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Page 1 (Radix Binary) Saturday, January 03, 2026 - 15:05:33
+HUNGENBURG 250707.RSS
+Data File B217 (bin) -- AA BITS
+Offset 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0 (Symbol) Description
+B217:0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0
+B217:1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0
+B217:2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0
+B217:3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B217:4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B217:5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B217:6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B217:7 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0
+B217:8 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0
+B217:9 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0
+B217:10 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0
+B217:11 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+B217:12 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+B217:13 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+B217:14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B217:15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B217:16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B217:17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B217:18 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B217:19 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B217:20 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B217:21 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B217:22 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B217:23 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B217:24 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B217:25 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B217:26 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B217:27 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B217:28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B217:29 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B217:30 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B217:31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Page 1 (Radix Binary) Saturday, January 03, 2026 - 15:05:34
+HUNGENBURG 250707.RSS
+Data File B218 (bin) -- AA BITS
+Offset 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0 (Symbol) Description
+B218:0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:11 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:12 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:13 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:18 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:19 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:20 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:21 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:22 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:23 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:24 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:25 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:26 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:27 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:29 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:30 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+B218:31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Page 1 (Radix Binary) Saturday, January 03, 2026 - 15:05:34
+HUNGENBURG 250707.RSS
+Data File F219 -- AA HH SP
+Offset 0 1 2 3 4
+F219:0 7000 275 1300 0 66
+F219:5 0 0 3 20 20
+F219:10 0.3 150 0 1300 0
+F219:15 0 0 0 0 0
+F219:20 0 0 0 0 0
+F219:25 0 0 0 0 0
+F219:30 0 0
+Page 1 Saturday, January 03, 2026 - 15:05:34
+HUNGENBURG 250707.RSS
+Data File T220 -- AA HH TMR
+Offset EN TT DN BASE PRE ACC (Symbol) Description
+T220:0 0 0 0 1.0 sec 1 0 HH TMR FT-101
+T220:1 0 0 0 1.0 sec 3 0 HH TMR PIT-102
+T220:2 0 0 0 1.0 sec 1 0 HH TMR PIT-103
+T220:3 0 0 0 1.0 sec 3 0 HH TMR P-102
+T220:4 0 0 0 1.0 sec 3 0 HH TMR P-101
+T220:5 0 0 0 1.0 sec 3 0 HH TMR PIT-100A
+T220:6 0 0 0 1.0 sec 3 0 HH TMR PIT-100
+T220:7 0 0 0 1.0 sec 1 0 HH TMR DPIT-101
+T220:8 0 0 0 1.0 sec 1 0 HH TMR AIT-102
+T220:9 0 0 0 1.0 sec 3 0 HH TMR AIT-103
+T220:10 0 0 0 1.0 sec 300 0 HH TMR AIT-101
+T220:11 0 0 0 1.0 sec 3 0 HH TMR PIT-101
+T220:12 0 0 0 1.0 sec 3 0 HH TMR TIT-101
+T220:13 0 0 0 1.0 sec 3 0 HH TMR PIT-104
+T220:14 0 0 0 1.0 sec 3 0 HH TMR
+T220:15 0 0 0 1.0 sec 3 0 HH TMR
+T220:16 0 0 0 1.0 sec 3 0 HH TMR
+T220:17 0 0 0 1.0 sec 3 0 HH TMR
+T220:18 0 0 0 1.0 sec 3 0 HH TMR
+T220:19 0 0 0 1.0 sec 3 0 HH TMR
+T220:20 0 0 0 1.0 sec 3 0 HH TMR
+T220:21 0 0 0 1.0 sec 3 0 HH TMR
+T220:22 0 0 0 1.0 sec 3 0 HH TMR
+T220:23 0 0 0 1.0 sec 3 0 HH TMR
+T220:24 0 0 0 1.0 sec 3 0 HH TMR
+T220:25 0 0 0 1.0 sec 3 0 HH TMR
+T220:26 0 0 0 1.0 sec 3 0 HH TMR
+T220:27 0 0 0 1.0 sec 3 0 HH TMR
+T220:28 0 0 0 1.0 sec 3 0 HH TMR
+T220:29 0 0 0 1.0 sec 3 0 HH TMR
+T220:30 0 0 0 1.0 sec 3 0 HH TMR
+T220:31 0 0 0 1.0 sec 3 0 HH TMR
+Page 1 Saturday, January 03, 2026 - 15:05:34
+HUNGENBURG 250707.RSS
+Data File F221 -- AA H SP
+Offset 0 1 2 3 4
+F221:0 1210 75 1100 0 0
+F221:5 0 0 1.5 10 10
+F221:10 0.3 75 0 750 0
+F221:15 0 0 0 0 0
+F221:20 0 0 0 0 0
+F221:25 0 0 0 0 0
+F221:30 0 0
+Page 1 Saturday, January 03, 2026 - 15:05:35
+HUNGENBURG 250707.RSS
+Data File T222 -- AA H TMR
+Offset EN TT DN BASE PRE ACC (Symbol) Description
+T222:0 0 0 0 1.0 sec 1 0 H TMR FT-101
+T222:1 0 0 0 1.0 sec 1 0 H TMR PIT-102
+T222:2 0 0 0 1.0 sec 1 0 H TMR PIT-103
+T222:3 0 0 0 1.0 sec 1 0 H TMR P-102
+T222:4 0 0 0 1.0 sec 1 0 H TMR P-101
+T222:5 0 0 0 1.0 sec 1 0 H TMR PIT-100A
+T222:6 0 0 0 1.0 sec 1 0 H TMR PIT-100
+T222:7 0 0 0 1.0 sec 1 0 H TMR DPIT-101
+T222:8 0 0 0 1.0 sec 1 0 H TMR AIT-102
+T222:9 0 0 0 1.0 sec 1 0 H TMR AIT-103
+T222:10 0 0 0 1.0 sec 10 0 H TMR AIT-101
+T222:11 0 0 0 1.0 sec 1 0 H TMR PIT-101
+T222:12 0 0 0 1.0 sec 1 0 H TMR TIT-101
+T222:13 0 0 0 1.0 sec 1 0 H TMR PIT-104
+T222:14 0 0 0 1.0 sec 1 0 H TMR
+T222:15 0 0 0 1.0 sec 1 0 H TMR
+T222:16 0 0 0 1.0 sec 1 0 H TMR
+T222:17 0 0 0 1.0 sec 1 0 H TMR
+T222:18 0 0 0 1.0 sec 1 0 H TMR
+T222:19 0 0 0 1.0 sec 1 0 H TMR
+T222:20 0 0 0 1.0 sec 1 0 H TMR
+T222:21 0 0 0 1.0 sec 1 0 H TMR
+T222:22 0 0 0 1.0 sec 1 0 H TMR
+T222:23 0 0 0 1.0 sec 1 0 H TMR
+T222:24 0 0 0 1.0 sec 1 0 H TMR
+T222:25 0 0 0 1.0 sec 1 0 H TMR
+T222:26 0 0 0 1.0 sec 1 0 H TMR
+T222:27 0 0 0 1.0 sec 1 0 H TMR
+T222:28 0 0 0 1.0 sec 1 0 H TMR
+T222:29 0 0 0 1.0 sec 1 0 H TMR
+T222:30 0 0 0 1.0 sec 1 0 H TMR
+T222:31 0 0 0 1.0 sec 1 0 H TMR
+Page 1 Saturday, January 03, 2026 - 15:05:35
+HUNGENBURG 250707.RSS
+Data File F223 -- AA L SP
+Offset 0 1 2 3 4
+F223:0 990 20 100 0 0
+F223:5 0 0 0 0 0
+F223:10 0.3 10 0 150 0
+F223:15 0 0 0 0 0
+F223:20 0 0 0 0 0
+F223:25 0 0 0 0 0
+F223:30 0 0
+Page 1 Saturday, January 03, 2026 - 15:05:35
+HUNGENBURG 250707.RSS
+Data File T224 -- AA L TMR
+Offset EN TT DN BASE PRE ACC (Symbol) Description
+T224:0 0 0 0 1.0 sec 30 0 L TMR FT-101
+T224:1 0 0 0 1.0 sec 5 0 L TMR PIT-102
+T224:2 0 0 0 1.0 sec 15 0 L TMR PIT-103
+T224:3 0 0 0 1.0 sec 1 0 L TMR P-102
+T224:4 0 0 0 1.0 sec 1 0 L TMR P-101
+T224:5 0 0 0 1.0 sec 1 0 L TMR PIT-100A
+T224:6 0 0 0 1.0 sec 1 0 L TMR PIT-100
+T224:7 0 0 0 1.0 sec 1 0 L TMR DPIT-101
+T224:8 0 0 0 1.0 sec 1 0 L TMR AIT-102
+T224:9 0 0 0 1.0 sec 1 0 L TMR AIT-103
+T224:10 1 0 1 1.0 sec 30 30 L TMR AIT-101
+T224:11 0 0 0 1.0 sec 1 0 L TMR PIT-101
+T224:12 0 0 0 1.0 sec 1 0 L TMR TIT-101
+T224:13 0 0 0 1.0 sec 1 0 L TMR PIT-104
+T224:14 0 0 0 1.0 sec 1 0 L TMR
+T224:15 0 0 0 1.0 sec 1 0 L TMR
+T224:16 0 0 0 1.0 sec 1 0 L TMR
+T224:17 0 0 0 1.0 sec 1 0 L TMR
+T224:18 0 0 0 1.0 sec 1 0 L TMR
+T224:19 0 0 0 1.0 sec 1 0 L TMR
+T224:20 0 0 0 1.0 sec 1 0 L TMR
+T224:21 0 0 0 1.0 sec 1 0 L TMR
+T224:22 0 0 0 1.0 sec 1 0 L TMR
+T224:23 0 0 0 1.0 sec 1 0 L TMR
+T224:24 0 0 0 1.0 sec 1 0 L TMR
+T224:25 0 0 0 1.0 sec 1 0 L TMR
+T224:26 0 0 0 1.0 sec 1 0 L TMR
+T224:27 0 0 0 1.0 sec 1 0 L TMR
+T224:28 0 0 0 1.0 sec 1 0 L TMR
+T224:29 0 0 0 1.0 sec 1 0 L TMR
+T224:30 0 0 0 1.0 sec 1 0 L TMR
+T224:31 0 0 0 1.0 sec 1 0 L TMR
+Page 1 Saturday, January 03, 2026 - 15:05:36
+HUNGENBURG 250707.RSS
+Data File F225 -- AA LL SP
+Offset 0 1 2 3 4
+F225:0 200 10 10 0 0
+F225:5 0 0 0 0 0
+F225:10 0 0 0 0 0
+F225:15 0 0 0 0 0
+F225:20 0 0 0 0 0
+F225:25 0 0 0 0 0
+F225:30 0 0
+Page 1 Saturday, January 03, 2026 - 15:05:36
+HUNGENBURG 250707.RSS
+Data File T226 -- AA LL TMR
+Offset EN TT DN BASE PRE ACC (Symbol) Description
+T226:0 0 0 0 1.0 sec 45 0 LL TMR FT-101
+T226:1 0 0 0 1.0 sec 5 0 LL TMR PIT-102
+T226:2 0 0 0 1.0 sec 15 0 LL TMR PIT-103
+T226:3 0 0 0 1.0 sec 1 0 LL TMR P-102
+T226:4 0 0 0 1.0 sec 1 0 LL TMR P-101
+T226:5 0 0 0 1.0 sec 1 0 LL TMR PIT-100A
+T226:6 0 0 0 1.0 sec 1 0 LL TMR PIT-100
+T226:7 0 0 0 1.0 sec 1 0 LL TMR DPIT-101
+T226:8 0 0 0 1.0 sec 1 0 LL TMR AIT-102
+T226:9 0 0 0 1.0 sec 1 0 LL TMR AIT-103
+T226:10 0 0 0 1.0 sec 1 0 LL TMR AIT-101
+T226:11 0 0 0 1.0 sec 1 0 LL TMR PIT-101
+T226:12 0 0 0 1.0 sec 1 0 LL TMR TIT-101
+T226:13 0 0 0 1.0 sec 1 0 LL TMR PIT-104
+T226:14 0 0 0 1.0 sec 1 0 LL TMR
+T226:15 0 0 0 1.0 sec 1 0 LL TMR
+T226:16 0 0 0 1.0 sec 1 0 LL TMR
+T226:17 0 0 0 1.0 sec 1 0 LL TMR
+T226:18 0 0 0 1.0 sec 1 0 LL TMR
+T226:19 0 0 0 1.0 sec 1 0 LL TMR
+T226:20 0 0 0 1.0 sec 1 0 LL TMR
+T226:21 0 0 0 1.0 sec 1 0 LL TMR
+T226:22 0 0 0 1.0 sec 1 0 LL TMR
+T226:23 0 0 0 1.0 sec 1 0 LL TMR
+T226:24 0 0 0 1.0 sec 1 0 LL TMR
+T226:25 0 0 0 1.0 sec 1 0 LL TMR
+T226:26 0 0 0 1.0 sec 1 0 LL TMR
+T226:27 0 0 0 1.0 sec 1 0 LL TMR
+T226:28 0 0 0 1.0 sec 1 0 LL TMR
+T226:29 0 0 0 1.0 sec 1 0 LL TMR
+T226:30 0 0 0 1.0 sec 1 0 LL TMR
+T226:31 0 0 0 1.0 sec 1 0 LL TMR
+Page 1 Saturday, January 03, 2026 - 15:05:36
+HUNGENBURG 250707.RSS
+Data File N227 (dec) -- AA OOR H
+Offset 0 1 2 3 4 5 6 7 8 9
+N227:0 7000 4100 4800 0 0 32000 32000 32000 4100 32000
+N227:10 10 304 153 32000 0 0 0 0 0 0
+N227:20 0 0 0 0 0 0 0 0 0 0
+N227:30 0 0
+Page 1 (Radix Decimal) Saturday, January 03, 2026 - 15:05:37
+HUNGENBURG 250707.RSS
+Data File N228 (dec) -- AA OOR L
+Offset 0 1 2 3 4 5 6 7 8 9
+N228:0 195 200 200 0 0 3000 3000 3000 200 1000
+N228:10 -1 -3 -3 3000 0 0 0 0 0 0
+N228:20 0 0 0 0 0 0 0 0 0 0
+N228:30 0 0
+Page 1 (Radix Decimal) Saturday, January 03, 2026 - 15:05:37
+HUNGENBURG 250707.RSS
+Data File T229 -- AA OOR TMR
+Offset EN TT DN BASE PRE ACC (Symbol) Description
+T229:0 0 0 0 1.0 sec 30 0 OOR TMR FT-101
+T229:1 0 0 0 1.0 sec 10 0 OOR TMR PIT-102
+T229:2 0 0 0 1.0 sec 10 0 OOR TMR PIT-103
+T229:3 0 0 0 1.0 sec 10 0 OOR TMR P-102
+T229:4 0 0 0 1.0 sec 10 0 OOR TMR P-101
+T229:5 0 0 0 1.0 sec 10 0 OOR TMR PIT-100A
+T229:6 0 0 0 1.0 sec 10 0 OOR TMR PIT-100
+T229:7 0 0 0 1.0 sec 10 0 OOR TMR DPIT-101
+T229:8 0 0 0 1.0 sec 10 0 OOR TMR AIT-102
+T229:9 0 0 0 1.0 sec 60 0 OOR TMR AIT-103
+T229:10 0 0 0 1.0 sec 10 0 OOR TMR AIT-101
+T229:11 0 0 0 1.0 sec 10 0 OOR TMR PIT-101
+T229:12 0 0 0 1.0 sec 10 0 OOR TMR TIT-101
+T229:13 0 0 0 1.0 sec 10 0 OOR TMR PIT-104
+T229:14 0 0 0 1.0 sec 10 0 OOR TMR
+T229:15 0 0 0 1.0 sec 10 0 OOR TMR
+T229:16 0 0 0 1.0 sec 10 0 OOR TMR
+T229:17 0 0 0 1.0 sec 10 0 OOR TMR
+T229:18 0 0 0 1.0 sec 10 0 OOR TMR
+T229:19 0 0 0 1.0 sec 10 0 OOR TMR
+T229:20 0 0 0 1.0 sec 10 0 OOR TMR
+T229:21 0 0 0 1.0 sec 10 0 OOR TMR
+T229:22 0 0 0 1.0 sec 10 0 OOR TMR
+T229:23 0 0 0 1.0 sec 10 0 OOR TMR
+T229:24 0 0 0 1.0 sec 10 0 OOR TMR
+T229:25 0 0 0 1.0 sec 10 0 OOR TMR
+T229:26 0 0 0 1.0 sec 10 0 OOR TMR
+T229:27 0 0 0 1.0 sec 10 0 OOR TMR
+T229:28 0 0 0 1.0 sec 10 0 OOR TMR
+T229:29 0 0 0 1.0 sec 10 0 OOR TMR
+T229:30 0 0 0 1.0 sec 10 0 OOR TMR
+T229:31 0 0 0 1.0 sec 10 0 OOR TMR
+Page 1 Saturday, January 03, 2026 - 15:05:37
+HUNGENBURG 250707.RSS
+Data File ST240 -- USERS -- Usernames
+Offset LEN String Text (Symbol) Description
+ST240:0 9 Autoelect
+ST240:1 3 Ops
+ST240:2 3 Sup
+ST240:3 6 Prover
+ST240:4 5 Admin
+ST240:5 0
+ST240:6 0
+ST240:7 0
+ST240:8 0
+ST240:9 0
+Page 1 Saturday, January 03, 2026 - 15:05:37
+HUNGENBURG 250707.RSS
+Data File ST241 -- USER PWDS -- passwords to go with usernames
+Offset LEN String Text (Symbol) Description
+ST241:0 8 Auto5349
+ST241:1 5 sleet
+ST241:2 7 ch3vron
+ST241:3 13 Vol10ume30inc
+ST241:4 10 ch3vronadm
+ST241:5 0
+ST241:6 0
+ST241:7 0
+ST241:8 0
+ST241:9 0
+Page 1 Saturday, January 03, 2026 - 15:05:38
+HUNGENBURG 250707.RSS
+Data File N242 (dec) -- USER CODES -- security code for the user
+Offset 0 1 2 3 4 5 6 7 8 9
+N242:0 -6385 3 7 8195 18191 0 0 0 0 -6385
+Page 1 (Radix Decimal) Saturday, January 03, 2026 - 15:05:38
+HUNGENBURG 250707.RSS
+Data File N243 (dec) -- USER LOGIN -- mechanics for the login process
+Offset 0 1 2 3 4 5 6 7 8 9
+N243:0 -27520 0 0 9 0 0 8 0 -1 5521
+N243:10 5521 5521 3
+Page 1 (Radix Decimal) Saturday, January 03, 2026 - 15:05:38
+HUNGENBURG 250707.RSS
+Data File ST244 -- USER LOGIN -- mechanics for the login process
+Offset LEN String Text (Symbol) Description
+ST244:0 0 (ENTERED
+ST244:1 0 (ENTERED
+ST244:2 0 (CURRENT
+ST244:3 0
+Page 1 Saturday, January 03, 2026 - 15:05:38
+HUNGENBURG 250707.RSS
+Data File T245 -- USERLOGOUT -- logout timer
+Offset EN TT DN BASE PRE ACC (Symbol) Description
+T245:0 0 0 0 1.0 sec 900 0 (AUTO_LOGOUT_TMR) AUTOMATIC
+T245:1 0 0 0 1.0 sec 5 0 (SCREEN_FORCE_TMR) Timer to hold the
+T245:2 0 0 0 1.0 sec 1 0
+Page 1 Saturday, January 03, 2026 - 15:05:39
+HUNGENBURG 250707.RSS
+Data File L246 (dec) -- USER LOGIN -- Long for login mech
+Offset 0 1 2 3 4
+L246:0 -588129039 -237178404 1093812786
+Page 1 (Radix Decimal) Saturday, January 03, 2026 - 15:05:39
+HUNGENBURG 250707.RSS
+Data File N248 (dec) -- RTC VALUES
+Offset 0 1 2 3 4 5 6 7 8 9
+N248:0 0 2025 7 7 11 4 4 1 0 0
+N248:10 0 0 0 0 0 0 0 0
+Page 1 (Radix Decimal) Saturday, January 03, 2026 - 15:05:39
+HUNGENBURG 250707.RSS
+Data File ST249 -- RTC STRING
+Offset LEN String Text (Symbol) Description
+ST249:0 4 /: 0 DateTime
+ST249:1 1 6 DateTime
+ST249:2 18 7/07/2025 11:04:06 DateTime
+Page 1 Saturday, January 03, 2026 - 15:05:40
+HUNGENBURG 250707.RSS
+Data File ST250 -- USER LOGIN
+Offset LEN String Text (Symbol) Description
+ST250:0 4 Lory Site Nam
+ST250:1 3 PDC Customer
+ST250:2 10 02/??/2020 Startup
+ST250:3 4 4500 Designed
+ST250:4 3 750 Designed
+ST250:5 0
+ST250:6 0
+ST250:7 0
+ST250:8 0
+ST250:9 0
+ST250:10 0
+ST250:11 0
+ST250:12 0
+ST250:13 0
+ST250:14 0
+ST250:15 0
+ST250:16 0
+ST250:17 0
+ST250:18 0
+ST250:19 0
+Page 1 Saturday, January 03, 2026 - 15:05:40
+HUNGENBURG 250707.RSS
+CDM 0 - Untitled
+Address (Symbol) = Value [Description]
+Page 1 Saturday, January 03, 2026 - 15:05:40
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+Page 1 Saturday, January 03, 2026 - 15:05:42
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+VFD2 Comm Fault
+B3:0 Various Control Bits
+B3:0/0 AFI Global
+B3:0/1 NOOP Global
+B3:0/2 ACK_ALL Global
+B3:0/3 HMI_START Global HMI Start Button
+B3:0/4
+B3:0/5
+B3:0/6 LL_SUCT_RESET_ONS Global LL_SUCT_RESET_ONS
+B3:0/7
+B3:0/8
+B3:0/9
+B3:0/10 SDV-104 Low PSI Unit Enable (if PIT-103 HH SP < 1300 PSI)
+B3:0/11 SDV-104 Low PSI Unit Enable (if PIT-104 HH SP < 1300 PSI)
+B3:0/12 VFD1_FAULT_SOURCE Global VFD1 Fault Source Set to ON=Hardwired OFF=Ethernet
+B3:0/13 MAINT_MODE_TESTING Global Maintenance Mode Enable ALM PRE (For Alarms Testing)
+B3:0/14 SIM MODE Timer Start Coil
+B3:0/15 SIM MODE Reset
+B3:1 Permissive Bits
+B3:1/0 Permissive ALL
+B3:1/1 Permissive Digital ALM
+B3:1/2 Permissive Analog ALM 0-9
+B3:1/3 Permissive Analog ALM 19-Oct
+B3:1/4 Permissive Analog ALM 20-29
+B3:1/5 Permissive Analog ALM 30-31
+B3:1/6 Permissive Comm ALM
+B3:1/7 Permissive SMADA
+B3:1/8 Permissive Terminal
+B3:1/9 Permissive
+B3:1/10 Permissive
+B3:1/11 Permissive
+B3:1/12 Permissive
+B3:1/13 Permissive
+B3:1/14 Permissive
+B3:1/15 Permissive
+B3:2 Maintenance Bits
+B3:2/0 MAINT_MODE Global Maintenance Mode
+B3:2/1 Maintenance Mode
+B3:2/2 Maintenance Mode Spare
+B3:2/3 Maintenance Mode SAMPLER 1=Open
+B3:2/4 Maintenance Mode Spare
+B3:2/5 Maintenance Mode DIVERT VALVE 0=Divert 1=Open
+B3:2/6 Maintenance Mode EXHAUST FAN 1=On
+B3:2/7 Maintenance Mode SUMP PUMP 1=On
+B3:2/8 Maintenance Mode ALARM BEACON 1=On
+B3:2/9 Maintenance Mode SDV-104 Actuate 1=open
+B3:2/10 Maintenance Mode SHUNT Trip
+B3:2/11 Maintenance Mode
+B3:2/12 Maintenance Mode
+B3:2/13 VFD1_P102_MAINT Global Maintenance Mode Pipeline Pump Run Cmd
+B3:2/14 Maintenance Mode Charge Pump Run Cmd
+B3:2/15 Maintenance Mode
+B3:3 Start Sequence Bits
+B3:4 Stop Sequence Bits
+B3:5 Run Options
+B3:5/0 Single/Multi Speed
+B3:5/1 LL Suction Restart Enable/Disable
+B3:5/2 HH BSW Counter Enable/Disable
+B3:5/13 FLOWRATE_IV_CUST Global BBL/D = 0 BBL/H = 1
+B3:5/14 FLOWRATE_GSV_CUST Global BBL/D = 0 BBL/H = 1
+B3:5/15 API = 0 g/cc = 1
+B3:6
+B3:7
+Page 2 Saturday, January 03, 2026 - 15:05:42
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B3:8
+B3:8/14 API Air Exchange Run Command
+B3:9 Various Control Bits
+B3:9/12 SHUNT TRIP on ESD First Scan Startup Delay (allows time for DI reads on PLC RUN & Power
+B3:10
+B3:11
+B3:12
+B3:13
+B3:14
+B3:15
+B3:16
+B3:17
+B3:18
+B3:19
+B3:20
+B3:21
+B3:22
+B3:23
+B3:24
+B3:25
+B3:26
+B3:27
+B3:28
+B3:29
+B3:30
+B3:31
+B3:32
+B30:0/0 SCADA Test Mode
+B30:0/1 SCADA Test ALL Bits
+B30:0/2 SCADA Test ALL Floats
+B30:0/3 SCADA Test ALL Strings
+B31:0/0 SMADA
+B31:0/1 SMADA
+B31:0/2 SMADA
+B31:0/3 SMADA
+B31:0/4 SMADA
+B31:0/5 SMADA
+B31:0/6 SMADA
+B31:0/7 SMADA
+B31:0/8 SMADA
+B31:0/9 SMADA
+B31:0/10 SMADA
+B31:0/11 SMADA
+B31:0/12 SMADA
+B31:0/13 SMADA
+B31:0/14 SMADA
+B31:0/15 SMADA
+B31:1/0 SMADA
+B31:1/1 SMADA
+B31:1/2 SMADA
+B31:1/3 SMADA
+B31:1/4 SMADA
+B31:1/5 SMADA
+B31:1/6 SMADA
+B31:1/7 SMADA
+B31:1/8 SMADA
+B31:1/9 SMADA
+B31:1/10 SMADA
+B31:1/11 SMADA
+B31:1/12 SMADA
+B31:1/13 SMADA
+B31:1/14 SMADA
+B31:1/15 SMADA
+B31:2/0 SMADA
+B31:2/1 SMADA
+B31:2/2 SMADA
+B31:2/3 SMADA
+B31:2/4 SMADA
+B31:2/5 SMADA
+B31:2/6 SMADA
+B31:2/7 SMADA
+B31:2/8 SMADA
+B31:2/9 SMADA
+B31:2/10 SMADA
+B31:2/11 SMADA
+B31:2/12 SMADA
+B31:2/13 SMADA
+B31:2/14 SMADA
+B31:2/15 SMADA
+B31:3/0 SMADA
+B31:3/1 SMADA
+B31:3/2 SMADA
+B31:3/3 SMADA
+B31:3/4 SMADA - Prover Logged In
+B31:3/5 SMADA
+Page 3 Saturday, January 03, 2026 - 15:05:42
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B31:3/6 SMADA
+B31:3/7 SMADA
+B31:3/8 SMADA
+B31:3/9 SMADA
+B31:3/10 SMADA
+B31:3/11 SMADA
+B31:3/12 SMADA
+B31:3/13 SMADA
+B31:3/14 SMADA
+B31:3/15 SMADA
+B31:4/0 SMADA
+B31:4/1 SMADA
+B31:4/2 SMADA
+B31:4/3 SMADA
+B31:4/4 SMADA
+B31:4/5 SMADA
+B31:4/6 SMADA
+B31:4/7 SMADA
+B31:4/8 SMADA
+B31:4/9 SMADA
+B31:4/10 SMADA
+B31:4/11 SMADA
+B31:4/12 SMADA
+B31:4/13 SMADA
+B31:4/14 SMADA
+B31:4/15 SMADA
+B31:5/0 SMADA
+B31:5/1 SMADA
+B31:5/2 SMADA
+B31:5/3 SMADA
+B31:5/4 SMADA
+B31:5/5 SMADA
+B31:5/6 SMADA
+B31:5/7 SMADA
+B31:5/8 SMADA
+B31:5/9 SMADA
+B31:5/10 SMADA
+B31:5/11 SMADA
+B31:5/12 SMADA
+B31:5/13 SMADA
+B31:5/14 SMADA
+B31:5/15 SMADA
+B200:0/0 ESD_INPUT Global INPUT ESD Input 0=ESD
+B200:0/1 EXISTS ESD Input
+B200:0/2 INHIBIT ESD Input
+B200:0/3 ARM ESD Input
+B200:0/4 ALARM STATE ESD Input
+B200:0/5 LATCHING ESD Input
+B200:0/6 SD BYPASS ESD Input
+B200:0/7 ALM ESD Input
+B200:0/8 SD ESD Input
+B200:0/9 ACK ESD Input
+B200:0/10 ESD Input
+B200:0/11 ESD Input
+B200:0/12 SIM SD ESD Input
+B200:0/13 SIM ALARM ESD Input
+B200:0/14 SIM INPUT ESD Input
+B200:0/15 SIM MODE ESD Input
+B200:1/0 SITE_PERMISSIVE Global INPUT Site Permissive 1=Run
+B200:1/1 EXISTS Site Permissive
+B200:1/2 INHIBIT Site Permissive
+B200:1/3 ARM Site Permissive
+B200:1/4 ALARM STATE Site Permissive
+B200:1/5 LATCHING Site Permissive
+B200:1/6 SD BYPASS Site Permissive
+B200:1/7 ALM Site Permissive
+B200:1/8 SD Site Permissive
+B200:1/9 ACK Site Permissive
+B200:1/10 Site Permissive
+B200:1/11 Site Permissive
+B200:1/12 SIM SD Site Permissive
+B200:1/13 SIM ALARM Site Permissive
+B200:1/14 SIM INPUT Site Permissive
+B200:1/15 SIM MODE Site Permissive
+B200:2/0 DIVERT_VALVE Global INPUT Divert Valve 1=Open
+B200:2/1 EXISTS Divert Valve
+B200:2/2 INHIBIT Divert Valve
+B200:2/3 ARM Divert Valve
+B200:2/4 ALARM STATE Divert Valve
+B200:2/5 LATCHING Divert Valve
+B200:2/6 SD BYPASS Divert Valve
+B200:2/7 ALM Divert Valve
+B200:2/8 SD Divert Valve
+B200:2/9 ACK Divert Valve
+B200:2/10 Divert Valve
+Page 4 Saturday, January 03, 2026 - 15:05:43
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B200:2/11 Divert Valve
+B200:2/12 SIM SD Divert Valve
+B200:2/13 SIM ALARM Divert Valve
+B200:2/14 SIM INPUT Divert Valve
+B200:2/15 SIM MODE Divert Valve
+B200:3/0 SUMP_PIT Global INPUT Sump Pit 0=H 1=L
+B200:3/1 EXISTS Sump Pit
+B200:3/2 INHIBIT Sump Pit
+B200:3/3 ARM Sump Pit
+B200:3/4 ALARM STATE Sump Pit
+B200:3/5 LATCHING Sump Pit
+B200:3/6 SD BYPASS Sump Pit
+B200:3/7 ALM Sump Pit
+B200:3/8 SD Sump Pit
+B200:3/9 ACK Sump Pit
+B200:3/10 Sump Pit
+B200:3/11 Sump Pit
+B200:3/12 SIM SD Sump Pit
+B200:3/13 SIM ALARM Sump Pit
+B200:3/14 SIM INPUT Sump Pit
+B200:3/15 SIM MODE Sump Pit
+B200:4/0 SAMPLE_POT Global INPUT Sample Pot 0=H 1=L
+B200:4/1 EXISTS Sample Pot
+B200:4/2 INHIBIT Sample Pot
+B200:4/3 ARM Sample Pot
+B200:4/4 ALARM STATE Sample Pot
+B200:4/5 LATCHING Sample Pot
+B200:4/6 SD BYPASS Sample Pot
+B200:4/7 ALM Sample Pot
+B200:4/8 SD Sample Pot
+B200:4/9 ACK Sample Pot
+B200:4/10 Sample Pot
+B200:4/11 Sample Pot
+B200:4/12 SIM SD Sample Pot
+B200:4/13 SIM ALARM Sample Pot
+B200:4/14 SIM INPUT Sample Pot
+B200:4/15 SIM MODE Sample Pot
+B200:5/0 EXHAUST_FAN_SW Global INPUT Exhaust Fan SW 0=A 1=H
+B200:5/1 EXISTS Exhaust Fan SW
+B200:5/2 INHIBIT Exhaust Fan SW
+B200:5/3 ARM Exhaust Fan SW
+B200:5/4 ALARM STATE Exhaust Fan SW
+B200:5/5 LATCHING Exhaust Fan SW
+B200:5/6 SD BYPASS Exhaust Fan SW
+B200:5/7 ALM Exhaust Fan SW
+B200:5/8 SD Exhaust Fan SW
+B200:5/9 ACK Exhaust Fan SW
+B200:5/10 Exhaust Fan SW
+B200:5/11 Exhaust Fan SW
+B200:5/12 SIM SD Exhaust Fan SW
+B200:5/13 SIM ALARM Exhaust Fan SW
+B200:5/14 SIM INPUT Exhaust Fan SW
+B200:5/15 SIM MODE Exhaust Fan SW
+B200:6/0 SUMP_PUMP_RUNNING Global INPUT Sump Pump Running 0=A 1=H
+B200:6/1 EXISTS Sump Pump Running
+B200:6/2 INHIBIT Sump Pump Running
+B200:6/3 ARM Sump Pump Running
+B200:6/4 ALARM STATE Sump Pump Running
+B200:6/5 LATCHING Sump Pump Running
+B200:6/6 SD BYPASS Sump Pump Running
+B200:6/7 ALM Sump Pump Running
+B200:6/8 SD Sump Pump Running
+B200:6/9 ACK Sump Pump Running
+B200:6/10 Sump Pump Running
+B200:6/11 Sump Pump Running
+B200:6/12 SIM SD Sump Pump Running
+B200:6/13 SIM ALARM Sump Pump Running
+B200:6/14 SIM INPUT Sump Pump Running
+B200:6/15 SIM MODE Sump Pump Running
+B200:7/0 INPUT SDV-104 Closed 1=Closed
+B200:7/1 EXISTS SDV-104 Closed
+B200:7/2 INHIBIT SDV-104 Closed
+B200:7/3 ARM SDV-104 Closed
+B200:7/4 ALARM STATE SDV-104 Closed
+B200:7/5 LATCHING SDV-104 Closed
+B200:7/6 SD BYPASS SDV-104 Closed
+B200:7/7 ALM SDV-104 Closed
+B200:7/8 SD SDV-104 Closed
+B200:7/9 ACK SDV-104 Closed
+B200:7/10 SDV-104 Closed
+B200:7/11 SDV-104 Closed
+B200:7/12 SIM SD SDV-104 Closed
+B200:7/13 SIM ALARM SDV-104 Closed
+B200:7/14 SIM INPUT SDV-104 Closed
+B200:7/15 SIM MODE SDV-104 Closed
+Page 5 Saturday, January 03, 2026 - 15:05:43
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B200:8/0 INPUT SDV-104 Open
+B200:8/1 EXISTS SDV-104 Open
+B200:8/2 INHIBIT SDV-104 Open
+B200:8/3 ARM SDV-104 Open
+B200:8/4 ALARM STATE SDV-104 Open
+B200:8/5 LATCHING SDV-104 Open
+B200:8/6 SD BYPASS SDV-104 Open
+B200:8/7 ALM SDV-104 Open
+B200:8/8 SD SDV-104 Open
+B200:8/9 ACK SDV-104 Open
+B200:8/10 SDV-104 Open
+B200:8/11 SDV-104 Open
+B200:8/12 SIM SD SDV-104 Open
+B200:8/13 SIM ALARM SDV-104 Open
+B200:8/14 SIM INPUT SDV-104 Open
+B200:8/15 SIM MODE SDV-104 Open
+B200:9/0 AC_POWER Global INPUT AC Power 0=Power
+B200:9/1 EXISTS AC Power
+B200:9/2 INHIBIT AC Power
+B200:9/3 ARM AC Power
+B200:9/4 ALARM STATE AC Power
+B200:9/5 LATCHING AC Power
+B200:9/6 SD BYPASS AC Power
+B200:9/7 ALM AC Power
+B200:9/8 SD AC Power
+B200:9/9 ACK AC Power
+B200:9/10 AC Power
+B200:9/11 AC Power
+B200:9/12 SIM SD AC Power
+B200:9/13 SIM ALARM AC Power
+B200:9/14 SIM INPUT AC Power
+B200:9/15 SIM MODE AC Power
+B200:10/0 COMM_ROC Global INPUT COMM ROC Heartbeat Stale
+B200:10/1 EXISTS COMM ROC Heartbeat Stale
+B200:10/2 INHIBIT COMM ROC Heartbeat Stale
+B200:10/3 ARM COMM ROC Heartbeat Stale
+B200:10/4 ALARM STATE COMM ROC Heartbeat Stale
+B200:10/5 LATCHING COMM ROC Heartbeat Stale
+B200:10/6 SD BYPASS COMM ROC Heartbeat Stale
+B200:10/7 ALM COMM ROC Heartbeat Stale
+B200:10/8 SD COMM ROC Heartbeat Stale
+B200:10/9 ACK COMM ROC Heartbeat Stale
+B200:10/10 COMM ROC Heartbeat Stale
+B200:10/11 COMM ROC Heartbeat Stale
+B200:10/12 SIM SD COMM ROC Heartbeat Stale
+B200:10/13 SIM ALARM COMM ROC Heartbeat Stale
+B200:10/14 SIM INPUT COMM ROC Heartbeat Stale
+B200:10/15 SIM MODE COMM ROC Heartbeat Stale
+B200:11/0 LL_SUCTION Global INPUT LL Suction Retry Counter
+B200:11/1 EXISTS LL Suction Retry Counter
+B200:11/2 INHIBIT LL Suction Retry Counter
+B200:11/3 ARM LL Suction Retry Counter
+B200:11/4 ALARM STATE LL Suction Retry Counter
+B200:11/5 LATCHING LL Suction Retry Counter
+B200:11/6 SD BYPASS LL Suction Retry Counter
+B200:11/7 ALM LL Suction Retry Counter
+B200:11/8 SD LL Suction Retry Counter
+B200:11/9 ACK LL Suction Retry Counter
+B200:11/10 LL Suction Retry Counter
+B200:11/11 LL Suction Retry Counter
+B200:11/12 SIM SD LL Suction Retry Counter
+B200:11/13 SIM ALARM LL Suction Retry Counter
+B200:11/14 SIM INPUT LL Suction Retry Counter
+B200:11/15 SIM MODE LL Suction Retry Counter
+B200:12/0 HH_BSW Global INPUT HH BSW Retry Counter
+B200:12/1 EXISTS HH BSW Retry Counter
+B200:12/2 INHIBIT HH BSW Retry Counter
+B200:12/3 ARM HH BSW Retry Counter
+B200:12/4 ALARM STATE HH BSW Retry Counter
+B200:12/5 LATCHING HH BSW Retry Counter
+B200:12/6 SD BYPASS HH BSW Retry Counter
+B200:12/7 ALM HH BSW Retry Counter
+B200:12/8 SD HH BSW Retry Counter
+B200:12/9 ACK HH BSW Retry Counter
+B200:12/10 HH BSW Retry Counter
+B200:12/11 HH BSW Retry Counter
+B200:12/12 SIM SD HH BSW Retry Counter
+B200:12/13 SIM ALARM HH BSW Retry Counter
+B200:12/14 SIM INPUT HH BSW Retry Counter
+B200:12/15 SIM MODE HH BSW Retry Counter
+B200:13/0 SMADA_PERMISSIVE Global INPUT SMADA Permissive
+B200:13/1 EXISTS SMADA Permissive
+B200:13/2 INHIBIT SMADA Permissive
+B200:13/3 ARM SMADA Permissive
+B200:13/4 ALARM STATE SMADA Permissive
+Page 6 Saturday, January 03, 2026 - 15:05:43
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B200:13/5 LATCHING SMADA Permissive
+B200:13/6 SD BYPASS SMADA Permissive
+B200:13/7 ALM SMADA Permissive
+B200:13/8 SD SMADA Permissive
+B200:13/9 ACK SMADA Permissive
+B200:13/10 SMADA Permissive
+B200:13/11 SMADA Permissive
+B200:13/12 SIM SD SMADA Permissive
+B200:13/13 SIM ALARM SMADA Permissive
+B200:13/14 SIM INPUT SMADA Permissive
+B200:13/15 SIM MODE SMADA Permissive
+B200:14/0 TERMINAL_PERMISSIVE Global INPUT Terminal Permissive
+B200:14/1 EXISTS Terminal Permissive
+B200:14/2 INHIBIT Terminal Permissive
+B200:14/3 ARM Terminal Permissive
+B200:14/4 ALARM STATE Terminal Permissive
+B200:14/5 LATCHING Terminal Permissive
+B200:14/6 SD BYPASS Terminal Permissive
+B200:14/7 ALM Terminal Permissive
+B200:14/8 SD Terminal Permissive
+B200:14/9 ACK Terminal Permissive
+B200:14/10 Terminal Permissive
+B200:14/11 Terminal Permissive
+B200:14/12 SIM SD Terminal Permissive
+B200:14/13 SIM ALARM Terminal Permissive
+B200:14/14 SIM INPUT Terminal Permissive
+B200:14/15 SIM MODE Terminal Permissive
+B200:15/0 VFD1_FAULT Global INPUT VFD1 Fault
+B200:15/1 EXISTS VFD1 Fault
+B200:15/2 INHIBIT VFD1 Fault
+B200:15/3 ARM VFD1 Fault
+B200:15/4 ALARM STATE VFD1 Fault
+B200:15/5 LATCHING VFD1 Fault
+B200:15/6 SD BYPASS VFD1 Fault
+B200:15/7 ALM VFD1 Fault
+B200:15/8 SD VFD1 Fault
+B200:15/9 ACK VFD1 Fault
+B200:15/10 VFD1 Fault
+B200:15/11 VFD1 Fault
+B200:15/12 SIM SD VFD1 Fault
+B200:15/13 SIM ALARM VFD1 Fault
+B200:15/14 SIM INPUT VFD1 Fault
+B200:15/15 SIM MODE VFD1 Fault
+B200:16/0 VFD1_COMM_FAULT Global INPUT VFD1 Comm Fault
+B200:16/1 EXISTS VFD1 Comm Fault
+B200:16/2 INHIBIT VFD1 Comm Fault
+B200:16/3 ARM VFD1 Comm Fault
+B200:16/4 ALARM STATE VFD1 Comm Fault
+B200:16/5 LATCHING VFD1 Comm Fault
+B200:16/6 SD BYPASS VFD1 Comm Fault
+B200:16/7 ALM VFD1 Comm Fault
+B200:16/8 SD VFD1 Comm Fault
+B200:16/9 ACK VFD1 Comm Fault
+B200:16/10 VFD1 Comm Fault
+B200:16/11 VFD1 Comm Fault
+B200:16/12 SIM SD VFD1 Comm Fault
+B200:16/13 SIM ALARM VFD1 Comm Fault
+B200:16/14 SIM INPUT VFD1 Comm Fault
+B200:16/15 SIM MODE VFD1 Comm Fault
+B200:17/0 VFD2_FAULT Global INPUT VFD2 Fault
+B200:17/1 EXISTS VFD2 Fault
+B200:17/2 INHIBIT VFD2 Fault
+B200:17/3 ARM VFD2 Fault
+B200:17/4 ALARM STATE VFD2 Fault
+B200:17/5 LATCHING VFD2 Fault
+B200:17/6 SD BYPASS VFD2 Fault
+B200:17/7 ALM VFD2 Fault
+B200:17/8 SD VFD2 Fault
+B200:17/9 ACK VFD2 Fault
+B200:17/10 VFD2 Fault
+B200:17/11 VFD2 Fault
+B200:17/12 SIM SD VFD2 Fault
+B200:17/13 SIM ALARM VFD2 Fault
+B200:17/14 SIM INPUT VFD2 Fault
+B200:17/15 SIM MODE VFD2 Fault
+B200:18/0 VFD2_COMM_FAULT Global INPUT VFD2 Comm Fault
+B200:18/1 EXISTS VFD2 Comm Fault
+B200:18/2 INHIBIT VFD2 Comm Fault
+B200:18/3 ARM VFD2 Comm Fault
+B200:18/4 ALARM STATE VFD2 Comm Fault
+B200:18/5 LATCHING VFD2 Comm Fault
+B200:18/6 SD BYPASS VFD2 Comm Fault
+B200:18/7 ALM VFD2 Comm Fault
+B200:18/8 SD VFD2 Comm Fault
+B200:18/9 ACK VFD2 Comm Fault
+Page 7 Saturday, January 03, 2026 - 15:05:43
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B200:18/10 VFD2 Comm Fault
+B200:18/11 VFD2 Comm Fault
+B200:18/12 SIM SD VFD2 Comm Fault
+B200:18/13 SIM ALARM VFD2 Comm Fault
+B200:18/14 SIM INPUT VFD2 Comm Fault
+B200:18/15 SIM MODE VFD2 Comm Fault
+B200:19/0 INPUT VFD1 Fail to Run
+B200:19/1 EXISTS
+B200:19/2 INHIBIT
+B200:19/3 ARM
+B200:19/4 ALARM STATE
+B200:19/5 LATCHING
+B200:19/6 SD BYPASS
+B200:19/7 ALM
+B200:19/8 SD VFD1 Fail to Run
+B200:19/9 ACK
+B200:19/10
+B200:19/11
+B200:19/12 SIM SD
+B200:19/13 SIM ALARM
+B200:19/14 SIM INPUT
+B200:19/15 SIM MODE
+B200:20/0 INPUT VFD2 Fail to Run
+B200:20/1 EXISTS
+B200:20/2 INHIBIT
+B200:20/3 ARM
+B200:20/4 ALARM STATE
+B200:20/5 LATCHING
+B200:20/6 SD BYPASS
+B200:20/7 ALM
+B200:20/8 SD VFD2 Fail to Run
+B200:20/9 ACK
+B200:20/10
+B200:20/11
+B200:20/12 SIM SD
+B200:20/13 SIM ALARM
+B200:20/14 SIM INPUT
+B200:20/15 SIM MODE
+B200:21/0 INPUT VFD1 Fail to Stop
+B200:21/1 EXISTS
+B200:21/2 INHIBIT
+B200:21/3 ARM
+B200:21/4 ALARM STATE
+B200:21/5 LATCHING
+B200:21/6 SD BYPASS
+B200:21/7 ALM
+B200:21/8 SD VFD1 Fail to Stop
+B200:21/9 ACK
+B200:21/10
+B200:21/11
+B200:21/12 SIM SD
+B200:21/13 SIM ALARM
+B200:21/14 SIM INPUT
+B200:21/15 SIM MODE
+B200:22/0 INPUT VFD2 Fail to stop
+B200:22/1 EXISTS
+B200:22/2 INHIBIT
+B200:22/3 ARM
+B200:22/4 ALARM STATE
+B200:22/5 LATCHING
+B200:22/6 SD BYPASS
+B200:22/7 ALM
+B200:22/8 SD VFD2 Fail to Stop
+B200:22/9 ACK
+B200:22/10
+B200:22/11
+B200:22/12 SIM SD
+B200:22/13 SIM ALARM
+B200:22/14 SIM INPUT
+B200:22/15 SIM MODE
+B200:23/0 INPUT
+B200:23/1 EXISTS
+B200:23/2 INHIBIT
+B200:23/3 ARM
+B200:23/4 ALARM STATE
+B200:23/5 LATCHING
+B200:23/6 SD BYPASS
+B200:23/7 ALM
+B200:23/8 SD
+B200:23/9 ACK
+B200:23/10
+B200:23/11
+B200:23/12 SIM SD
+B200:23/13 SIM ALARM
+B200:23/14 SIM INPUT
+Page 8 Saturday, January 03, 2026 - 15:05:43
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B200:23/15 SIM MODE
+B200:24/0 INPUT
+B200:24/1 EXISTS
+B200:24/2 INHIBIT
+B200:24/3 ARM
+B200:24/4 ALARM STATE
+B200:24/5 LATCHING
+B200:24/6 SD BYPASS
+B200:24/7 ALM
+B200:24/8 SD
+B200:24/9 ACK
+B200:24/10
+B200:24/11
+B200:24/12 SIM SD
+B200:24/13 SIM ALARM
+B200:24/14 SIM INPUT
+B200:24/15 SIM MODE
+B200:25/0 INPUT
+B200:25/1 EXISTS
+B200:25/2 INHIBIT
+B200:25/3 ARM
+B200:25/4 ALARM STATE
+B200:25/5 LATCHING
+B200:25/6 SD BYPASS
+B200:25/7 ALM
+B200:25/8 SD
+B200:25/9 ACK
+B200:25/10
+B200:25/11
+B200:25/12 SIM SD
+B200:25/13 SIM ALARM
+B200:25/14 SIM INPUT
+B200:25/15 SIM MODE
+B200:26/0 INPUT
+B200:26/1 EXISTS
+B200:26/2 INHIBIT
+B200:26/3 ARM
+B200:26/4 ALARM STATE
+B200:26/5 LATCHING
+B200:26/6 SD BYPASS
+B200:26/7 ALM
+B200:26/8 SD
+B200:26/9 ACK
+B200:26/10
+B200:26/11
+B200:26/12 SIM SD
+B200:26/13 SIM ALARM
+B200:26/14 SIM INPUT
+B200:26/15 SIM MODE
+B200:27/0 INPUT
+B200:27/1 EXISTS
+B200:27/2 INHIBIT
+B200:27/3 ARM
+B200:27/4 ALARM STATE
+B200:27/5 LATCHING
+B200:27/6 SD BYPASS
+B200:27/7 ALM
+B200:27/8 SD
+B200:27/9 ACK
+B200:27/10
+B200:27/11
+B200:27/12 SIM SD
+B200:27/13 SIM ALARM
+B200:27/14 SIM INPUT
+B200:27/15 SIM MODE
+B200:28/0 INPUT
+B200:28/1 EXISTS
+B200:28/2 INHIBIT
+B200:28/3 ARM
+B200:28/4 ALARM STATE
+B200:28/5 LATCHING
+B200:28/6 SD BYPASS
+B200:28/7 ALM
+B200:28/8 SD
+B200:28/9 ACK
+B200:28/10
+B200:28/11
+B200:28/12 SIM SD
+B200:28/13 SIM ALARM
+B200:28/14 SIM INPUT
+B200:28/15 SIM MODE
+B200:29/0 INPUT
+B200:29/1 EXISTS
+B200:29/2 INHIBIT
+B200:29/3 ARM
+Page 9 Saturday, January 03, 2026 - 15:05:43
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B200:29/4 ALARM STATE
+B200:29/5 LATCHING
+B200:29/6 SD BYPASS
+B200:29/7 ALM
+B200:29/8 SD
+B200:29/9 ACK
+B200:29/10
+B200:29/11
+B200:29/12 SIM SD
+B200:29/13 SIM ALARM
+B200:29/14 SIM INPUT
+B200:29/15 SIM MODE
+B200:30/0 INPUT
+B200:30/1 EXISTS
+B200:30/2 INHIBIT
+B200:30/3 ARM
+B200:30/4 ALARM STATE
+B200:30/5 LATCHING
+B200:30/6 SD BYPASS
+B200:30/7 ALM
+B200:30/8 SD
+B200:30/9 ACK
+B200:30/10
+B200:30/11
+B200:30/12 SIM SD
+B200:30/13 SIM ALARM
+B200:30/14 SIM INPUT
+B200:30/15 SIM MODE
+B200:31/0 INPUT
+B200:31/1 EXISTS
+B200:31/2 INHIBIT
+B200:31/3 ARM
+B200:31/4 ALARM STATE
+B200:31/5 LATCHING
+B200:31/6 SD BYPASS
+B200:31/7 ALM
+B200:31/8 SD
+B200:31/9 ACK
+B200:31/10
+B200:31/11
+B200:31/12 SIM SD
+B200:31/13 SIM ALARM
+B200:31/14 SIM INPUT
+B200:31/15 SIM MODE
+B216:0/0 EXISTS FT-101
+B216:0/1 HH PRE FT-101
+B216:0/2 H PRE FT-101
+B216:0/3 L PRE FT-101
+B216:0/4 LL PRE FT-101
+B216:0/5 OOR PRE FT-101
+B216:0/6 HH INHIBIT FT-101
+B216:0/7 H INHIBIT FT-101
+B216:0/8 L INHIBIT FT-101
+B216:0/9 LL INHIBIT FT-101
+B216:0/10 OOR INHIBIT FT-101
+B216:0/11 HH ALM FT-101
+B216:0/12 H ALM FT-101
+B216:0/13 L ALM FT-101
+B216:0/14 LL ALM FT-101
+B216:0/15 OOR ALM FT-101
+B216:1/0 EXISTS PIT-102
+B216:1/1 HH PRE PIT-102
+B216:1/2 H PRE PIT-102
+B216:1/3 L PRE PIT-102
+B216:1/4 LL PRE PIT-102
+B216:1/5 OOR PRE PIT-102
+B216:1/6 HH INHIBIT PIT-102
+B216:1/7 H INHIBIT PIT-102
+B216:1/8 L INHIBIT PIT-102
+B216:1/9 LL INHIBIT PIT-102
+B216:1/10 OOR INHIBIT PIT-102
+B216:1/11 HH ALM PIT-102
+B216:1/12 H ALM PIT-102
+B216:1/13 L ALM PIT-102
+B216:1/14 LL ALM PIT-102
+B216:1/15 OOR ALM PIT-102
+B216:2/0 EXISTS PIT-103
+B216:2/1 HH PRE PIT-103
+B216:2/2 H PRE PIT-103
+B216:2/3 L PRE PIT-103
+B216:2/4 LL PRE PIT-103
+B216:2/5 OOR PRE PIT-103
+B216:2/6 HH INHIBIT PIT-103
+B216:2/7 H INHIBIT PIT-103
+B216:2/8 L INHIBIT PIT-103
+Page 10 Saturday, January 03, 2026 - 15:05:43
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B216:2/9 LL INHIBIT PIT-103
+B216:2/10 OOR INHIBIT PIT-103
+B216:2/11 HH ALM PIT-103
+B216:2/12 H ALM PIT-103
+B216:2/13 L ALM PIT-103
+B216:2/14 LL ALM PIT-103
+B216:2/15 OOR ALM PIT-103
+B216:3/0 EXISTS P-102
+B216:3/1 HH PRE P-102
+B216:3/2 H PRE P-102
+B216:3/3 L PRE P-102
+B216:3/4 LL PRE P-102
+B216:3/5 OOR PRE P-102
+B216:3/6 HH INHIBIT P-102
+B216:3/7 H INHIBIT P-102
+B216:3/8 L INHIBIT P-102
+B216:3/9 LL INHIBIT P-102
+B216:3/10 OOR INHIBIT P-102
+B216:3/11 HH ALM P-102
+B216:3/12 H ALM P-102
+B216:3/13 L ALM P-102
+B216:3/14 LL ALM P-102
+B216:3/15 OOR ALM P-102
+B216:4/0 EXISTS P-101
+B216:4/1 HH PRE P-101
+B216:4/2 H PRE P-101
+B216:4/3 L PRE P-101
+B216:4/4 LL PRE P-101
+B216:4/5 OOR PRE P-101
+B216:4/6 HH INHIBIT P-101
+B216:4/7 H INHIBIT P-101
+B216:4/8 L INHIBIT P-101
+B216:4/9 LL INHIBIT P-101
+B216:4/10 OOR INHIBIT P-101
+B216:4/11 HH ALM P-101
+B216:4/12 H ALM P-101
+B216:4/13 L ALM P-101
+B216:4/14 LL ALM P-101
+B216:4/15 OOR ALM P-101
+B216:5/0 EXISTS PIT-100A
+B216:5/1 HH PRE PIT-100A
+B216:5/2 H PRE PIT-100A
+B216:5/3 L PRE PIT-100A
+B216:5/4 LL PRE PIT-100A
+B216:5/5 OOR PRE PIT-100A
+B216:5/6 HH INHIBIT PIT-100A
+B216:5/7 H INHIBIT PIT-100A
+B216:5/8 L INHIBIT PIT-100A
+B216:5/9 LL INHIBIT PIT-100A
+B216:5/10 OOR INHIBIT PIT-100A
+B216:5/11 HH ALM PIT-100A
+B216:5/12 H ALM PIT-100A
+B216:5/13 L ALM PIT-100A
+B216:5/14 LL ALM PIT-100A
+B216:5/15 OOR ALM PIT-100A
+B216:6/0 EXISTS PIT-100
+B216:6/1 HH PRE PIT-100
+B216:6/2 H PRE PIT-100
+B216:6/3 L PRE PIT-100
+B216:6/4 LL PRE PIT-100
+B216:6/5 OOR PRE PIT-100
+B216:6/6 HH INHIBIT PIT-100
+B216:6/7 H INHIBIT PIT-100
+B216:6/8 L INHIBIT PIT-100
+B216:6/9 LL INHIBIT PIT-100
+B216:6/10 OOR INHIBIT PIT-100
+B216:6/11 HH ALM PIT-100
+B216:6/12 H ALM PIT-100
+B216:6/13 L ALM PIT-100
+B216:6/14 LL ALM PIT-100
+B216:6/15 OOR ALM PIT-100
+B216:7/0 EXISTS DPIT-101
+B216:7/1 HH PRE DPIT-101
+B216:7/2 H PRE DPIT-101
+B216:7/3 L PRE DPIT-101
+B216:7/4 LL PRE DPIT-101
+B216:7/5 OOR PRE DPIT-101
+B216:7/6 HH INHIBIT DPIT-101
+B216:7/7 H INHIBIT DPIT-101
+B216:7/8 L INHIBIT DPIT-101
+B216:7/9 LL INHIBIT DPIT-101
+B216:7/10 OOR INHIBIT DPIT-101
+B216:7/11 HH ALM DPIT-101
+B216:7/12 H ALM DPIT-101
+B216:7/13 L ALM DPIT-101
+Page 11 Saturday, January 03, 2026 - 15:05:43
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B216:7/14 LL ALM DPIT-101
+B216:7/15 OOR ALM DPIT-101
+B216:8/0 EXISTS AIT-102
+B216:8/1 HH PRE AIT-102
+B216:8/2 H PRE AIT-102
+B216:8/3 L PRE AIT-102
+B216:8/4 LL PRE AIT-102
+B216:8/5 OOR PRE AIT-102
+B216:8/6 HH INHIBIT AIT-102
+B216:8/7 H INHIBIT AIT-102
+B216:8/8 L INHIBIT AIT-102
+B216:8/9 LL INHIBIT AIT-102
+B216:8/10 OOR INHIBIT AIT-102
+B216:8/11 HH ALM AIT-102
+B216:8/12 H ALM AIT-102
+B216:8/13 L ALM AIT-102
+B216:8/14 LL ALM AIT-102
+B216:8/15 OOR ALM AIT-102
+B216:9/0 EXISTS AIT-103
+B216:9/1 HH PRE AIT-103
+B216:9/2 H PRE AIT-103
+B216:9/3 L PRE AIT-103
+B216:9/4 LL PRE AIT-103
+B216:9/5 OOR PRE AIT-103
+B216:9/6 HH INHIBIT AIT-103
+B216:9/7 H INHIBIT AIT-103
+B216:9/8 L INHIBIT AIT-103
+B216:9/9 LL INHIBIT AIT-103
+B216:9/10 OOR INHIBIT AIT-103
+B216:9/11 HH ALM AIT-103
+B216:9/12 H ALM AIT-103
+B216:9/13 L ALM AIT-103
+B216:9/14 LL ALM AIT-103
+B216:9/15 OOR ALM AIT-103
+B216:10/0 EXISTS AIT-101
+B216:10/1 HH PRE AIT-101
+B216:10/2 H PRE AIT-101
+B216:10/3 L PRE AIT-101
+B216:10/4 LL PRE AIT-101
+B216:10/5 OOR PRE AIT-101
+B216:10/6 HH INHIBIT AIT-101
+B216:10/7 H INHIBIT AIT-101
+B216:10/8 L INHIBIT AIT-101
+B216:10/9 LL INHIBIT AIT-101
+B216:10/10 OOR INHIBIT AIT-101
+B216:10/11 HH ALM AIT-101
+B216:10/12 H ALM AIT-101
+B216:10/13 L ALM AIT-101
+B216:10/14 LL ALM AIT-101
+B216:10/15 OOR ALM AIT-101
+B216:11/0 EXISTS PIT-101
+B216:11/1 HH PRE PIT-101
+B216:11/2 H PRE PIT-101
+B216:11/3 L PRE PIT-101
+B216:11/4 LL PRE PIT-101
+B216:11/5 OOR PRE PIT-101
+B216:11/6 HH INHIBIT PIT-101
+B216:11/7 H INHIBIT PIT-101
+B216:11/8 L INHIBIT PIT-101
+B216:11/9 LL INHIBIT PIT-101
+B216:11/10 OOR INHIBIT PIT-101
+B216:11/11 HH ALM PIT-101
+B216:11/12 H ALM PIT-101
+B216:11/13 L ALM PIT-101
+B216:11/14 LL ALM PIT-101
+B216:11/15 OOR ALM PIT-101
+B216:12/0 EXISTS TIT-101
+B216:12/1 HH PRE TIT-101
+B216:12/2 H PRE TIT-101
+B216:12/3 L PRE TIT-101
+B216:12/4 LL PRE TIT-101
+B216:12/5 OOR PRE TIT-101
+B216:12/6 HH INHIBIT TIT-101
+B216:12/7 H INHIBIT TIT-101
+B216:12/8 L INHIBIT TIT-101
+B216:12/9 LL INHIBIT TIT-101
+B216:12/10 OOR INHIBIT TIT-101
+B216:12/11 HH ALM TIT-101
+B216:12/12 H ALM TIT-101
+B216:12/13 L ALM TIT-101
+B216:12/14 LL ALM TIT-101
+B216:12/15 OOR ALM TIT-101
+B216:13/0 EXISTS PIT-104
+B216:13/1 HH PRE PIT-104
+B216:13/2 H PRE PIT-104
+Page 12 Saturday, January 03, 2026 - 15:05:43
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B216:13/3 L PRE PIT-104
+B216:13/4 LL PRE PIT-104
+B216:13/5 OOR PRE PIT-104
+B216:13/6 HH INHIBIT PIT-104
+B216:13/7 H INHIBIT PIT-104
+B216:13/8 L INHIBIT PIT-104
+B216:13/9 LL INHIBIT PIT-104
+B216:13/10 OOR INHIBIT PIT-104
+B216:13/11 HH ALM PIT-104
+B216:13/12 H ALM PIT-104
+B216:13/13 L ALM PIT-104
+B216:13/14 LL ALM PIT-104
+B216:13/15 OOR ALM PIT-104
+B216:14/0 EXISTS
+B216:14/1 HH PRE
+B216:14/2 H PRE
+B216:14/3 L PRE
+B216:14/4 LL PRE
+B216:14/5 OOR PRE
+B216:14/6 HH INHIBIT
+B216:14/7 H INHIBIT
+B216:14/8 L INHIBIT
+B216:14/9 LL INHIBIT
+B216:14/10 OOR INHIBIT
+B216:14/11 HH ALM
+B216:14/12 H ALM
+B216:14/13 L ALM
+B216:14/14 LL ALM
+B216:14/15 OOR ALM
+B216:15/0 EXISTS
+B216:15/1 HH PRE
+B216:15/2 H PRE
+B216:15/3 L PRE
+B216:15/4 LL PRE
+B216:15/5 OOR PRE
+B216:15/6 HH INHIBIT
+B216:15/7 H INHIBIT
+B216:15/8 L INHIBIT
+B216:15/9 LL INHIBIT
+B216:15/10 OOR INHIBIT
+B216:15/11 HH ALM
+B216:15/12 H ALM
+B216:15/13 L ALM
+B216:15/14 LL ALM
+B216:15/15 OOR ALM
+B216:16/0 EXISTS
+B216:16/1 HH PRE
+B216:16/2 H PRE
+B216:16/3 L PRE
+B216:16/4 LL PRE
+B216:16/5 OOR PRE
+B216:16/6 HH INHIBIT
+B216:16/7 H INHIBIT
+B216:16/8 L INHIBIT
+B216:16/9 LL INHIBIT
+B216:16/10 OOR INHIBIT
+B216:16/11 HH ALM
+B216:16/12 H ALM
+B216:16/13 L ALM
+B216:16/14 LL ALM
+B216:16/15 OOR ALM
+B216:17/0 EXISTS
+B216:17/1 HH PRE
+B216:17/2 H PRE
+B216:17/3 L PRE
+B216:17/4 LL PRE
+B216:17/5 OOR PRE
+B216:17/6 HH INHIBIT
+B216:17/7 H INHIBIT
+B216:17/8 L INHIBIT
+B216:17/9 LL INHIBIT
+B216:17/10 OOR INHIBIT
+B216:17/11 HH ALM
+B216:17/12 H ALM
+B216:17/13 L ALM
+B216:17/14 LL ALM
+B216:17/15 OOR ALM
+B216:18/0 EXISTS
+B216:18/1 HH PRE
+B216:18/2 H PRE
+B216:18/3 L PRE
+B216:18/4 LL PRE
+B216:18/5 OOR PRE
+B216:18/6 HH INHIBIT
+B216:18/7 H INHIBIT
+Page 13 Saturday, January 03, 2026 - 15:05:43
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B216:18/8 L INHIBIT
+B216:18/9 LL INHIBIT
+B216:18/10 OOR INHIBIT
+B216:18/11 HH ALM
+B216:18/12 H ALM
+B216:18/13 L ALM
+B216:18/14 LL ALM
+B216:18/15 OOR ALM
+B216:19/0 EXISTS
+B216:19/1 HH PRE
+B216:19/2 H PRE
+B216:19/3 L PRE
+B216:19/4 LL PRE
+B216:19/5 OOR PRE
+B216:19/6 HH INHIBIT
+B216:19/7 H INHIBIT
+B216:19/8 L INHIBIT
+B216:19/9 LL INHIBIT
+B216:19/10 OOR INHIBIT
+B216:19/11 HH ALM
+B216:19/12 H ALM
+B216:19/13 L ALM
+B216:19/14 LL ALM
+B216:19/15 OOR ALM
+B216:20/0 EXISTS
+B216:20/1 HH PRE
+B216:20/2 H PRE
+B216:20/3 L PRE
+B216:20/4 LL PRE
+B216:20/5 OOR PRE
+B216:20/6 HH INHIBIT
+B216:20/7 H INHIBIT
+B216:20/8 L INHIBIT
+B216:20/9 LL INHIBIT
+B216:20/10 OOR INHIBIT
+B216:20/11 HH ALM
+B216:20/12 H ALM
+B216:20/13 L ALM
+B216:20/14 LL ALM
+B216:20/15 OOR ALM
+B216:21/0 EXISTS
+B216:21/1 HH PRE
+B216:21/2 H PRE
+B216:21/3 L PRE
+B216:21/4 LL PRE
+B216:21/5 OOR PRE
+B216:21/6 HH INHIBIT
+B216:21/7 H INHIBIT
+B216:21/8 L INHIBIT
+B216:21/9 LL INHIBIT
+B216:21/10 OOR INHIBIT
+B216:21/11 HH ALM
+B216:21/12 H ALM
+B216:21/13 L ALM
+B216:21/14 LL ALM
+B216:21/15 OOR ALM
+B216:22/0 EXISTS
+B216:22/1 HH PRE
+B216:22/2 H PRE
+B216:22/3 L PRE
+B216:22/4 LL PRE
+B216:22/5 OOR PRE
+B216:22/6 HH INHIBIT
+B216:22/7 H INHIBIT
+B216:22/8 L INHIBIT
+B216:22/9 LL INHIBIT
+B216:22/10 OOR INHIBIT
+B216:22/11 HH ALM
+B216:22/12 H ALM
+B216:22/13 L ALM
+B216:22/14 LL ALM
+B216:22/15 OOR ALM
+B216:23/0 EXISTS
+B216:23/1 HH PRE
+B216:23/2 H PRE
+B216:23/3 L PRE
+B216:23/4 LL PRE
+B216:23/5 OOR PRE
+B216:23/6 HH INHIBIT
+B216:23/7 H INHIBIT
+B216:23/8 L INHIBIT
+B216:23/9 LL INHIBIT
+B216:23/10 OOR INHIBIT
+B216:23/11 HH ALM
+B216:23/12 H ALM
+Page 14 Saturday, January 03, 2026 - 15:05:43
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B216:23/13 L ALM
+B216:23/14 LL ALM
+B216:23/15 OOR ALM
+B216:24/0 EXISTS
+B216:24/1 HH PRE
+B216:24/2 H PRE
+B216:24/3 L PRE
+B216:24/4 LL PRE
+B216:24/5 OOR PRE
+B216:24/6 HH INHIBIT
+B216:24/7 H INHIBIT
+B216:24/8 L INHIBIT
+B216:24/9 LL INHIBIT
+B216:24/10 OOR INHIBIT
+B216:24/11 HH ALM
+B216:24/12 H ALM
+B216:24/13 L ALM
+B216:24/14 LL ALM
+B216:24/15 OOR ALM
+B216:25/0 EXISTS
+B216:25/1 HH PRE
+B216:25/2 H PRE
+B216:25/3 L PRE
+B216:25/4 LL PRE
+B216:25/5 OOR PRE
+B216:25/6 HH INHIBIT
+B216:25/7 H INHIBIT
+B216:25/8 L INHIBIT
+B216:25/9 LL INHIBIT
+B216:25/10 OOR INHIBIT
+B216:25/11 HH ALM
+B216:25/12 H ALM
+B216:25/13 L ALM
+B216:25/14 LL ALM
+B216:25/15 OOR ALM
+B216:26/0 EXISTS
+B216:26/1 HH PRE
+B216:26/2 H PRE
+B216:26/3 L PRE
+B216:26/4 LL PRE
+B216:26/5 OOR PRE
+B216:26/6 HH INHIBIT
+B216:26/7 H INHIBIT
+B216:26/8 L INHIBIT
+B216:26/9 LL INHIBIT
+B216:26/10 OOR INHIBIT
+B216:26/11 HH ALM
+B216:26/12 H ALM
+B216:26/13 L ALM
+B216:26/14 LL ALM
+B216:26/15 OOR ALM
+B216:27/0 EXISTS
+B216:27/1 HH PRE
+B216:27/2 H PRE
+B216:27/3 L PRE
+B216:27/4 LL PRE
+B216:27/5 OOR PRE
+B216:27/6 HH INHIBIT
+B216:27/7 H INHIBIT
+B216:27/8 L INHIBIT
+B216:27/9 LL INHIBIT
+B216:27/10 OOR INHIBIT
+B216:27/11 HH ALM
+B216:27/12 H ALM
+B216:27/13 L ALM
+B216:27/14 LL ALM
+B216:27/15 OOR ALM
+B216:28/0 EXISTS
+B216:28/1 HH PRE
+B216:28/2 H PRE
+B216:28/3 L PRE
+B216:28/4 LL PRE
+B216:28/5 OOR PRE
+B216:28/6 HH INHIBIT
+B216:28/7 H INHIBIT
+B216:28/8 L INHIBIT
+B216:28/9 LL INHIBIT
+B216:28/10 OOR INHIBIT
+B216:28/11 HH ALM
+B216:28/12 H ALM
+B216:28/13 L ALM
+B216:28/14 LL ALM
+B216:28/15 OOR ALM
+B216:29/0 EXISTS
+B216:29/1 HH PRE
+Page 15 Saturday, January 03, 2026 - 15:05:44
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B216:29/2 H PRE
+B216:29/3 L PRE
+B216:29/4 LL PRE
+B216:29/5 OOR PRE
+B216:29/6 HH INHIBIT
+B216:29/7 H INHIBIT
+B216:29/8 L INHIBIT
+B216:29/9 LL INHIBIT
+B216:29/10 OOR INHIBIT
+B216:29/11 HH ALM
+B216:29/12 H ALM
+B216:29/13 L ALM
+B216:29/14 LL ALM
+B216:29/15 OOR ALM
+B216:30/0 EXISTS
+B216:30/1 HH PRE
+B216:30/2 H PRE
+B216:30/3 L PRE
+B216:30/4 LL PRE
+B216:30/5 OOR PRE
+B216:30/6 HH INHIBIT
+B216:30/7 H INHIBIT
+B216:30/8 L INHIBIT
+B216:30/9 LL INHIBIT
+B216:30/10 OOR INHIBIT
+B216:30/11 HH ALM
+B216:30/12 H ALM
+B216:30/13 L ALM
+B216:30/14 LL ALM
+B216:30/15 OOR ALM
+B216:31/0 EXISTS
+B216:31/1 HH PRE
+B216:31/2 H PRE
+B216:31/3 L PRE
+B216:31/4 LL PRE
+B216:31/5 OOR PRE
+B216:31/6 HH INHIBIT
+B216:31/7 H INHIBIT
+B216:31/8 L INHIBIT
+B216:31/9 LL INHIBIT
+B216:31/10 OOR INHIBIT
+B216:31/11 HH ALM
+B216:31/12 H ALM
+B216:31/13 L ALM
+B216:31/14 LL ALM
+B216:31/15 OOR ALM
+B217:0/0 ALL SD BYPASS FT-101
+B217:0/1 HH SD BYPASS FT-101
+B217:0/2 H SD BYPASS FT-101
+B217:0/3 L SD BYPASS FT-101
+B217:0/4 LL SD BYPASS FT-101
+B217:0/5 OOR SD BYPASS FT-101
+B217:0/6 HH SD FT-101
+B217:0/7 H SD FT-101
+B217:0/8 L SD FT-101
+B217:0/9 LL SD FT-101
+B217:0/10 OOR SD FT-101
+B217:0/11 HH ACK FT-101
+B217:0/12 H ACK FT-101
+B217:0/13 L ACK FT-101
+B217:0/14 LL ACK FT-101
+B217:0/15 OOR ACK FT-101
+B217:1/0 ALL SD BYPASS PIT-102
+B217:1/1 HH SD BYPASS PIT-102
+B217:1/2 H SD BYPASS PIT-102
+B217:1/3 L SD BYPASS PIT-102
+B217:1/4 LL SD BYPASS PIT-102
+B217:1/5 OOR SD BYPASS PIT-102
+B217:1/6 HH SD PIT-102
+B217:1/7 H SD PIT-102
+B217:1/8 L SD PIT-102
+B217:1/9 LL SD PIT-102
+B217:1/10 OOR SD PIT-102
+B217:1/11 HH ACK PIT-102
+B217:1/12 H ACK PIT-102
+B217:1/13 L ACK PIT-102
+B217:1/14 LL ACK PIT-102
+B217:1/15 OOR ACK PIT-102
+B217:2/0 ALL SD BYPASS PIT-103
+B217:2/1 HH SD BYPASS PIT-103
+B217:2/2 H SD BYPASS PIT-103
+B217:2/3 L SD BYPASS PIT-103
+B217:2/4 LL SD BYPASS PIT-103
+B217:2/5 OOR SD BYPASS PIT-103
+B217:2/6 HH SD PIT-103
+Page 16 Saturday, January 03, 2026 - 15:05:44
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B217:2/7 H SD PIT-103
+B217:2/8 L SD PIT-103
+B217:2/9 LL SD PIT-103
+B217:2/10 OOR SD PIT-103
+B217:2/11 HH ACK PIT-103
+B217:2/12 H ACK PIT-103
+B217:2/13 L ACK PIT-103
+B217:2/14 LL ACK PIT-103
+B217:2/15 OOR ACK PIT-103
+B217:3/0 ALL SD BYPASS P-102
+B217:3/1 HH SD BYPASS P-102
+B217:3/2 H SD BYPASS P-102
+B217:3/3 L SD BYPASS P-102
+B217:3/4 LL SD BYPASS P-102
+B217:3/5 OOR SD BYPASS P-102
+B217:3/6 HH SD P-102
+B217:3/7 H SD P-102
+B217:3/8 L SD P-102
+B217:3/9 LL SD P-102
+B217:3/10 OOR SD P-102
+B217:3/11 HH ACK P-102
+B217:3/12 H ACK P-102
+B217:3/13 L ACK P-102
+B217:3/14 LL ACK P-102
+B217:3/15 OOR ACK P-102
+B217:4/0 ALL SD BYPASS P-101
+B217:4/1 HH SD BYPASS P-101
+B217:4/2 H SD BYPASS P-101
+B217:4/3 L SD BYPASS P-101
+B217:4/4 LL SD BYPASS P-101
+B217:4/5 OOR SD BYPASS P-101
+B217:4/6 HH SD P-101
+B217:4/7 H SD P-101
+B217:4/8 L SD P-101
+B217:4/9 LL SD P-101
+B217:4/10 OOR SD P-101
+B217:4/11 HH ACK P-101
+B217:4/12 H ACK P-101
+B217:4/13 L ACK P-101
+B217:4/14 LL ACK P-101
+B217:4/15 OOR ACK P-101
+B217:5/0 ALL SD BYPASS PIT-100A
+B217:5/1 HH SD BYPASS PIT-100A
+B217:5/2 H SD BYPASS PIT-100A
+B217:5/3 L SD BYPASS PIT-100A
+B217:5/4 LL SD BYPASS PIT-100A
+B217:5/5 OOR SD BYPASS PIT-100A
+B217:5/6 HH SD PIT-100A
+B217:5/7 H SD PIT-100A
+B217:5/8 L SD PIT-100A
+B217:5/9 LL SD PIT-100A
+B217:5/10 OOR SD PIT-100A
+B217:5/11 HH ACK PIT-100A
+B217:5/12 H ACK PIT-100A
+B217:5/13 L ACK PIT-100A
+B217:5/14 LL ACK PIT-100A
+B217:5/15 OOR ACK PIT-100A
+B217:6/0 ALL SD BYPASS PIT-100
+B217:6/1 HH SD BYPASS PIT-100
+B217:6/2 H SD BYPASS PIT-100
+B217:6/3 L SD BYPASS PIT-100
+B217:6/4 LL SD BYPASS PIT-100
+B217:6/5 OOR SD BYPASS PIT-100
+B217:6/6 HH SD PIT-100
+B217:6/7 H SD PIT-100
+B217:6/8 L SD PIT-100
+B217:6/9 LL SD PIT-100
+B217:6/10 OOR SD PIT-100
+B217:6/11 HH ACK PIT-100
+B217:6/12 H ACK PIT-100
+B217:6/13 L ACK PIT-100
+B217:6/14 LL ACK PIT-100
+B217:6/15 OOR ACK PIT-100
+B217:7/0 ALL SD BYPASS DPIT-101
+B217:7/1 HH SD BYPASS DPIT-101
+B217:7/2 H SD BYPASS DPIT-101
+B217:7/3 L SD BYPASS DPIT-101
+B217:7/4 LL SD BYPASS DPIT-101
+B217:7/5 OOR SD BYPASS DPIT-101
+B217:7/6 HH SD DPIT-101
+B217:7/7 H SD DPIT-101
+B217:7/8 L SD DPIT-101
+B217:7/9 LL SD DPIT-101
+B217:7/10 OOR SD DPIT-101
+B217:7/11 HH ACK DPIT-101
+Page 17 Saturday, January 03, 2026 - 15:05:44
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B217:7/12 H ACK DPIT-101
+B217:7/13 L ACK DPIT-101
+B217:7/14 LL ACK DPIT-101
+B217:7/15 OOR ACK DPIT-101
+B217:8/0 ALL SD BYPASS AIT-102
+B217:8/1 HH SD BYPASS AIT-102
+B217:8/2 H SD BYPASS AIT-102
+B217:8/3 L SD BYPASS AIT-102
+B217:8/4 LL SD BYPASS AIT-102
+B217:8/5 OOR SD BYPASS AIT-102
+B217:8/6 HH SD AIT-102
+B217:8/7 H SD AIT-102
+B217:8/8 L SD AIT-102
+B217:8/9 LL SD AIT-102
+B217:8/10 OOR SD AIT-102
+B217:8/11 HH ACK AIT-102
+B217:8/12 H ACK AIT-102
+B217:8/13 L ACK AIT-102
+B217:8/14 LL ACK AIT-102
+B217:8/15 OOR ACK AIT-102
+B217:9/0 ALL SD BYPASS AIT-103
+B217:9/1 HH SD BYPASS AIT-103
+B217:9/2 H SD BYPASS AIT-103
+B217:9/3 L SD BYPASS AIT-103
+B217:9/4 LL SD BYPASS AIT-103
+B217:9/5 OOR SD BYPASS AIT-103
+B217:9/6 HH SD AIT-103
+B217:9/7 H SD AIT-103
+B217:9/8 L SD AIT-103
+B217:9/9 LL SD AIT-103
+B217:9/10 OOR SD AIT-103
+B217:9/11 HH ACK AIT-103
+B217:9/12 H ACK AIT-103
+B217:9/13 L ACK AIT-103
+B217:9/14 LL ACK AIT-103
+B217:9/15 OOR ACK AIT-103
+B217:10/0 ALL SD BYPASS AIT-101
+B217:10/1 HH SD BYPASS AIT-101
+B217:10/2 H SD BYPASS AIT-101
+B217:10/3 L SD BYPASS AIT-101
+B217:10/4 LL SD BYPASS AIT-101
+B217:10/5 OOR SD BYPASS AIT-101
+B217:10/6 HH SD AIT-101
+B217:10/7 H SD AIT-101
+B217:10/8 L SD AIT-101
+B217:10/9 LL SD AIT-101
+B217:10/10 OOR SD AIT-101
+B217:10/11 HH ACK AIT-101
+B217:10/12 H ACK AIT-101
+B217:10/13 L ACK AIT-101
+B217:10/14 LL ACK AIT-101
+B217:10/15 OOR ACK AIT-101
+B217:11/0 ALL SD BYPASS PIT-101
+B217:11/1 HH SD BYPASS PIT-101
+B217:11/2 H SD BYPASS PIT-101
+B217:11/3 L SD BYPASS PIT-101
+B217:11/4 LL SD BYPASS PIT-101
+B217:11/5 OOR SD BYPASS PIT-101
+B217:11/6 HH SD PIT-101
+B217:11/7 H SD PIT-101
+B217:11/8 L SD PIT-101
+B217:11/9 LL SD PIT-101
+B217:11/10 OOR SD PIT-101
+B217:11/11 HH ACK PIT-101
+B217:11/12 H ACK PIT-101
+B217:11/13 L ACK PIT-101
+B217:11/14 LL ACK PIT-101
+B217:11/15 OOR ACK PIT-101
+B217:12/0 ALL SD BYPASS TIT-101
+B217:12/1 HH SD BYPASS TIT-101
+B217:12/2 H SD BYPASS TIT-101
+B217:12/3 L SD BYPASS TIT-101
+B217:12/4 LL SD BYPASS TIT-101
+B217:12/5 OOR SD BYPASS TIT-101
+B217:12/6 HH SD TIT-101
+B217:12/7 H SD TIT-101
+B217:12/8 L SD TIT-101
+B217:12/9 LL SD TIT-101
+B217:12/10 OOR SD TIT-101
+B217:12/11 HH ACK TIT-101
+B217:12/12 H ACK TIT-101
+B217:12/13 L ACK TIT-101
+B217:12/14 LL ACK TIT-101
+B217:12/15 OOR ACK TIT-101
+B217:13/0 ALL SD BYPASS PIT-104
+Page 18 Saturday, January 03, 2026 - 15:05:44
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B217:13/1 HH SD BYPASS PIT-104
+B217:13/2 H SD BYPASS PIT-104
+B217:13/3 L SD BYPASS PIT-104
+B217:13/4 LL SD BYPASS PIT-104
+B217:13/5 OOR SD BYPASS PIT-104
+B217:13/6 HH SD PIT-104
+B217:13/7 H SD PIT-104
+B217:13/8 L SD PIT-104
+B217:13/9 LL SD PIT-104
+B217:13/10 OOR SD PIT-104
+B217:13/11 HH ACK PIT-104
+B217:13/12 H ACK PIT-104
+B217:13/13 L ACK PIT-104
+B217:13/14 LL ACK PIT-104
+B217:13/15 OOR ACK PIT-104
+B217:14/0 ALL SD BYPASS
+B217:14/1 HH SD BYPASS
+B217:14/2 H SD BYPASS
+B217:14/3 L SD BYPASS
+B217:14/4 LL SD BYPASS
+B217:14/5 OOR SD BYPASS
+B217:14/6 HH SD
+B217:14/7 H SD
+B217:14/8 L SD
+B217:14/9 LL SD
+B217:14/10 OOR SD
+B217:14/11 HH ACK
+B217:14/12 H ACK
+B217:14/13 L ACK
+B217:14/14 LL ACK
+B217:14/15 OOR ACK
+B217:15/0 ALL SD BYPASS
+B217:15/1 HH SD BYPASS
+B217:15/2 H SD BYPASS
+B217:15/3 L SD BYPASS
+B217:15/4 LL SD BYPASS
+B217:15/5 OOR SD BYPASS
+B217:15/6 HH SD
+B217:15/7 H SD
+B217:15/8 L SD
+B217:15/9 LL SD
+B217:15/10 OOR SD
+B217:15/11 HH ACK
+B217:15/12 H ACK
+B217:15/13 L ACK
+B217:15/14 LL ACK
+B217:15/15 OOR ACK
+B217:16/0 ALL SD BYPASS
+B217:16/1 HH SD BYPASS
+B217:16/2 H SD BYPASS
+B217:16/3 L SD BYPASS
+B217:16/4 LL SD BYPASS
+B217:16/5 OOR SD BYPASS
+B217:16/6 HH SD
+B217:16/7 H SD
+B217:16/8 L SD
+B217:16/9 LL SD
+B217:16/10 OOR SD
+B217:16/11 HH ACK
+B217:16/12 H ACK
+B217:16/13 L ACK
+B217:16/14 LL ACK
+B217:16/15 OOR ACK
+B217:17/0 ALL SD BYPASS
+B217:17/1 HH SD BYPASS
+B217:17/2 H SD BYPASS
+B217:17/3 L SD BYPASS
+B217:17/4 LL SD BYPASS
+B217:17/5 OOR SD BYPASS
+B217:17/6 HH SD
+B217:17/7 H SD
+B217:17/8 L SD
+B217:17/9 LL SD
+B217:17/10 OOR SD
+B217:17/11 HH ACK
+B217:17/12 H ACK
+B217:17/13 L ACK
+B217:17/14 LL ACK
+B217:17/15 OOR ACK
+B217:18/0 ALL SD BYPASS
+B217:18/1 HH SD BYPASS
+B217:18/2 H SD BYPASS
+B217:18/3 L SD BYPASS
+B217:18/4 LL SD BYPASS
+B217:18/5 OOR SD BYPASS
+Page 19 Saturday, January 03, 2026 - 15:05:44
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B217:18/6 HH SD
+B217:18/7 H SD
+B217:18/8 L SD
+B217:18/9 LL SD
+B217:18/10 OOR SD
+B217:18/11 HH ACK
+B217:18/12 H ACK
+B217:18/13 L ACK
+B217:18/14 LL ACK
+B217:18/15 OOR ACK
+B217:19/0 ALL SD BYPASS
+B217:19/1 HH SD BYPASS
+B217:19/2 H SD BYPASS
+B217:19/3 L SD BYPASS
+B217:19/4 LL SD BYPASS
+B217:19/5 OOR SD BYPASS
+B217:19/6 HH SD
+B217:19/7 H SD
+B217:19/8 L SD
+B217:19/9 LL SD
+B217:19/10 OOR SD
+B217:19/11 HH ACK
+B217:19/12 H ACK
+B217:19/13 L ACK
+B217:19/14 LL ACK
+B217:19/15 OOR ACK
+B217:20/0 ALL SD BYPASS
+B217:20/1 HH SD BYPASS
+B217:20/2 H SD BYPASS
+B217:20/3 L SD BYPASS
+B217:20/4 LL SD BYPASS
+B217:20/5 OOR SD BYPASS
+B217:20/6 HH SD
+B217:20/7 H SD
+B217:20/8 L SD
+B217:20/9 LL SD
+B217:20/10 OOR SD
+B217:20/11 HH ACK
+B217:21/0 ALL SD BYPASS
+B217:21/1 HH SD BYPASS
+B217:21/2 H SD BYPASS
+B217:21/3 L SD BYPASS
+B217:21/4 LL SD BYPASS
+B217:21/5 OOR SD BYPASS
+B217:21/6 HH SD
+B217:21/7 H SD
+B217:21/8 L SD
+B217:21/9 LL SD
+B217:21/10 OOR SD
+B217:21/11 HH ACK
+B217:21/12 H ACK
+B217:21/13 L ACK
+B217:21/14 LL ACK
+B217:21/15 OOR ACK
+B217:22/0 ALL SD BYPASS
+B217:22/1 HH SD BYPASS
+B217:22/2 H SD BYPASS
+B217:22/3 L SD BYPASS
+B217:22/4 LL SD BYPASS
+B217:22/5 OOR SD BYPASS
+B217:22/6 HH SD
+B217:22/7 H SD
+B217:22/8 L SD
+B217:22/9 LL SD
+B217:22/10 OOR SD
+B217:22/11 HH ACK
+B217:22/12 H ACK
+B217:22/13 L ACK
+B217:22/14 LL ACK
+B217:22/15 OOR ACK
+B217:23/0 ALL SD BYPASS
+B217:23/1 HH SD BYPASS
+B217:23/2 H SD BYPASS
+B217:23/3 L SD BYPASS
+B217:23/4 LL SD BYPASS
+B217:23/5 OOR SD BYPASS
+B217:23/6 HH SD
+B217:23/7 H SD
+B217:23/8 L SD
+B217:23/9 LL SD
+B217:23/10 OOR SD
+B217:23/11 HH ACK
+B217:23/12 H ACK
+B217:23/13 L ACK
+B217:23/14 LL ACK
+Page 20 Saturday, January 03, 2026 - 15:05:44
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B217:23/15 OOR ACK
+B217:24/0 ALL SD BYPASS
+B217:24/1 HH SD BYPASS
+B217:24/2 H SD BYPASS
+B217:24/3 L SD BYPASS
+B217:24/4 LL SD BYPASS
+B217:24/5 OOR SD BYPASS
+B217:24/6 HH SD
+B217:24/7 H SD
+B217:24/8 L SD
+B217:24/9 LL SD
+B217:24/10 OOR SD
+B217:24/11 HH ACK
+B217:24/12 H ACK
+B217:24/13 L ACK
+B217:24/14 LL ACK
+B217:24/15 OOR ACK
+B217:25/0 ALL SD BYPASS
+B217:25/1 HH SD BYPASS
+B217:25/2 H SD BYPASS
+B217:25/3 L SD BYPASS
+B217:25/4 LL SD BYPASS
+B217:25/5 OOR SD BYPASS
+B217:25/6 HH SD
+B217:25/7 H SD
+B217:25/8 L SD
+B217:25/9 LL SD
+B217:25/10 OOR SD
+B217:25/11 HH ACK
+B217:25/12 H ACK
+B217:25/13 L ACK
+B217:25/14 LL ACK
+B217:25/15 OOR ACK
+B217:26/0 ALL SD BYPASS
+B217:26/1 HH SD BYPASS
+B217:26/2 H SD BYPASS
+B217:26/3 L SD BYPASS
+B217:26/4 LL SD BYPASS
+B217:26/5 OOR SD BYPASS
+B217:26/6 HH SD
+B217:26/7 H SD
+B217:26/8 L SD
+B217:26/9 LL SD
+B217:26/10 OOR SD
+B217:26/11 HH ACK
+B217:26/12 H ACK
+B217:26/13 L ACK
+B217:26/14 LL ACK
+B217:26/15 OOR ACK
+B217:27/0 ALL SD BYPASS
+B217:27/1 HH SD BYPASS
+B217:27/2 H SD BYPASS
+B217:27/3 L SD BYPASS
+B217:27/4 LL SD BYPASS
+B217:27/5 OOR SD BYPASS
+B217:27/6 HH SD
+B217:27/7 H SD
+B217:27/8 L SD
+B217:27/9 LL SD
+B217:27/10 OOR SD
+B217:27/11 HH ACK
+B217:27/12 H ACK
+B217:27/13 L ACK
+B217:27/14 LL ACK
+B217:27/15 OOR ACK
+B217:28/0 ALL SD BYPASS
+B217:28/1 HH SD BYPASS
+B217:28/2 H SD BYPASS
+B217:28/3 L SD BYPASS
+B217:28/4 LL SD BYPASS
+B217:28/5 OOR SD BYPASS
+B217:28/6 HH SD
+B217:28/7 H SD
+B217:28/8 L SD
+B217:28/9 LL SD
+B217:28/10 OOR SD
+B217:28/11 HH ACK
+B217:28/12 H ACK
+B217:28/13 L ACK
+B217:28/14 LL ACK
+B217:28/15 OOR ACK
+B217:29/0 ALL SD BYPASS
+B217:29/1 HH SD BYPASS
+B217:29/2 H SD BYPASS
+B217:29/3 L SD BYPASS
+Page 21 Saturday, January 03, 2026 - 15:05:44
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B217:29/4 LL SD BYPASS
+B217:29/5 OOR SD BYPASS
+B217:29/6 HH SD
+B217:29/7 H SD
+B217:29/8 L SD
+B217:29/9 LL SD
+B217:29/10 OOR SD
+B217:29/11 HH ACK
+B217:29/12 H ACK
+B217:29/13 L ACK
+B217:29/14 LL ACK
+B217:29/15 OOR ACK
+B217:30/0 ALL SD BYPASS
+B217:30/1 HH SD BYPASS
+B217:30/2 H SD BYPASS
+B217:30/3 L SD BYPASS
+B217:30/4 LL SD BYPASS
+B217:30/5 OOR SD BYPASS
+B217:30/6 HH SD
+B217:30/7 H SD
+B217:30/8 L SD
+B217:30/9 LL SD
+B217:30/10 OOR SD
+B217:30/11 HH ACK
+B217:30/12 H ACK
+B217:30/13 L ACK
+B217:30/14 LL ACK
+B217:30/15 OOR ACK
+B217:31/0 ALL SD BYPASS
+B217:31/1 HH SD BYPASS
+B217:31/2 H SD BYPASS
+B217:31/3 L SD BYPASS
+B217:31/4 LL SD BYPASS
+B217:31/5 OOR SD BYPASS
+B217:31/6 HH SD
+B217:31/7 H SD
+B217:31/8 L SD
+B217:31/9 LL SD
+B217:31/10 OOR SD
+B217:31/11 HH ACK
+B217:31/12 H ACK
+B217:31/13 L ACK
+B217:31/14 LL ACK
+B217:31/15 OOR ACK
+B218:0/0 XMTR ACK ALL FT-101
+B218:0/1 SIM MODE FT-101
+B218:0/2 SIM INPUT FT-101
+B218:0/3 SIM HH ALM FT-101
+B218:0/4 SIM H ALM FT-101
+B218:0/5 SIM L ALM FT-101
+B218:0/6 SIM LL ALM FT-101
+B218:0/7 SIM OOR ALM FT-101
+B218:0/8 SIM HH SD FT-101
+B218:0/9 SIM H SD FT-101
+B218:0/10 SIM L SD FT-101
+B218:0/11 SIM LL SD FT-101
+B218:0/12 SIM OOR SD FT-101
+B218:0/13 FT-101
+B218:0/14 FT-101
+B218:0/15 FT-101
+B218:1/0 XMTR ACK ALL PIT-102
+B218:1/1 SIM MODE PIT-102
+B218:1/2 SIM INPUT PIT-102
+B218:1/3 SIM HH ALM PIT-102
+B218:1/4 SIM H ALM PIT-102
+B218:1/5 SIM L ALM PIT-102
+B218:1/6 SIM LL ALM PIT-102
+B218:1/7 SIM OOR ALM PIT-102
+B218:1/8 SIM HH SD PIT-102
+B218:1/9 SIM H SD PIT-102
+B218:1/10 SIM L SD PIT-102
+B218:1/11 SIM LL SD PIT-102
+B218:1/12 SIM OOR SD PIT-102
+B218:1/13 PIT-102
+B218:1/14 PIT-102
+B218:1/15 PIT-102
+B218:2/0 XMTR ACK ALL PIT-103
+B218:2/1 SIM MODE PIT-103
+B218:2/2 SIM INPUT PIT-103
+B218:2/3 SIM HH ALM PIT-103
+B218:2/4 SIM H ALM PIT-103
+B218:2/5 SIM L ALM PIT-103
+B218:2/6 SIM LL ALM PIT-103
+B218:2/7 SIM OOR ALM PIT-103
+B218:2/8 SIM HH SD PIT-103
+Page 22 Saturday, January 03, 2026 - 15:05:44
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B218:2/9 SIM H SD PIT-103
+B218:2/10 SIM L SD PIT-103
+B218:2/11 SIM LL SD PIT-103
+B218:2/12 SIM OOR SD PIT-103
+B218:2/13 PIT-103
+B218:2/14 PIT-103
+B218:2/15 PIT-103
+B218:3/0 XMTR ACK ALL P-102
+B218:3/1 SIM MODE P-102
+B218:3/2 SIM INPUT P-102
+B218:3/3 SIM HH ALM P-102
+B218:3/4 SIM H ALM P-102
+B218:3/5 SIM L ALM P-102
+B218:3/6 SIM LL ALM P-102
+B218:3/7 SIM OOR ALM P-102
+B218:3/8 SIM HH SD P-102
+B218:3/9 SIM H SD P-102
+B218:3/10 SIM L SD P-102
+B218:3/11 SIM LL SD P-102
+B218:3/12 SIM OOR SD P-102
+B218:3/13 P-102
+B218:3/14 P-102
+B218:3/15 P-102
+B218:4/0 XMTR ACK ALL P-101
+B218:4/1 SIM MODE P-101
+B218:4/2 SIM INPUT P-101
+B218:4/3 SIM HH ALM P-101
+B218:4/4 SIM H ALM P-101
+B218:4/5 SIM L ALM P-101
+B218:4/6 SIM LL ALM P-101
+B218:4/7 SIM OOR ALM P-101
+B218:4/8 SIM HH SD P-101
+B218:4/9 SIM H SD P-101
+B218:4/10 SIM L SD P-101
+B218:4/11 SIM LL SD P-101
+B218:4/12 SIM OOR SD P-101
+B218:4/13 P-101
+B218:4/14 P-101
+B218:4/15 P-101
+B218:5/0 XMTR ACK ALL PIT-100A
+B218:5/1 SIM MODE PIT-100A
+B218:5/2 SIM INPUT PIT-100A
+B218:5/3 SIM HH ALM PIT-100A
+B218:5/4 SIM H ALM PIT-100A
+B218:5/5 SIM L ALM PIT-100A
+B218:5/6 SIM LL ALM PIT-100A
+B218:5/7 SIM OOR ALM PIT-100A
+B218:5/8 SIM HH SD PIT-100A
+B218:5/9 SIM H SD PIT-100A
+B218:5/10 SIM L SD PIT-100A
+B218:5/11 SIM LL SD PIT-100A
+B218:5/12 SIM OOR SD PIT-100A
+B218:5/13 PIT-100A
+B218:5/14 PIT-100A
+B218:5/15 PIT-100A
+B218:6/0 XMTR ACK ALL PIT-100
+B218:6/1 SIM MODE PIT-100
+B218:6/2 SIM INPUT PIT-100
+B218:6/3 SIM HH ALM PIT-100
+B218:6/4 SIM H ALM PIT-100
+B218:6/5 SIM L ALM PIT-100
+B218:6/6 SIM LL ALM PIT-100
+B218:6/7 SIM OOR ALM PIT-100
+B218:6/8 SIM HH SD PIT-100
+B218:6/9 SIM H SD PIT-100
+B218:6/10 SIM L SD PIT-100
+B218:6/11 SIM LL SD PIT-100
+B218:6/12 SIM OOR SD PIT-100
+B218:6/13 PIT-100B
+B218:6/14 PIT-100B
+B218:6/15 PIT-100B
+B218:7/0 XMTR ACK ALL DPIT-101
+B218:7/1 SIM MODE DPIT-101
+B218:7/2 SIM INPUT DPIT-101
+B218:7/3 SIM HH ALM DPIT-101
+B218:7/4 SIM H ALM DPIT-101
+B218:7/5 SIM L ALM DPIT-101
+B218:7/6 SIM LL ALM DPIT-101
+B218:7/7 SIM OOR ALM DPIT-101
+B218:7/8 SIM HH SD DPIT-101
+B218:7/9 SIM H SD DPIT-101
+B218:7/10 SIM L SD DPIT-101
+B218:7/11 SIM LL SD DPIT-101
+B218:7/12 SIM OOR SD DPIT-101
+B218:7/13 DPIT
+Page 23 Saturday, January 03, 2026 - 15:05:44
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B218:7/14 DPIT
+B218:7/15 DPIT
+B218:8/0 XMTR ACK ALL AIT-102
+B218:8/1 SIM MODE AIT-102
+B218:8/2 SIM INPUT AIT-102
+B218:8/3 SIM HH ALM AIT-102
+B218:8/4 SIM H ALM AIT-102
+B218:8/5 SIM L ALM AIT-102
+B218:8/6 SIM LL ALM AIT-102
+B218:8/7 SIM OOR ALM AIT-102
+B218:8/8 SIM HH SD AIT-102
+B218:8/9 SIM H SD AIT-102
+B218:8/10 SIM L SD AIT-102
+B218:8/11 SIM LL SD AIT-102
+B218:8/12 SIM OOR SD AIT-102
+B218:8/13 AIT-102
+B218:8/14 AIT-102
+B218:8/15 AIT-102
+B218:9/0 XMTR ACK ALL AIT-103
+B218:9/1 SIM MODE AIT-103
+B218:9/2 SIM INPUT AIT-103
+B218:9/3 SIM HH ALM AIT-103
+B218:9/4 SIM H ALM AIT-103
+B218:9/5 SIM L ALM AIT-103
+B218:9/6 SIM LL ALM AIT-103
+B218:9/7 SIM OOR ALM AIT-103
+B218:9/8 SIM HH SD AIT-103
+B218:9/9 SIM H SD AIT-103
+B218:9/10 SIM L SD AIT-103
+B218:9/11 SIM LL SD AIT-103
+B218:9/12 SIM OOR SD AIT-103
+B218:9/13 AIT-103
+B218:9/14 AIT-103
+B218:9/15 AIT-103
+B218:10/0 XMTR ACK ALL AIT-101
+B218:10/1 SIM MODE AIT-101
+B218:10/2 SIM INPUT AIT-101
+B218:10/3 SIM HH ALM AIT-101
+B218:10/4 SIM H ALM AIT-101
+B218:10/5 SIM L ALM AIT-101
+B218:10/6 SIM LL ALM AIT-101
+B218:10/7 SIM OOR ALM AIT-101
+B218:10/8 SIM HH SD AIT-101
+B218:10/9 SIM H SD AIT-101
+B218:10/10 SIM L SD AIT-101
+B218:10/11 SIM LL SD AIT-101
+B218:10/12 SIM OOR SD AIT-101
+B218:10/13 AIT-101
+B218:10/14 AIT-101
+B218:10/15 AIT-101
+B218:11/0 XMTR ACK ALL PIT-101
+B218:11/1 SIM MODE PIT-101
+B218:11/2 SIM INPUT PIT-101
+B218:11/3 SIM HH ALM PIT-101
+B218:11/4 SIM H ALM PIT-101
+B218:11/5 SIM L ALM PIT-101
+B218:11/6 SIM LL ALM PIT-101
+B218:11/7 SIM OOR ALM PIT-101
+B218:11/8 SIM HH SD PIT-101
+B218:11/9 SIM H SD PIT-101
+B218:11/10 SIM L SD PIT-101
+B218:11/11 SIM LL SD PIT-101
+B218:11/12 SIM OOR SD PIT-101
+B218:11/13 PIT-101
+B218:11/14 PIT-101
+B218:11/15 PIT-101
+B218:12/0 XMTR ACK ALL TIT-101
+B218:12/1 SIM MODE TIT-101
+B218:12/2 SIM INPUT TIT-101
+B218:12/3 SIM HH ALM TIT-101
+B218:12/4 SIM H ALM TIT-101
+B218:12/5 SIM L ALM TIT-101
+B218:12/6 SIM LL ALM TIT-101
+B218:12/7 SIM OOR ALM TIT-101
+B218:12/8 SIM HH SD TIT-101
+B218:12/9 SIM H SD TIT-101
+B218:12/10 SIM L SD TIT-101
+B218:12/11 SIM LL SD TIT-101
+B218:12/12 SIM OOR SD TIT-101
+B218:12/13 TIT-101
+B218:12/14 TIT-101
+B218:12/15 TIT-101
+B218:13/0 XMTR ACK ALL PIT-104
+B218:13/1 SIM MODE PIT-104
+B218:13/2 SIM INPUT PIT-104
+Page 24 Saturday, January 03, 2026 - 15:05:44
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B218:13/3 SIM HH ALM PIT-104
+B218:13/4 SIM H ALM PIT-104
+B218:13/5 SIM L ALM PIT-104
+B218:13/6 SIM LL ALM PIT-104
+B218:13/7 SIM OOR ALM PIT-104
+B218:13/8 SIM HH SD PIT-104
+B218:13/9 SIM H SD PIT-104
+B218:13/10 SIM L SD PIT-104
+B218:13/11 SIM LL SD PIT-104
+B218:13/12 SIM OOR SD PIT-104
+B218:13/13
+B218:13/14
+B218:13/15
+B218:14/0 XMTR ACK ALL
+B218:14/1 SIM MODE
+B218:14/2 SIM INPUT
+B218:14/3 SIM HH ALM
+B218:14/4 SIM H ALM
+B218:14/5 SIM L ALM
+B218:14/6 SIM LL ALM
+B218:14/7 SIM OOR ALM
+B218:14/8 SIM HH SD
+B218:14/9 SIM H SD
+B218:14/10 SIM L SD
+B218:14/11 SIM LL SD
+B218:14/12 SIM OOR SD
+B218:14/13
+B218:14/14
+B218:14/15
+B218:15/0 XMTR ACK ALL
+B218:15/1 SIM MODE
+B218:15/2 SIM INPUT
+B218:15/3 SIM HH ALM
+B218:15/4 SIM H ALM
+B218:15/5 SIM L ALM
+B218:15/6 SIM LL ALM
+B218:15/7 SIM OOR ALM
+B218:15/8 SIM HH SD
+B218:15/9 SIM H SD
+B218:15/10 SIM L SD
+B218:15/11 SIM LL SD
+B218:15/12 SIM OOR SD
+B218:15/13
+B218:15/14
+B218:15/15
+B218:16/0 XMTR ACK ALL
+B218:16/1 SIM MODE
+B218:16/2 SIM INPUT
+B218:16/3 SIM HH ALM
+B218:16/4 SIM H ALM
+B218:16/5 SIM L ALM
+B218:16/6 SIM LL ALM
+B218:16/7 SIM OOR ALM
+B218:16/8 SIM HH SD
+B218:16/9 SIM H SD
+B218:16/10 SIM L SD
+B218:16/11 SIM LL SD
+B218:16/12 SIM OOR SD
+B218:16/13
+B218:16/14
+B218:16/15
+B218:17/0 XMTR ACK ALL
+B218:17/1 SIM MODE
+B218:17/2 SIM INPUT
+B218:17/3 SIM HH ALM
+B218:17/4 SIM H ALM
+B218:17/5 SIM L ALM
+B218:17/6 SIM LL ALM
+B218:17/7 SIM OOR ALM
+B218:17/8 SIM HH SD
+B218:17/9 SIM H SD
+B218:17/10 SIM L SD
+B218:17/11 SIM LL SD
+B218:17/12 SIM OOR SD
+B218:17/13
+B218:17/14
+B218:17/15
+B218:18/0 XMTR ACK ALL
+B218:18/1 SIM MODE
+B218:18/2 SIM INPUT
+B218:18/3 SIM HH ALM
+B218:18/4 SIM H ALM
+B218:18/5 SIM L ALM
+B218:18/6 SIM LL ALM
+B218:18/7 SIM OOR ALM
+Page 25 Saturday, January 03, 2026 - 15:05:45
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B218:18/8 SIM HH SD
+B218:18/9 SIM H SD
+B218:18/10 SIM L SD
+B218:18/11 SIM LL SD
+B218:18/12 SIM OOR SD
+B218:18/13
+B218:18/14
+B218:18/15
+B218:19/0 XMTR ACK ALL
+B218:19/1 SIM MODE
+B218:19/2 SIM INPUT
+B218:19/3 SIM HH ALM
+B218:19/4 SIM H ALM
+B218:19/5 SIM L ALM
+B218:19/6 SIM LL ALM
+B218:19/7 SIM OOR ALM
+B218:19/8 SIM HH SD
+B218:19/9 SIM H SD
+B218:19/10 SIM L SD
+B218:19/11 SIM LL SD
+B218:19/12 SIM OOR SD
+B218:19/13
+B218:19/14
+B218:19/15
+B218:20/0 XMTR ACK ALL
+B218:20/1 SIM MODE
+B218:20/2 SIM INPUT
+B218:20/3 SIM HH ALM
+B218:20/4 SIM H ALM
+B218:20/5 SIM L ALM
+B218:20/6 SIM LL ALM
+B218:20/7 SIM OOR ALM
+B218:20/8 SIM HH SD
+B218:20/9 SIM H SD
+B218:20/10 SIM L SD
+B218:20/11 SIM LL SD
+B218:20/12 SIM OOR SD
+B218:20/13
+B218:20/14
+B218:20/15
+B218:21/0 XMTR ACK ALL
+B218:21/1 SIM MODE
+B218:21/2 SIM INPUT
+B218:21/3 SIM HH ALM
+B218:21/4 SIM H ALM
+B218:21/5 SIM L ALM
+B218:21/6 SIM LL ALM
+B218:21/7 SIM OOR ALM
+B218:21/8 SIM HH SD
+B218:21/9 SIM H SD
+B218:21/10 SIM L SD
+B218:21/11 SIM LL SD
+B218:21/12 SIM OOR SD
+B218:21/13
+B218:21/14
+B218:21/15
+B218:22/0 XMTR ACK ALL
+B218:22/1 SIM MODE
+B218:22/2 SIM INPUT
+B218:22/3 SIM HH ALM
+B218:22/4 SIM H ALM
+B218:22/5 SIM L ALM
+B218:22/6 SIM LL ALM
+B218:22/7 SIM OOR ALM
+B218:22/8 SIM HH SD
+B218:22/9 SIM H SD
+B218:22/10 SIM L SD
+B218:22/11 SIM LL SD
+B218:22/12 SIM OOR SD
+B218:22/13
+B218:22/14
+B218:22/15
+B218:23/0 XMTR ACK ALL
+B218:23/1 SIM MODE
+B218:23/2 SIM INPUT
+B218:23/3 SIM HH ALM
+B218:23/4 SIM H ALM
+B218:23/5 SIM L ALM
+B218:23/6 SIM LL ALM
+B218:23/7 SIM OOR ALM
+B218:23/8 SIM HH SD
+B218:23/9 SIM H SD
+B218:23/10 SIM L SD
+B218:23/11 SIM LL SD
+B218:23/12 SIM OOR SD
+Page 26 Saturday, January 03, 2026 - 15:05:45
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B218:23/13
+B218:23/14
+B218:23/15
+B218:24/0 XMTR ACK ALL
+B218:24/1 SIM MODE
+B218:24/2 SIM INPUT
+B218:24/3 SIM HH ALM
+B218:24/4 SIM H ALM
+B218:24/5 SIM L ALM
+B218:24/6 SIM LL ALM
+B218:24/7 SIM OOR ALM
+B218:24/8 SIM HH SD
+B218:24/9 SIM H SD
+B218:24/10 SIM L SD
+B218:24/11 SIM LL SD
+B218:24/12 SIM OOR SD
+B218:24/13
+B218:24/14
+B218:24/15
+B218:25/0 XMTR ACK ALL
+B218:25/1 SIM MODE
+B218:25/2 SIM INPUT
+B218:25/3 SIM HH ALM
+B218:25/4 SIM H ALM
+B218:25/5 SIM L ALM
+B218:25/6 SIM LL ALM
+B218:25/7 SIM OOR ALM
+B218:25/8 SIM HH SD
+B218:25/9 SIM H SD
+B218:25/10 SIM L SD
+B218:25/11 SIM LL SD
+B218:25/12 SIM OOR SD
+B218:25/13
+B218:25/14
+B218:25/15
+B218:26/0 XMTR ACK ALL
+B218:26/1 SIM MODE
+B218:26/2 SIM INPUT
+B218:26/3 SIM HH ALM
+B218:26/4 SIM H ALM
+B218:26/5 SIM L ALM
+B218:26/6 SIM LL ALM
+B218:26/7 SIM OOR ALM
+B218:26/8 SIM HH SD
+B218:26/9 SIM H SD
+B218:26/10 SIM L SD
+B218:26/11 SIM LL SD
+B218:26/12 SIM OOR SD
+B218:26/13
+B218:26/14
+B218:26/15
+B218:27/0 XMTR ACK ALL
+B218:27/1 SIM MODE
+B218:27/2 SIM INPUT
+B218:27/3 SIM HH ALM
+B218:27/4 SIM H ALM
+B218:27/5 SIM L ALM
+B218:27/6 SIM LL ALM
+B218:27/7 SIM OOR ALM
+B218:27/8 SIM HH SD
+B218:27/9 SIM H SD
+B218:27/10 SIM L SD
+B218:27/11 SIM LL SD
+B218:27/12 SIM OOR SD
+B218:27/13
+B218:27/14
+B218:27/15
+B218:28/0 XMTR ACK ALL
+B218:28/1 SIM MODE
+B218:28/2 SIM INPUT
+B218:28/3 SIM HH ALM
+B218:28/4 SIM H ALM
+B218:28/5 SIM L ALM
+B218:28/6 SIM LL ALM
+B218:28/7 SIM OOR ALM
+B218:28/8 SIM HH SD
+B218:28/9 SIM H SD
+B218:28/10 SIM L SD
+B218:28/11 SIM LL SD
+B218:28/12 SIM OOR SD
+B218:28/13
+B218:28/14
+B218:28/15
+B218:29/0 XMTR ACK ALL
+B218:29/1 SIM MODE
+Page 27 Saturday, January 03, 2026 - 15:05:45
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+B218:29/2 SIM INPUT
+B218:29/3 SIM HH ALM
+B218:29/4 SIM H ALM
+B218:29/5 SIM L ALM
+B218:29/6 SIM LL ALM
+B218:29/7 SIM OOR ALM
+B218:29/8 SIM HH SD
+B218:29/9 SIM H SD
+B218:29/10 SIM L SD
+B218:29/11 SIM LL SD
+B218:29/12 SIM OOR SD
+B218:29/13
+B218:29/14
+B218:29/15
+B218:30/0 XMTR ACK ALL
+B218:30/1 SIM MODE
+B218:30/2 SIM INPUT
+B218:30/3 SIM HH ALM
+B218:30/4 SIM H ALM
+B218:30/5 SIM L ALM
+B218:30/6 SIM LL ALM
+B218:30/7 SIM OOR ALM
+B218:30/8 SIM HH SD
+B218:30/9 SIM H SD
+B218:30/10 SIM L SD
+B218:30/11 SIM LL SD
+B218:30/12 SIM OOR SD
+B218:30/13
+B218:30/14
+B218:30/15
+B218:31/0 XMTR ACK ALL
+B218:31/1 SIM MODE
+B218:31/2 SIM INPUT
+B218:31/3 SIM HH ALM
+B218:31/4 SIM H ALM
+B218:31/5 SIM L ALM
+B218:31/6 SIM LL ALM
+B218:31/7 SIM OOR ALM
+B218:31/8 SIM HH SD
+B218:31/9 SIM H SD
+B218:31/10 SIM L SD
+B218:31/11 SIM LL SD
+B218:31/12 SIM OOR SD
+B218:31/13
+B218:31/14
+B218:31/15
+C5:1 LL_SUCTION_RETRIES Global LL Suction Retry Counter
+C5:2 HH_BSW_RETRIES Global HH BSW Retry Counter
+C5:3 SUMP_PIT_SD_ALARM Global LSH-301 Sump Pit Not Empty Re-Alarm to SCADA
+C22:0
+C22:1 COMM VFD1 State 1
+C22:2 COMM VFD1 State 2
+C22:3 COMM VFD1 State 3
+C22:4 COMM VFD1 State 4
+C22:5 COMM VFD1 State 5
+C22:6 COMM VFD1 State 6
+C22:7 COMM VFD1 State 7
+C22:8
+C22:9
+C22:10
+C22:11 COMM VFD2 State 1
+C22:12 COMM VFD2 State 2
+C22:13 COMM VFD2 State 3
+C22:14 COMM VFD2 State 4
+C22:15 COMM VFD2 State 5
+C22:16 COMM VFD2 State 6
+C22:17 COMM VFD2 State 7
+C22:18
+C22:19
+C22:20
+C22:21 COMM ROC State 1
+C22:22 COMM ROC State 2
+C22:23 COMM ROC State 3
+C22:24 COMM ROC State 4
+C22:25 COMM ROC State 5
+C22:26 COMM ROC State 6
+C22:27 COMM ROC State 7
+C22:28
+C22:29
+C22:30
+C22:31
+F8:0
+F8:4 P102_MIN_START_PSI Global P-102 Minimum Start Suction PSI of PIT- 102 (Set to LL-SD =10)
+F8:6 Used in API to g/cc conversion
+F8:7 Used in API to g/cc conversion
+Page 28 Saturday, January 03, 2026 - 15:05:45
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+F8:8 Used in API to g/cc conversion
+F8:9 Used in API to g/cc conversion
+F8:10 Used in GSV Flowrate conversion to BBL/H
+F8:11 Used in IV Flowrate conversion to BBL/H
+F8:15 Heartbeat Previous
+F8:16 API Run Time Required
+F13:0 STW_SP Global step then wait setpoint
+F29:0 COMM ROC Read Current Second
+F29:1 COMM ROC Read Current Minute
+F29:2 COMM ROC Read Current Hour
+F29:3 COMM ROC Read Current Day
+F29:4 COMM ROC Read Current Month
+F29:5 COMM ROC Read Current Year
+F29:6 COMM ROC Read Drive Gain
+F29:7 COMM ROC Read Current API
+F29:8 COMM ROC Read Current Batch Avg AP
+F29:9 COMM ROC Read Previous Batch Avg API
+F29:10 COMM ROC Read Pressure
+F29:11 COMM ROC Read Temperature Current
+F29:12 COMM ROC Read Temperature Current Min
+F29:13 COMM ROC Read Temperature Current Max
+F29:14 COMM ROC Read Temperature Current Avg
+F29:15 COMM ROC Read Temperature Previous Min
+F29:16 COMM ROC Read Temperature Previous Max
+F29:17 COMM ROC Read Temperature Previous Avg
+F29:18 COMM ROC Read BSW Current
+F29:19 COMM ROC Read BSW Current Min
+F29:20 COMM ROC Read BSW Current Max
+F29:21 COMM ROC Read BSW Current Avg
+F29:22 COMM ROC Read BSW Previous Min
+F29:23 COMM ROC Read BSW Previous Max
+F29:24 COMM ROC Read BSW Previous Avg
+F29:25 COMM ROC Read IV Flow Rate
+F29:26 COMM ROC Read IV Current Hour
+F29:27 COMM ROC Read IV Last Hour
+F29:28 COMM ROC Read IV Today
+F29:29 COMM ROC Read IV Yesterday
+F29:30 COMM ROC Read IV This Month
+F29:31 COMM ROC Read IV Last Month
+F29:32 COMM ROC Read IV Cumulative
+F29:33 COMM ROC Read GSV Flow Rate
+F29:34 COMM ROC Read GSV Current Hour
+F29:35 COMM ROC Read GSV Last Hour
+F29:36 COMM ROC Read GSV Today
+F29:37 COMM ROC Read GSV Yesterday
+F29:38 COMM ROC Read GSV This Month
+F29:39 COMM ROC Read GSV Last Month
+F29:40 COMM ROC Read GSV Cumulative
+F29:41 COMM ROC Read NSV Flow Rate
+F29:42 COMM ROC Read NSV Current Hour
+F29:43 COMM ROC Read NSV Last Hour
+F29:44 COMM ROC Read NSV Today
+F29:45 COMM ROC Read NSV Yesterday
+F29:46 COMM ROC Read NSV This Month
+F29:47 COMM ROC Read NSV Last Month
+F29:48 COMM ROC Read NSV Cumulative
+F29:49 COMM ROC Read Failure MicroMotion Comm
+F29:50 COMM ROC Read Failure Measurement
+F29:51 COMM ROC Read Failure BS&W Transmitter
+F29:52 COMM ROC Read Failure Pressure Transmitter
+F29:53 COMM ROC Read Failure Temperature Transmit
+F29:54 COMM ROC Read Future Use
+F29:55 COMM ROC Read Future Use
+F29:56 COMM ROC Read Future Use
+F29:57 COMM ROC Read Future Use
+F29:58 COMM ROC Read Future Use
+F29:59 COMM ROC Read Future Use
+F29:60 COMM ROC Read Heartbeat PLC>ROC
+F29:61 COMM ROC Read Batch Start CMD
+F29:62 COMM ROC Read Recalculate CMD
+F29:63 COMM ROC Read Future Use
+F29:64 COMM ROC Read Multiple Flowrates
+F29:65 COMM ROC Read Flow Rate 0
+F29:66 COMM ROC Read Meter Factor 0
+F29:67 COMM ROC Read Flow Rate 1
+F29:68 COMM ROC Read Meter Factor 1
+F29:69 COMM ROC Read Flow Rate 2
+F29:70 COMM ROC Read Meter Factor 2
+F29:71 COMM ROC Read Flow Rate 3
+F29:72 COMM ROC Read Meter Factor 3
+F29:73 COMM ROC Read Flow Rate 4
+F29:74 COMM ROC Read Meter Factor 4
+F29:75 COMM ROC Read Flow Rate 5
+F29:76 COMM ROC Read Meter Factor 5
+F29:77 COMM ROC Read Flow Rate 6
+Page 29 Saturday, January 03, 2026 - 15:05:45
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+F29:78 COMM ROC Read Meter Factor 6
+F29:79 COMM ROC Read Flow Rate 7
+F29:80 COMM ROC Read Meter Factor 7
+F29:81 COMM ROC Read Flow Rate 8
+F29:82 COMM ROC Read Meter Factor 8
+F29:83 COMM ROC Read Flow Rate 9
+F29:84 COMM ROC Read Meter Factor 9
+F29:85 COMM ROC Read Flow Rate 10
+F29:86 COMM ROC Read Meter Factor 10
+F29:87 COMM ROC Read Flow Rate 11
+F29:88 COMM ROC Read Meter Factor 11
+F29:89 COMM ROC Read Flow Rate 12
+F29:90 COMM ROC Read Meter Factor 12
+F29:91 COMM ROC Read BSW
+F29:92 COMM ROC Read RVP
+F29:93 COMM ROC Read Future Use
+F29:94 COMM ROC Read Future Use
+F29:95 COMM ROC Read Future Use
+F29:96 COMM ROC Read Future Use
+F29:97 COMM ROC Read Future Use
+F29:98 COMM ROC Read Future Use
+F29:99 COMM ROC Read Future Use
+F29:100 COMM ROC Write Heartbeat PLC>ROC
+F29:101 COMM ROC Write Batch End CMD
+F29:102 COMM ROC Write Recalculate CMD
+F29:103 COMM ROC Write RVP Increment
+F29:104 COMM ROC Write Multiple Flowrates
+F29:105 COMM ROC Write Flow Rate 0
+F29:106 COMM ROC Write Meter Factor 0
+F29:107 COMM ROC Write Flow Rate 1
+F29:108 COMM ROC Write Meter Factor 1
+F29:109 COMM ROC Write Flow Rate 2
+F29:110 COMM ROC Write Meter Factor 2
+F29:111 COMM ROC Write Flow Rate 3
+F29:112 COMM ROC Write Meter Factor 3
+F29:113 COMM ROC Write Flow Rate 4
+F29:114 COMM ROC Write Meter Factor 4
+F29:115 COMM ROC Write Flow Rate 5
+F29:116 COMM ROC Write Meter Factor 5
+F29:117 COMM ROC Write Flow Rate 6
+F29:118 COMM ROC Write Meter Factor 6
+F29:119 COMM ROC Write Flow Rate 7
+F29:120 COMM ROC Write Meter Factor 7
+F29:121 COMM ROC Write Flow Rate 8
+F29:122 COMM ROC Write Meter Factor 8
+F29:123 COMM ROC Write Flow Rate 9
+F29:124 COMM ROC Write Meter Factor 9
+F29:125 COMM ROC Write Flow Rate 10
+F29:126 COMM ROC Write Meter Factor 10
+F29:127 COMM ROC Write Flow Rate 11
+F29:128 COMM ROC Write Meter Factor 11
+F29:129 COMM ROC Write Flow Rate 12
+F29:130 COMM ROC Write Meter Factor 12
+F29:131 COMM ROC Write RVP
+F29:132 COMM ROC Write BSW
+F29:133 COMM ROC Write Density
+F29:134 COMM ROC Write Pressure
+F29:135 COMM ROC Write Temperature
+F29:136 COMM ROC Write Future Use
+F29:137 COMM ROC Write Future Use
+F29:138 COMM ROC Write Future Use
+F29:139 COMM ROC Write Future Use
+F29:140 ROC Heartbeat Holding
+F29:141 Prover Desired Flowrate SP
+F29:150 COMM ROC Read Temperature Current (Repeat-3rd Party Check-point)
+F29:151 COMM ROC Read Mass Flow Rate
+F29:152 COMM ROC Read Mass Total - Today
+F29:153 COMM ROC Read Mass Total - Yesterday
+F29:154 COMM ROC Read Non-Resettable Mass Volume
+F29:155 COMM ROC Read FWA - Pressure Correction Factor
+F29:156 COMM ROC Read FWA - Temperature Correction Factor
+F29:157 COMM ROC Read Density Correction Factor
+F29:158 COMM ROC Read Meter Factor - In Use
+F29:159 COMM ROC Read K-Factor - In Use
+F29:160 COMM ROC Read Net Standard Volume Flow Rate
+F29:161 COMM ROC Read Base Density - Current - API
+F29:162 COMM ROC Read Base Density - Avg. Yesterday - API
+F29:163 ROC Meter Number (Hand Enter in F36:4 . Not able to send from ROC)
+F29:164 COMM ROC Read (Spare 163 to 169. Add description if used)
+F29:165 COMM ROC Read (Spare 163 to 169. Add description if used)
+F29:166 COMM ROC Read (Spare 163 to 169. Add description if used)
+F29:167 COMM ROC Read (Spare 163 to 169. Add description if used)
+F29:168 COMM ROC Read (Spare 163 to 169. Add description if used)
+F29:169 COMM ROC Read (Spare 163 to 169. Add description if used)
+F29:170 ROC IV Flowrate in selected EU BBL/D or BBL/H
+Page 30 Saturday, January 03, 2026 - 15:05:45
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+F29:174 RMM PL Dwnstrm PIT
+F29:179
+F32:0 SCADA TEST Value Register (Used to enter an value while in SCADA Test Mode)
+F32:1 IV Flowrate (=BBL/H) (BBL/D from ROC/24)
+F32:2 SCADA Value COMM ROC Read GSV Today
+F32:3 SCADA Value COMM ROC Read GSV Yesterday
+F32:4 SCADA Value COMM ROC Read GSV This Month
+F32:5 SCADA Value COMM ROC Read GSV Last Month
+F32:6 SCADA Value COMM ROC Read GSV Cumulative
+F32:7 SCADA Value COMM ROC Read NSV Today
+F32:8 SCADA Value COMM ROC Read NSV Yesterday
+F32:9 SCADA Value COMM ROC Read NSV This Month
+F32:10 SCADA Value COMM ROC Read NSV Last Month
+F32:11 SCADA Value COMM ROC Read NSV Cumulative
+F32:12 SCADA Value COMM ROC Read Temperature Current
+F32:13 SCADA Value COMM ROC Read Pressure
+F32:14 Heartbeat
+F32:15 SCADA Value COMM ROC Read Current API
+F32:16 SCADA Value COMM ROC Read GSV Flow Rate
+F32:17 SCADA Value COMM ROC Read NSV Flow Rate
+F32:18 SCADA Value COMM ROC Read Current API
+F32:19 SCADA Value COMM ROC Read Current API
+F32:20 SCADA Value COMM ROC Read BSW Current Avg
+F32:21 SCADA Value COMM ROC Read BSW Previous Avg
+F32:22 SCADA Value COMM ROC Read Previous Batch Avg API
+F32:23 SCADA Value HH SP AIT-102
+F32:24 SCADA Value H SP AIT-102
+F32:25 SCADA Value COMM ROC Read Drive Gain
+F32:32 SCADA Value AIT-102 %
+F32:33 SCADA Value AIT-101 %
+F32:36 SCADA Value Current FWRVP
+F32:37 SCADA Value ROC Read RVP
+F32:41 SCADA Value P-102 Hz
+F32:44 SCADA Value PIT-102 PSI
+F32:45 SCADA Value PIT-103 PSI
+F32:46 SCADA Value Previous FWRVP
+F32:48 SCADA Value DPIT PSI
+F32:53 SCADA Value PIT-100B PSI
+F32:54 SCADA Value AIT-103 %
+F32:55 SCADA Value PIT-104 PSI
+F32:56 SCADA Value RMM PL Dwnstrm PIT
+F35:0 SMADA ESD
+F35:1 Milton Permissive
+F35:2 Lucerne Permissive
+F35:3
+F35:4
+F35:5
+F35:6
+F35:7
+F35:8
+F35:9
+F35:10
+F35:11
+F35:12
+F35:13
+F35:14
+F35:15
+F35:16
+F35:17
+F35:18
+F35:19
+F35:20
+F35:21
+F35:22
+F35:23
+F35:24
+F35:25
+F35:26
+F35:27
+F35:28
+F35:29
+F35:30
+F35:31
+F35:32
+F35:33
+F35:34
+F35:35
+F35:36
+F35:37
+F35:38
+F35:39
+F35:40
+F35:41
+F35:42
+F35:43
+Page 31 Saturday, January 03, 2026 - 15:05:45
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+F35:44
+F35:45
+F35:46
+F35:47
+F35:48
+F35:49
+F35:50
+F35:51
+F35:52
+F35:53
+F35:54
+F35:55
+F35:56
+F35:57
+F35:58
+F35:59
+F35:60
+F35:61
+F35:62
+F35:63
+F35:64
+F35:65
+F35:66
+F35:67
+F35:68
+F35:69
+F35:70
+F35:71
+F35:72
+F35:73
+F35:74
+F35:75
+F35:76
+F35:77
+F35:78
+F35:79
+F35:80
+F35:81
+F35:82
+F35:83
+F35:84
+F35:85
+F35:86
+F35:87
+F35:88
+F35:89
+F35:90
+F35:91
+F35:92
+F35:93
+F35:94
+F35:95
+F35:96
+F35:97
+F35:98
+F35:99
+F35:100
+F35:101
+F35:102
+F35:103
+F35:104
+F35:105
+F35:106
+F35:107
+F35:108
+F35:109
+F35:110
+F35:111
+F35:112
+F35:113
+F35:114
+F35:115
+F35:116
+F35:117
+F35:118
+F35:119
+F35:120
+F35:121
+F35:122
+F35:123
+F35:124
+F35:125
+F35:126
+F35:127
+F35:128
+Page 32 Saturday, January 03, 2026 - 15:05:45
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+F35:129
+F35:130
+F35:131
+F35:132
+F35:133
+F35:134
+F35:135
+F35:136
+F35:137
+F35:138
+F35:139
+F35:140
+F35:141
+F35:142
+F35:143
+F35:144
+F35:145
+F35:146
+F35:147
+F35:148
+F35:149
+F36:0 Pad Producer Selected Shipping Tank Level (Inches)
+F36:1 Pad Producer Selected Divert Tank Level (Inches)
+F36:2 Pad Producer Selected Shipping Tank LACT START Level (Inches)
+F36:3 Pad Producer Selected Shipping Tank LACT STOP Level (Inches)
+F36:4 ROC Meter Number (Hand Enter in F36:4 . Not able to send from ROC)705500071
+F42:0 STW1_SP Global STW1 Setpoint
+F42:1 STW1_PV Global STW1 Process Variable
+F42:2 STW1_ERROR Global STW1 Error
+F42:3 STW1_ERROR_ABS Global STW1 Error Absolute Value
+F42:4 STW1_DEADBAND Global STW1 Deadband
+F42:5 STW1_CV_ADJ Global STW1 Control Variable Adjustment
+F42:6 STW1_CV Global STW1 Control Variable
+F42:7 STW1_CV_MAX Global STW1 Output Max
+F42:8 STW1_CV_MIN Global STW1 Output Min
+F42:9 STW1_CV_MAN Global STW1 Control Variable Manual
+F42:10 STW1 Error Bracket 1
+F42:11 STW1 Error Bracket 2
+F42:12 STW1 Error Bracket 3
+F42:13 STW1 Error Bracket 4
+F42:14 STW1 Error Bracket 5
+F42:15 STW1 Error Percent Bracket 1
+F42:16 STW1 Error Percent Bracket 2
+F42:17 STW1 Error Percent Bracket 3
+F42:18 STW1 Error Percent Bracket 4
+F42:19 STW1 Error Percent Bracket 5
+F42:20 STW1 Wait Bracket 1
+F42:21 STW1 Wait Bracket 2
+F42:22 STW1 Wait Bracket 3
+F42:23 STW1 Wait Bracket 4
+F42:24 STW1 Wait Bracket 5
+F42:25 STW1 Step Bracket 1
+F42:26 STW1 Step Bracket 2
+F42:27 STW1 Step Bracket 3
+F42:28 STW1 Step Bracket 4
+F42:29 STW1 Step Bracket 5
+F42:30 STW2_SP Global STW2 Setpoint
+F42:31 STW2_PV Global STW2 Process Variable
+F42:32 STW2_ERROR Global STW2 Error
+F42:33 STW2_ERROR_ABS Global STW2 Error Absolute Value
+F42:34 STW2_DEADBAND Global STW2 Deadband
+F42:35 STW2_CV_ADJ Global STW2 Control Variable Adjustment
+F42:36 STW2_CV Global STW2 Control Variable
+F42:37 STW2_CV_MAX Global STW2 Output Max
+F42:38 STW2_CV_MIN Global STW2 Output Min
+F42:39 STW2_CV_MAN Global STW2 Control Variable Manual
+F42:40 STW2 Error Bracket 1
+F42:41 STW2 Error Bracket 2
+F42:42 STW2 Error Bracket 3
+F42:43 STW2 Error Bracket 4
+F42:44 STW2 Error Bracket 5
+F42:45 STW2 Error Percent Bracket 1
+F42:46 STW2 Error Percent Bracket 2
+F42:47 STW2 Error Percent Bracket 3
+F42:48 STW2 Error Percent Bracket 4
+F42:49 STW2 Error Percent Bracket 5
+F42:50 STW2 Wait Bracket 1
+F42:51 STW2 Wait Bracket 2
+F42:52 STW2 Wait Bracket 3
+F42:53 STW2 Wait Bracket 4
+F42:54 STW2 Wait Bracket 5
+F42:55 STW2 Step Bracket 1
+F42:56 STW2 Step Bracket 2
+F42:57 STW2 Step Bracket 3
+F42:58 STW2 Step Bracket 4
+Page 33 Saturday, January 03, 2026 - 15:05:45
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+F42:59 STW2 Step Bracket 5
+F50:0 Sampler Last Total Sampled
+F50:1 Sampler Next Sample Total
+F50:2 Sample Queue
+F50:3 Sample Rate 1
+F51:1 Cumaulative Holding
+F51:2 Sampler Cache
+F51:95
+F51:96
+F63:75 To SCADA Meter Heartbeat
+F213:0 EU Min FT-101
+F213:1 EU Min PIT-102
+F213:2 EU Min PIT-103
+F213:3 EU Min P-102
+F213:4 EU Min P-101
+F213:5 EU Min PIT-100A
+F213:6 EU Min PIT-100B
+F213:7 EU Min DPIT
+F213:8 EU Min AIT-102
+F213:9 EU Min AIT-103
+F213:10 EU Min AIT-101
+F213:11 EU Min PIT-101
+F213:12 EU Min TIT-101
+F213:13 EU Min PIT-104
+F213:14 EU Min
+F213:15 EU Min
+F213:16 EU Min
+F213:17 EU Min
+F213:18 EU Min
+F213:19 EU Min
+F213:20 EU Min
+F213:21 EU Min
+F213:22 EU Min
+F213:23 EU Min
+F213:24 EU Min
+F213:25 EU Min
+F213:26 EU Min
+F213:27 EU Min
+F213:28 EU Min
+F213:29 EU Min
+F213:30 EU Min
+F213:31 EU Min
+F214:0 EU Max FT-101
+F214:1 EU Max PIT-102
+F214:2 EU Max PIT-103
+F214:3 EU Max P-102
+F214:4 EU Max P-101
+F214:5 EU Max PIT-100A
+F214:6 EU Max PIT-100B
+F214:7 EU Max DPIT
+F214:8 EU Max AIT-102
+F214:9 EU Max AIT-103
+F214:10 EU Max AIT-101
+F214:11 EU Max PIT-101
+F214:12 EU Max TIT-101
+F214:13 EU Max PIT-104
+F214:14 EU Max
+F214:15 EU Max
+F214:16 EU Max
+F214:17 EU Max
+F214:18 EU Max
+F214:19 EU Max
+F214:20 EU Max
+F214:21 EU Max
+F214:22 EU Max
+F214:23 EU Max
+F214:24 EU Max
+F214:25 EU Max
+F214:26 EU Max
+F214:27 EU Max
+F214:28 EU Max
+F214:29 EU Max
+F214:30 EU Max
+F214:31 EU Max
+F215:0 Value FT-101 BBL/D
+F215:1 PIT_102_PV Global Value PIT-102 PSI
+F215:2 Value PIT-103 PSI
+F215:3 Raw In P-102 VFD1 Hz
+F215:4 Value P-101 Hz
+F215:5 Value PIT-100A PSI (Used on PS2.0 LACTs)
+F215:6 Value PIT-100 PSI
+F215:7 Value DPIT-101 (PS3.0) PSI
+F215:8 Value AIT-102 %
+F215:9 Value AIT-103 %
+F215:10 Value AIT-101 %
+Page 34 Saturday, January 03, 2026 - 15:05:45
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+F215:11 Value PIT-101 PSI
+F215:12 Value TIT-101 deg F
+F215:13 Value PIT-104 PSI
+F215:14 Value
+F215:15 Value
+F215:16 Value
+F215:17 Value
+F215:18 Value
+F215:19 Value
+F215:20 Value
+F215:21 Value
+F215:22 Value
+F215:23 Value
+F215:24 Value
+F215:25 Value
+F215:26 Value
+F215:27 Value
+F215:28 Value
+F215:29 Value
+F215:30 Value
+F215:31 Value
+F219:0 HH SP FT-101
+F219:1 HH SP PIT-102
+F219:2 HH SP PIT-103
+F219:3 HH SP P-102
+F219:4 HH SP P-101
+F219:5 HH SP PIT-100A
+F219:6 HH SP PIT-100B
+F219:7 HH SP DPIT
+F219:8 HH SP AIT-102
+F219:9 HH SP AIT-103
+F219:10 HH SP AIT-101
+F219:11 HH SP PIT-101
+F219:12 HH SP TIT-101
+F219:13 HH SP PIT-104
+F219:14 HH SP
+F219:15 HH SP
+F219:16 HH SP
+F219:17 HH SP
+F219:18 HH SP
+F219:19 HH SP
+F219:20 HH SP
+F219:21 HH SP
+F219:22 HH SP
+F219:23 HH SP
+F219:24 HH SP
+F219:25 HH SP
+F219:26 HH SP
+F219:27 HH SP
+F219:28 HH SP
+F219:29 HH SP
+F219:30 HH SP
+F219:31 HH SP
+F221:0 H SP FT-101
+F221:1 H SP PIT-102
+F221:2 H SP PIT-103
+F221:3 H SP P-102
+F221:4 H SP P-101
+F221:5 H SP PIT-100A
+F221:6 H SP PIT-100B
+F221:7 H SP DPIT
+F221:8 H SP AIT-102
+F221:9 H SP AIT-103
+F221:10 H SP AIT-101
+F221:11 H SP PIT-101
+F221:12 H SP TIT-101
+F221:13 H SP PIT-104
+F221:14 H SP
+F221:15 H SP
+F221:16 H SP
+F221:17 H SP
+F221:18 H SP
+F221:19 H SP
+F221:20 H SP
+F221:21 H SP
+F221:22 H SP
+F221:23 H SP
+F221:24 H SP
+F221:25 H SP
+F221:26 H SP
+F221:27 H SP
+F221:28 H SP
+F221:29 H SP
+F221:30 H SP
+F221:31 H SP
+Page 35 Saturday, January 03, 2026 - 15:05:45
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+F223:0 L SP FT-101
+F223:1 L SP PIT-102
+F223:2 L SP PIT-103
+F223:3 L SP P-102
+F223:4 L SP P-101
+F223:5 L SP PIT-100A
+F223:6 L SP PIT-100B
+F223:7 L SP DPIT
+F223:8 L SP AIT-102
+F223:9 L SP AIT-103
+F223:10 L SP AIT-101
+F223:11 L SP PIT-101
+F223:12 L SP TIT-101
+F223:13 L SP PIT-104
+F223:14 L SP
+F223:15 L SP
+F223:16 L SP
+F223:17 L SP
+F223:18 L SP
+F223:19 L SP
+F223:20 L SP
+F223:21 L SP
+F223:22 L SP
+F223:23 L SP
+F223:24 L SP
+F223:25 L SP
+F223:26 L SP
+F223:27 L SP
+F223:28 L SP
+F223:29 L SP
+F223:30 L SP
+F223:31 L SP
+F225:0 LL SP FT-101
+F225:1 LL SP PIT-102
+F225:2 LL SP PIT-103
+F225:3 LL SP P-102
+F225:4 LL SP P-101
+F225:5 LL SP PIT-100A
+F225:6 LL SP PIT-100B
+F225:7 LL SP DPIT
+F225:8 LL SP AIT-102
+F225:9 LL SP AIT-103
+F225:10 LL SP AIT-101
+F225:11 LL SP PIT-101
+F225:12 LL SP TIT-101
+F225:13 LL SP PIT-104
+F225:14 LL SP
+F225:15 LL SP
+F225:16 LL SP
+F225:17 LL SP
+F225:18 LL SP
+F225:19 LL SP
+F225:20 LL SP
+F225:21 LL SP
+F225:22 LL SP
+F225:23 LL SP
+F225:24 LL SP
+F225:25 LL SP
+F225:26 LL SP
+F225:27 LL SP
+F225:28 LL SP
+F225:29 LL SP
+F225:30 LL SP
+F225:31 LL SP
+I:0/0 DI 0.0
+I:0/1 DI 0.1
+I:0/2 DI 0.2 Site Run Permissive 1=Run
+I:0/3 DI 0.3 Divert Valve 1=Open
+I:0/4 DI 0.4
+I:0/5 DI 0.5 Sump Pit 0=H 1=L
+I:0/6 DI 0.6 Sample Pot 0=H 1=L
+I:0/7 DI 0.7
+I:0/8 DI 0.8
+I:0/9 DI 0.9 From J-Box
+I:0/10 DI 0.10 From J-Box
+I:0/11 DI 0.11 From J-Box
+I:0/12 DI 0.12 Exhaust Fan 0=A 1=H
+I:0/13 DI 0.13 Sump Pump 0=A 1=H
+I:0/14 DI 0.14
+I:0/15 DI 0.15
+I:0/16 DI 0.16
+I:0/17 DI 0.17
+I:0/18 DI 0.18
+I:0/19 DI 0.19
+I:3/0 DI 3.0 Shunt Armed 1=Armed
+Page 36 Saturday, January 03, 2026 - 15:05:45
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+I:3/1 DI 3.1 SDV Open 1=Open
+I:3/2 DI 3.2 SDV Closed 1=Closed
+L246:0 COMPLETE_RANDOM_NUM Global compelete Random number
+L246:1 CHALLENGE_RESPONSE Global challenge response number
+MG23:0
+MG23:1 COMM_VFD1_ST_1_MSG Global COMM VFD1 State 1
+MG23:2 COMM_VFD1_ST_2_MSG Global COMM VFD1 State 2
+MG23:3 COMM_VFD1_ST_3_MSG Global COMM VFD1 State 3
+MG23:4 COMM_VFD1_ST_4_MSG Global COMM VFD1 State 4
+MG23:5 COMM_VFD1_ST_5_MSG Global COMM VFD1 State 5
+MG23:6 COMM_VFD1_ST_6_MSG Global COMM VFD1 State 6
+MG23:7 COMM_VFD1_ST_7_MSG Global COMM VFD1 State 7
+MG23:8
+MG23:9
+MG23:10
+MG23:11 COMM_VFD2_ST_1_MSG Global COMM VFD2 State 1
+MG23:12 COMM_VFD2_ST_2_MSG Global COMM VFD2 State 2
+MG23:13 COMM_VFD2_ST_3_MSG Global COMM VFD2 State 3
+MG23:14 COMM_VFD2_ST_4_MSG Global COMM VFD2 State 4
+MG23:15 COMM_VFD2_ST_5_MSG Global COMM VFD2 State 5
+MG23:16 COMM_VFD2_ST_6_MSG Global COMM VFD2 State 6
+MG23:17 COMM_VFD2_ST_7_MSG Global COMM VFD2 State 7
+MG23:18
+MG23:19
+MG23:20
+MG23:21 COMM_ROC_ST_1_MSG Global COMM ROC State 1
+MG23:22 COMM_ROC_ST_2_MSG Global COMM ROC State 2
+MG23:23 COMM_ROC_ST_3_MSG Global COMM ROC State 3
+MG23:24 COMM_ROC_ST_4_MSG Global COMM ROC State 4
+MG23:25 COMM_ROC_ST_5_MSG Global COMM ROC State 5
+MG23:26 COMM_ROC_ST_6_MSG Global COMM ROC State 6
+MG23:27 COMM_ROC_ST_7_MSG Global COMM ROC State 7
+MG23:28
+MG23:29
+MG23:30
+MG23:31
+N7:43
+N7:49 Terminal Permissive 1=Milton 2=Lucerne 3=Both 4=Either
+N9:0 DI
+N9:0/0 DI_0_0 Global
+N9:0/1 DI_0_1 Global
+N9:0/2 DI_0_2 Global Site Run Permissive 1=Run
+N9:0/3 DI_0_3 Global Divert Valve 1=Open
+N9:0/4 DI_0_4 Global
+N9:0/5 DI_0_5 Global Sump Pit LVL 0=H 1=L
+N9:0/6 DI_0_6 Global Sample Pot LVL 0=H 1=L
+N9:0/7 DI_0_7 Global
+N9:0/8 DI_0_8 Global
+N9:0/9 DI_0_9 Global From J-Box
+N9:0/10 DI_0_10 Global From J-Box
+N9:0/11 DI_0_11 Global From J-Box
+N9:0/12 DI_0_12 Global Exhaust Fan SW 0=A 1=H
+N9:0/13 DI_0_13 Global Sump Pump SW 0=A 1=H
+N9:0/14 DI_0_14 Global
+N9:0/15 DI_0_15 Global
+N9:1 DI
+N9:1/0 DI_0_16 Global
+N9:1/1 DI_0_17 Global
+N9:1/2 DI_0_18 Global AC Power 0=Power
+N9:1/3 DI_0_19 Global ESD Input 0=ESD
+N9:1/4 DI_3_0 Global Shunt Armed 1=Armed
+N9:1/5 DI_3_1 Global SDV-104 Open 1=Open
+N9:1/6 DI_3_2 Global SDV-104 Closed 1=Closed
+N9:1/7
+N9:1/8
+N9:1/9
+N9:1/10
+N9:1/11
+N9:1/12
+N9:1/13
+N9:1/14
+N9:1/15
+N9:2 DI
+N9:2/0
+N9:2/1
+N9:2/2
+N9:2/3
+N9:2/4
+N9:2/5
+N9:2/6
+N9:2/7
+N9:2/8
+N9:2/9
+N9:2/10
+N9:2/11
+Page 37 Saturday, January 03, 2026 - 15:05:46
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+N9:2/12
+N9:2/13
+N9:2/14
+N9:2/15
+N9:3 DO
+N9:3/0 DO_0_0 Global Shunt Arm 1=arm
+N9:3/1 DO_0_1 Global
+N9:3/2 DO_0_2 Global Sampler 1=Open
+N9:3/3 DO_0_3 Global Spare
+N9:3/4 DO_0_4 Global Divert Valve 0=Divert
+N9:3/5 DO_0_5 Global Exhaust Fan 1=On
+N9:3/6 DO_0_6 Global Sump Pump 1=On
+N9:3/7 DO_0_7 Global Alarm Beacon 1=On
+N9:3/8 DO_0_8 Global SDV Actuate 1=Open
+N9:3/9 DO_0_9 Global Shunt Trip
+N9:3/10 DO_0_10 Global
+N9:3/11 DO_0_11 Global
+N9:3/12
+N9:3/13 VFD1_P102 Global Pipeline Pump Run Cmd
+N9:3/14 Charge Pump Run Cmd
+N9:3/15
+N9:4 DO
+N9:4/0
+N9:4/1
+N9:4/2
+N9:4/3
+N9:4/4
+N9:4/5
+N9:4/6
+N9:4/7
+N9:4/8
+N9:4/9
+N9:4/10
+N9:4/11
+N9:4/12
+N9:4/13
+N9:4/14
+N9:4/15
+N9:5 DO
+N9:5/0
+N9:5/1
+N9:5/2
+N9:5/3
+N9:5/4
+N9:5/5
+N9:5/6
+N9:5/7
+N9:5/8
+N9:5/9
+N9:5/10
+N9:5/11
+N9:5/12
+N9:5/13
+N9:5/14
+N9:5/15
+N9:6
+N9:7
+N9:8
+N9:9
+N9:10 AI_0_4 Global PIT-102 Pipeline Pump Suction Pressure
+N9:11 AI_0_5 Global PIT-103 Pipeline Pump Discharge Pressure
+N9:12 AI_0_6 Global Spare
+N9:13 AI_0_7 Global AIT-102 Process Area LEL Percent
+N9:14 AI_1_0 Global Spare
+N9:15 AI_1_1 Global PIT-100A Inlet Pressure
+N9:16 AI_1_2 Global Spare
+N9:17 AI_1_3 Global PIT-100B Charge Pump Suction Pressure
+N9:18 AI_2_0 Global Spare
+N9:19 AI_2_1 Global AIT-103 Electrical Room LEL Percent
+N9:20 AI_2_2 Global PIT-104 Charge Pump Discharge Pressure
+N9:21 AI_2_3 Global Spare
+N9:22 AI_3_0 Global Spare
+N9:23 AI_3_1 Global PIT-104 Pipeline Pressure
+N9:24 AI_3_2 Global AIT-103 Electrical Room LEL Percent
+N9:25 AI_3_3 Global Spare
+N9:26 AI_4_0 Global Spare
+N9:27 AI_4_1 Global Spare
+N9:28
+N9:29
+N9:30 AO_0_4_VFD1_HZ_SP Global VFD1 Speed (Hz) Setpoint
+N9:31 AO_0_5 Global Spare
+N9:32 AO_4_0 Global Spare
+N9:33 AO_4_1 Global Spare
+N9:34
+N9:35
+Page 38 Saturday, January 03, 2026 - 15:05:46
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+N9:36
+N9:37
+N9:38
+N9:39
+N20:0 COMM VFD1 Current State
+N20:1 COMM VFD1 State 1 Next State
+N20:2 COMM VFD1 State 2 Next State
+N20:3 COMM VFD1 State 3 Next State
+N20:4 COMM VFD1 State 4 Next State
+N20:5 COMM VFD1 State 5 Next State
+N20:6 COMM VFD1 State 6 Next State
+N20:7 COMM VFD1 State 7 Next State
+N20:8
+N20:9 COMM VFD1 ONS
+N20:9/0 COMM_VFD1_ST_0_ONS Global COMM VFD1 State 0 One Shot
+N20:9/1 COMM_VFD1_ST_1_ONS Global COMM VFD1 State 1 One Shot
+N20:9/2 COMM_VFD1_ST_2_ONS Global COMM VFD1 State 2 One Shot
+N20:9/3 COMM_VFD1_ST_3_ONS Global COMM VFD1 State 3 One Shot
+N20:9/4 COMM_VFD1_ST_4_ONS Global COMM VFD1 State 4 One Shot
+N20:9/5 COMM_VFD1_ST_5_ONS Global COMM VFD1 State 5 One Shot
+N20:9/6 COMM_VFD1_ST_6_ONS Global COMM VFD1 State 6 One Shot
+N20:9/7 COMM_VFD1_ST_7_ONS Global COMM VFD1 State 7 One Shot
+N20:9/8
+N20:9/9
+N20:9/10
+N20:9/11
+N20:9/12
+N20:9/13
+N20:9/14
+N20:9/15
+N20:10 COMM VFD2 Current State
+N20:11 COMM VFD2 State 1 Next State
+N20:12 COMM VFD2 State 2 Next State
+N20:13 COMM VFD2 State 3 Next State
+N20:14 COMM VFD2 State 4 Next State
+N20:15 COMM VFD2 State 5 Next State
+N20:16 COMM VFD2 State 6 Next State
+N20:17 COMM VFD2 State 7 Next State
+N20:18
+N20:19 COMM VFD2 ONS
+N20:19/0 COMM_VFD2_ST_0_ONS Global COMM VFD2 State 0 One Shot
+N20:19/1 COMM_VFD2_ST_1_ONS Global COMM VFD2 State 1 One Shot
+N20:19/2 COMM_VFD2_ST_2_ONS Global COMM VFD2 State 2 One Shot
+N20:19/3 COMM_VFD2_ST_3_ONS Global COMM VFD2 State 3 One Shot
+N20:19/4 COMM_VFD2_ST_4_ONS Global COMM VFD2 State 4 One Shot
+N20:19/5 COMM_VFD2_ST_5_ONS Global COMM VFD2 State 5 One Shot
+N20:19/6 COMM_VFD2_ST_6_ONS Global COMM VFD2 State 6 One Shot
+N20:19/7 COMM_VFD2_ST_7_ONS Global COMM VFD2 State 7 One Shot
+N20:19/8
+N20:19/9
+N20:19/10
+N20:19/11
+N20:19/12
+N20:19/13
+N20:19/14
+N20:19/15
+N20:20 COMM ROC Current State
+N20:21 COMM ROC State 1 Next State
+N20:22 COMM ROC State 2 Next State
+N20:23 COMM ROC State 3 Next State
+N20:24 COMM ROC State 4 Next State
+N20:25 COMM ROC State 5 Next State
+N20:26 COMM ROC State 6 Next State
+N20:27 COMM ROC State 7 Next State
+N20:28
+N20:29 COMM ROC ONS
+N20:29/0 COMM_ROC_ST_0_ONS Global COMM ROC State 0 One Shot
+N20:29/1 COMM_ROC_ST_1_ONS Global COMM ROC State 1 One Shot
+N20:29/2 COMM_ROC_ST_2_ONS Global COMM ROC State 2 One Shot
+N20:29/3 COMM_ROC_ST_3_ONS Global COMM ROC State 3 One Shot
+N20:29/4 COMM_ROC_ST_4_ONS Global COMM ROC State 4 One Shot
+N20:29/5 COMM_ROC_ST_5_ONS Global COMM ROC State 5 One Shot
+N20:29/6 COMM_ROC_ST_6_ONS Global COMM ROC State 6 One Shot
+N20:29/7 COMM_ROC_ST_7_ONS Global COMM ROC State 7 One Shot
+N20:29/8
+N20:29/9
+N20:29/10
+N20:29/11
+N20:29/12
+N20:29/13
+N20:29/14
+N20:29/15
+N20:30
+N20:31
+N20:32
+Page 39 Saturday, January 03, 2026 - 15:05:46
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+N20:33
+N20:34
+N20:35
+N20:36
+N20:37
+N20:38
+N20:39
+N25:0 VFD1 Comm Bits Fault Monitor
+N25:0/0 COMM_VFD1_COMM_FAULT Global VFD Comm Fault
+N25:0/1
+N25:0/2
+N25:0/3
+N25:0/4
+N25:0/5
+N25:0/6
+N25:0/7
+N25:0/8
+N25:0/9
+N25:0/10
+N25:0/11
+N25:0/12
+N25:0/13
+N25:0/14
+N25:0/15
+N25:1 VFD1 COMM Bits Write
+N25:1/0 COMM_VFD1_START Global VFD Start
+N25:1/1 COMM_VFD1_DIRECTION Global VFD Direction
+N25:1/2 COMM_VFD1_FAULT_CLR Global VFD Fault Clear
+N25:1/3
+N25:1/4
+N25:1/5
+N25:1/6
+N25:1/7
+N25:1/8
+N25:1/9
+N25:1/10
+N25:1/11
+N25:1/12
+N25:1/13
+N25:1/14
+N25:1/15
+N25:2
+N25:3 COMM_VFD1_PERCENT_SP Global VFD Percent Setpoint
+N25:4
+N25:5
+N25:6
+N25:7
+N25:8
+N25:9
+N25:10 VFD1 COMM Bits Read
+N25:10/0 COMM_VFD1_READY Global VFD Ready
+N25:10/1 COMM_VFD1_RUNNING Global VFD Running
+N25:10/2 COMM_VFD1_DIRECT_ Global VFD Direction
+N25:10/3 COMM_VFD1_FAULT Global VFD Fault 1=Fault, 0=Normal
+N25:10/4 COMM_VFD1_WARNING Global VFD Warning
+N25:10/5 COMM_VFD1_AT_REF Global VFD At Reference
+N25:10/6 COMM_VFD1_ZEROSPEED Global VFD At Zero Speed
+N25:10/7
+N25:10/8
+N25:10/9
+N25:10/10
+N25:10/11
+N25:10/12
+N25:10/13
+N25:10/14
+N25:10/15
+N25:11
+N25:12 VFD1 % Read
+N25:13 COMM_VFD1_FREQ Global VFD1 Hz Read
+N25:14 VFD1 RPM Read
+N25:15 VFD1 Amps Read
+N25:16 VFD1 Torque Read
+N25:17 VFD1 Power Read
+N25:18 VFD1 Voltage Read
+N25:19 VFD1 DC Bus Voltage Read
+N25:20
+N25:21
+N25:22
+N25:23
+N25:24
+N25:25
+N25:26
+N25:27
+N25:28
+N25:29
+Page 40 Saturday, January 03, 2026 - 15:05:46
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+N25:30
+N25:31
+N26:0 VFD2 Comm Bits Fault Monitor
+N26:0/0 COMM_VFD2_COMM_FAULT Global VFD Comm Fault
+N26:0/1
+N26:0/2
+N26:0/3
+N26:0/4
+N26:0/5
+N26:0/6
+N26:0/7
+N26:0/8
+N26:0/9
+N26:0/10
+N26:0/11
+N26:0/12
+N26:0/13
+N26:0/14
+N26:0/15
+N26:1 VFD2 Bits Write
+N26:1/0 COMM_VFD2_START Global VFD Start
+N26:1/1
+N26:1/2 COMM_VFD2_FAULT_CLR Global VFD Fault Clear
+N26:1/3
+N26:1/4
+N26:1/5
+N26:1/6
+N26:1/7
+N26:1/8
+N26:1/9
+N26:1/10
+N26:1/11
+N26:1/12
+N26:1/13
+N26:1/14
+N26:1/15
+N26:2
+N26:3 COMM_VFD2_PERCENT_SP Global VFD2 Percent Setpoint
+N26:4
+N26:5
+N26:6
+N26:7
+N26:8
+N26:9
+N26:10 VFD2 Bits Read
+N26:10/0 COMM_VFD2_READY Global VFD Ready
+N26:10/1 COMM_VFD2_RUNNING Global VFD Running
+N26:10/2 COMM_VFD2_DIRECT Global VFD Direction
+N26:10/3 COMM_VFD2_FAULT Global VFD Fault
+N26:10/4 COMM_VFD2_WARNING Global VFD Warning
+N26:10/5 COMM_VFD2_AT_REF Global VFD At Reference
+N26:10/6 COMM_VFD2_ZEROSPEED Global VFD At Zero Speed
+N26:10/7
+N26:10/8
+N26:10/9
+N26:10/10
+N26:10/11
+N26:10/12
+N26:10/13
+N26:10/14
+N26:10/15
+N26:11
+N26:12 VFD2 % Read
+N26:13 VFD2 Hz Read
+N26:14 VFD2 RPM Read
+N26:15 VFD2 Amps Read
+N26:16 VFD2 Torque Read
+N26:17 VFD2 Power Read
+N26:18 VFD2 Voltage Read
+N26:19 VFD2 DC Bus Voltage Read
+N26:20
+N26:21
+N26:22
+N26:23
+N26:24
+N26:25
+N26:26
+N26:27
+N26:28
+N26:29
+N26:30
+N26:31
+N28:200 COMM ROC Read (200-201)Temperature Current(Repeat-3rd Party Check-point)
+N28:201 COMM ROC Read (200- 201)Temperature Current(Repeat-3rd Party Check-point)
+N28:202 COMM ROC Read (202-203) Mass Flow Rate
+Page 41 Saturday, January 03, 2026 - 15:05:46
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+N28:203 COMM ROC Read (202-203) Mass Flow Rate
+N28:204 COMM ROC Read (204-205)Mass Total #NAME?
+N28:205 COMM ROC Read (204- 205)Mass Total - Today
+N28:206 COMM ROC Read (206-207)Mass Total #NAME?
+N28:207 COMM ROC Read (206- 207)Mass Total - Yesterday
+N28:208 COMM ROC Read (208-209)Non- Resettable Mass Volume
+N28:209 COMM ROC Read (208- 209)Non- Resettable Mass Volume
+N28:240
+N30:0 ROC Read back Writes
+N30:1 ROC Read back Writes
+N30:2 ROC Read back Writes
+N30:3 ROC Read back Writes
+N30:4 ROC Read back Writes
+N30:5 ROC Read back Writes
+N30:6 ROC Read back Writes
+N30:7 ROC Read back Writes
+N30:8 ROC Read back Writes
+N30:9 ROC Read back Writes
+N30:10 ROC Read back Writes
+N30:11 ROC Read back Writes
+N30:12 ROC Read back Writes
+N30:13 ROC Read back Writes
+N30:14 ROC Read back Writes
+N30:15 ROC Read back Writes
+N30:16 ROC Read back Writes
+N30:17 ROC Read back Writes
+N30:18 ROC Read back Writes
+N30:19 ROC Read back Writes
+N30:20 ROC Read back Writes
+N30:21 ROC Read back Writes
+N30:22 ROC Read back Writes
+N30:23 ROC Read back Writes
+N30:24 ROC Read back Writes
+N30:25 ROC Read back Writes
+N30:26 ROC Read back Writes
+N30:27 ROC Read back Writes
+N30:28 ROC Read back Writes
+N30:29 ROC Read back Writes
+N30:30 ROC Read back Writes
+N30:31 ROC Read back Writes
+N30:32 ROC Read back Writes
+N30:33 ROC Read back Writes
+N30:34 ROC Read back Writes
+N30:35 ROC Read back Writes
+N30:36 ROC Read back Writes
+N30:37 ROC Read back Writes
+N30:38 ROC Read back Writes
+N30:39 ROC Read back Writes
+N30:40 ROC Read back Writes
+N30:41 ROC Read back Writes
+N30:42 ROC Read back Writes
+N30:43 ROC Read back Writes
+N30:44 ROC Read back Writes
+N30:45 ROC Read back Writes
+N30:46 ROC Read back Writes
+N30:47 ROC Read back Writes
+N30:48 ROC Read back Writes
+N30:49 ROC Read back Writes
+N30:50 ROC Read back Writes
+N30:51 ROC Read back Writes
+N30:52 ROC Read back Writes
+N30:53 ROC Read back Writes
+N30:54 ROC Read back Writes
+N30:55 ROC Read back Writes
+N30:56 ROC Read back Writes
+N30:57 ROC Read back Writes
+N30:58 ROC Read back Writes
+N30:59 ROC Read back Writes
+N30:60 ROC Read back Writes
+N30:61 ROC Read back Writes
+N30:62 ROC Read back Writes
+N30:63 ROC Read back Writes
+N30:64 ROC Read back Writes
+N30:65 ROC Read back Writes
+N30:66 ROC Read back Writes
+N30:67 ROC Read back Writes
+N30:68 ROC Read back Writes
+N30:69 ROC Read back Writes
+N30:70 ROC Read back Writes
+N30:71 ROC Read back Writes
+N30:72 ROC Read back Writes
+N30:73 ROC Read back Writes
+N30:74 ROC Read back Writes
+N30:75 ROC Read back Writes
+N30:76 ROC Read back Writes
+Page 42 Saturday, January 03, 2026 - 15:05:46
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+N30:77 ROC Read back Writes
+N30:78 ROC Read back Writes
+N30:79 ROC Read back Writes
+N30:80 ROC Read back Writes
+N30:81 ROC Read back Writes
+N30:82 ROC Read back Writes
+N30:83 ROC Read back Writes
+N30:84 ROC Read back Writes
+N30:85 ROC Read back Writes
+N30:86 ROC Read back Writes
+N30:87 ROC Read back Writes
+N30:88 ROC Read back Writes
+N30:89 ROC Read back Writes
+N30:90 ROC Read back Writes
+N30:91 ROC Read back Writes
+N30:92 ROC Read back Writes
+N30:93 ROC Read back Writes
+N30:94 ROC Read back Writes
+N30:95 ROC Read back Writes
+N30:96 ROC Read back Writes
+N30:97 ROC Read back Writes
+N30:98 ROC Read back Writes
+N30:99 ROC Read back Writes
+N30:100 ROC Read Floats
+N30:101 ROC Read Floats
+N30:102 ROC Read Floats
+N30:103 ROC Read Floats
+N30:104 ROC Read Floats
+N30:105 ROC Read Floats
+N30:106 ROC Read Floats
+N30:107 ROC Read Floats
+N30:108 ROC Read Floats
+N30:109 ROC Read Floats
+N30:110 ROC Read Floats
+N30:111 ROC Read Floats
+N30:112 ROC Read Floats
+N30:113 ROC Read Floats
+N30:114 ROC Read Floats
+N30:115 ROC Read Floats
+N30:116 ROC Read Floats
+N30:117 ROC Read Floats
+N30:118 ROC Read Floats
+N30:119 ROC Read Floats
+N30:120 ROC Read Floats
+N30:121 ROC Read Floats
+N30:122 ROC Read Floats
+N30:123 ROC Read Floats
+N30:124 ROC Read Floats
+N30:125 ROC Read Floats
+N30:126 ROC Read Floats
+N30:127 ROC Read Floats
+N30:128 ROC Read Floats
+N30:129 ROC Read Floats
+N30:130 ROC Read Floats
+N30:131 ROC Read Floats
+N30:132 ROC Read Floats
+N30:133 ROC Read Floats
+N30:134 ROC Read Floats
+N30:135 ROC Read Floats
+N30:136 ROC Read Floats
+N30:137 ROC Read Floats
+N30:138 ROC Read Floats
+N30:139 ROC Read Floats
+N30:140 ROC Read Floats
+N30:141 ROC Read Floats
+N30:142 ROC Read Floats
+N30:143 ROC Read Floats
+N30:144 ROC Read Floats
+N30:145 ROC Read Floats
+N30:146 ROC Read Floats
+N30:147 ROC Read Floats
+N30:148 ROC Read Floats
+N30:149 ROC Read Floats
+N34:0 SMADA ESD
+N34:0/0 SMADA ESD
+N34:0/1 Milton Permissive
+N34:0/2 Lucerne Permissive
+N34:1 Milton Permissive
+N34:2 Lucerne Permissive
+N34:3
+N34:4
+N34:5
+N34:6
+N34:7
+N34:8
+Page 43 Saturday, January 03, 2026 - 15:05:46
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+N34:9
+N34:10
+N34:11
+N34:12
+N34:13
+N34:14
+N34:15
+N34:16
+N34:17
+N34:18
+N34:19
+N34:20
+N34:21
+N34:22
+N34:23
+N34:24
+N34:25
+N34:26
+N34:27
+N34:28
+N34:29
+N34:30
+N34:31
+N34:32
+N34:33
+N34:34
+N34:35
+N34:36
+N34:37
+N34:38
+N34:39
+N34:40
+N34:41
+N34:42
+N34:43
+N34:44
+N34:45
+N34:46
+N34:47
+N34:48
+N34:49
+N34:50
+N34:51
+N34:52
+N34:53
+N34:54
+N34:55
+N34:56
+N34:57
+N34:58
+N34:59
+N34:60
+N34:61
+N34:62
+N34:63
+N34:64
+N34:65
+N34:66
+N34:67
+N34:68
+N34:69
+N34:70
+N34:71
+N34:72
+N34:73
+N34:74
+N34:75
+N34:76
+N34:77
+N34:78
+N34:79
+N34:80
+N34:81
+N34:82
+N34:83
+N34:84
+N34:85
+N34:86
+N34:87
+N34:88
+N34:89
+N34:90
+N34:91
+N34:92
+N34:93
+Page 44 Saturday, January 03, 2026 - 15:05:46
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+N34:94
+N34:95
+N34:96
+N34:97
+N34:98
+N34:99
+N34:100
+N34:101
+N34:102
+N34:103
+N34:104
+N34:105
+N34:106
+N34:107
+N34:108
+N34:109
+N34:110
+N34:111
+N34:112
+N34:113
+N34:114
+N34:115
+N34:116
+N34:117
+N34:118
+N34:119
+N34:120
+N34:121
+N34:122
+N34:123
+N34:124
+N34:125
+N34:126
+N34:127
+N34:128
+N34:129
+N34:130
+N34:131
+N34:132
+N34:133
+N34:134
+N34:135
+N34:136
+N34:137
+N34:138
+N34:139
+N34:140
+N34:141
+N34:142
+N34:143
+N34:144
+N34:145
+N34:146
+N34:147
+N34:148
+N34:149
+N35:0/0 ESD PB Input
+N35:0/1 BS&W Fault
+N35:0/2 Divert Valve Position
+N35:0/3 Pipeline Pump Run Status
+N35:0/4 Charge pump Run Status
+N35:0/5 SMADA Permissive
+N35:0/6 Terminal Permissive
+N35:0/7 Low Low Suction
+N35:0/8 High High LEL
+N35:0/10 HMI Start/Stop Bit Status
+N35:0/11 AC Power Status
+N35:0/12 Maintenance Mode Enabled
+N35:44
+N35:54 LACT PLC RTC Seconds
+N35:55 LACT ROC Clock Seconds
+N35:56 LACT STW1 VFD1 Flowrate SetPoint. N35:56/57
+N35:58 ROC Meter Pressure PIT-104 PSI N35:58/59
+N35:59 ROC Meter Pressure PIT-104 PSI N35:58/59
+N35:60
+N35:88 ROC Meter Pressure from PIT-101 N35:88/89
+N35:89 ROC Meter Pressure from PIT-101 N35:88/89
+N35:98 Pad Producer PLC Clock Seconds
+N35:100 ROC & PLC Float Values N35:100/101 to 144/145
+N35:124 LACT ROC METER NUMBER - Must be hand entered per LACT into F36:4 N35:124/125
+N35:125 LACT ROC METER NUMBER - Must be hand entered per LACT into F36:4 N35:124/125
+N35:138 ROC IV Flowrate N35:138/139
+N35:139 ROC IV Flowrate N35:138/139
+N35:146 RMM PL Dwnstrm PIT (146/147)
+N35:147 RMM PL Dwnstrm PIT (146/147)
+Page 45 Saturday, January 03, 2026 - 15:05:46
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+N35:152 RMM PL SDV PLC Clock Seconds
+N37:0 Read Only Data Set2 for 2nd Customer (Pipeline)
+N37:98 Pad Producer PLC Clock Seconds
+N37:100
+N37:146 RMM PL Dwnstrm PIT (146/147)
+N37:147 RMM PL Dwnstrm PIT (146/147)
+N37:152 RMM PL SDV PLC Clock Seconds
+N37:159
+N40:0 STW1_BITS Global
+N40:0/0 STW1_RUN_CMD Global STW1 Run Command
+N40:0/1 STW1_RUN_MAN Global STW1 Manual Mode
+N40:0/2 STW1_SP_TO_PV Global STW1 Relationship 1 SP-PV 0 PV-SP
+N40:0/3 STW1_ERR_POS Global STW1 Error 1 Positive 0 Negative
+N40:0/4 STW1 Make Adjustment
+N40:0/6 STW1_ADJUST Global STW1 Make Adjustment
+N40:1 STW2_BITS Global
+N40:1/0 STW2_RUN_CMD Global STW2 Run Command
+N40:1/1 STW2_RUN_MAN Global STW2 Manual Mode
+N40:1/2 STW2_SP_TO_PV Global STW2 Relationship 1 SP-PV 0 PV-SP
+N40:1/3 STW2_ERR_POS Global STW2 Error 1 Positive 0 Negative
+N40:1/4 STW2 Make Adjustment
+N40:1/6 STW2_ADJUST Global STW2 Make Adjustment
+N40:2 CUST_PLC_HB Global Producer PLC HB RTC Seconds (Heartbeat)
+N40:3 CUST_SPEED_SP Global Producer LACT Speed Setpoint (1,2,4,8 = speeds Lowest- Highest)
+N50:0 Proving Bits
+N50:0/0 Multiple Flowrates
+N50:0/1 Submit Proving
+N50:0/2
+N50:0/3
+N50:0/4
+N50:0/6 New Prove
+N50:0/7
+N50:0/8
+N50:0/10 Proving Submitted
+N50:0/11 Proving ONS
+N50:0/12 Proving Info Too Short
+N50:0/13 Minimum Error
+N50:0/14 Order Error
+N50:0/15 Sampler ONS
+N50:1 Number of Speeds
+N50:2 Grind Out Bits
+N50:2/0 End Batch CMD
+N50:2/1 Submit Grind Out
+N50:2/2 Recalculate CMD
+N50:2/6 New Grind Out
+N50:2/10 Grind Out Submitted Success
+N50:2/11 Grind Out ONS
+N50:2/14 Grind Out Values Outside Min/Max
+N50:2/15 Grind Out Info Too Short
+N50:3 RVP Bits
+N50:3/1 Submit RVP
+N50:3/6 New RVP
+N50:3/10 RVP Submitted Success
+N50:3/11 RVP ONS
+N50:3/14 RVP Values Outside Min/Max
+N50:3/15 RVP Info Too Short
+N120:25/8 ESD Open input
+N120:28/8 ESD Closed input
+N120:30/8 input Shunt Armed Status
+N210:0 Raw In FT-101
+N210:1 Raw In PIT-102
+N210:2 Raw In PIT-103
+N210:3 Raw In P-102 VFD1 Hz
+N210:4 Raw In P-101
+N210:5 Raw In PDIT-101 (PS3.0LACT) Was PIT-100A (PS2.0)
+N210:6 Raw In PIT-100 (PS3.0LACT) Was PIT-100B (PS2.0)
+N210:7 Raw In DPIT-101 (From I:1.1 on PS3.0 LACT)
+N210:8 Raw In AIT-102
+N210:9 Raw In AIT-103
+N210:10 Raw In AIT-101
+N210:11 Raw In PIT-101
+N210:12 Raw In TIT-101
+N210:13 Raw In PIT-104
+N210:14 Raw In
+N210:15 Raw In
+N210:16 Raw In
+N210:17 Raw In
+N210:18 Raw In
+N210:19 Raw In
+N210:20 Raw In
+N210:21 Raw In
+N210:22 Raw In
+N210:23 Raw In
+N210:24 Raw In
+N210:25 Raw In
+Page 46 Saturday, January 03, 2026 - 15:05:46
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+N210:26 Raw In
+N210:27 Raw In
+N210:28 Raw In
+N210:29 Raw In
+N210:30 Raw In
+N210:31 Raw In
+N211:0 In Min FT-101
+N211:1 In Min PIT-102
+N211:2 In Min PIT-103
+N211:3 In Min P-102
+N211:4 In Min P-101
+N211:5 In Min PIT-100A
+N211:6 In Min PIT-100B
+N211:7 In Min DPIT
+N211:8 In Min AIT-102
+N211:9 In Min AIT-103
+N211:10 In Min AIT-101
+N211:11 In Min PIT-101
+N211:12 In Min TIT-101
+N211:13 In Min PIT-104
+N211:14 In Min
+N211:15 In Min
+N211:16 In Min
+N211:17 In Min
+N211:18 In Min
+N211:19 In Min
+N211:20 In Min
+N211:21 In Min
+N211:22 In Min
+N211:23 In Min
+N211:24 In Min
+N211:25 In Min
+N211:26 In Min
+N211:27 In Min
+N211:28 In Min
+N211:29 In Min
+N211:30 In Min
+N211:31 In Min
+N212:0 In Max FT-101
+N212:1 In Max PIT-102
+N212:2 In Max PIT-103
+N212:3 In Max P-102
+N212:4 In Max P-101
+N212:5 In Max PIT-100A
+N212:6 In Max PIT-100B
+N212:7 In Max DPIT
+N212:8 In Max AIT-102
+N212:9 In Max AIT-103
+N212:10 In Max AIT-101
+N212:11 In Max PIT-101
+N212:12 In Max TIT-101
+N212:13 In Max PIT-104
+N212:14 In Max
+N212:15 In Max
+N212:16 In Max
+N212:17 In Max
+N212:18 In Max
+N212:19 In Max
+N212:20 In Max
+N212:21 In Max
+N212:22 In Max
+N212:23 In Max
+N212:24 In Max
+N212:25 In Max
+N212:26 In Max
+N212:27 In Max
+N212:28 In Max
+N212:29 In Max
+N212:30 In Max
+N212:31 In Max
+N227:0 OOR H SP FT-101
+N227:1 OOR H SP PIT-102
+N227:2 OOR H SP PIT-103
+N227:3 OOR H SP P-102
+N227:4 OOR H SP P-101
+N227:5 OOR H SP PIT-100A
+N227:6 OOR H SP PIT-100B
+N227:7 OOR H SP DPIT
+N227:8 OOR H SP AIT-102
+N227:9 OOR H SP AIT-103
+N227:10 OOR H SP AIT-101
+N227:11 OOR H SP PIT-101
+N227:12 OOR H SP TIT-101
+N227:13 OOR H SP PIT-104
+N227:14 OOR H SP
+Page 47 Saturday, January 03, 2026 - 15:05:46
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+N227:15 OOR H SP
+N227:16 OOR H SP
+N227:17 OOR H SP
+N227:18 OOR H SP
+N227:19 OOR H SP
+N227:20 OOR H SP
+N227:21 OOR H SP
+N227:22 OOR H SP
+N227:23 OOR H SP
+N227:24 OOR H SP
+N227:25 OOR H SP
+N227:26 OOR H SP
+N227:27 OOR H SP
+N227:28 OOR H SP
+N227:29 OOR H SP
+N227:30 OOR H SP
+N227:31 OOR H SP
+N228:0 OOR L SP FT-101
+N228:1 OOR L SP PIT-102
+N228:2 OOR L SP PIT-103
+N228:3 OOR L SP P-102
+N228:4 OOR L SP P-101
+N228:5 OOR L SP PIT-100A
+N228:6 OOR L SP PIT-100B
+N228:7 OOR L SP DPIT
+N228:8 OOR L SP AIT-102
+N228:9 OOR L SP AIT-103
+N228:10 OOR L SP AIT-101
+N228:11 OOR L SP PIT-101
+N228:12 OOR L SP TIT-101
+N228:13 OOR L SP PIT-104
+N228:14 OOR L SP
+N228:15 OOR L SP
+N228:16 OOR L SP
+N228:17 OOR L SP
+N228:18 OOR L SP
+N228:19 OOR L SP
+N228:20 OOR L SP
+N228:21 OOR L SP
+N228:22 OOR L SP
+N228:23 OOR L SP
+N228:24 OOR L SP
+N228:25 OOR L SP
+N228:26 OOR L SP
+N228:27 OOR L SP
+N228:28 OOR L SP
+N228:29 OOR L SP
+N228:30 OOR L SP
+N228:31 OOR L SP
+N242:0 Derek
+N242:1 Ops
+N242:2 Sup
+N242:3 Prover
+N242:4 Admin
+N243:0/0 USER_LOGIN Global SET BY HMI
+N243:0/1 INVALID_LOGIN Global SET WHEN
+N243:0/2 AUTOLOGOUT_RESET Global TRIGGED FROM
+N243:0/3 USER_LOGOUT Global WHEN ACTIVE
+N243:0/4 SET_NEW_PASSWORD Global SETS A NEW PASSWORD
+N243:0/5 VALID_LOGIN Global 1= LOGIN
+N243:0/6 SHOW_CODE Global Show code button on
+N243:0/7 SHOW_CODE_ONS Global
+N243:0/8 SHOW_CODE_ONS_2 Global
+N243:0/9 CHALLENGE_MET Global if the code
+N243:1 LOGIN_COUNTER Global USED TO CYCLE
+N243:2 CURRENT_USER_CODE Global LOGGED IN USERS
+N243:2/13 Prover Logged In
+N243:3 CURRENT_USER_INDEX Global INDEX OF THE LOGGED
+N243:4 ADMIN_STEP_COMPARE Global USED WHEN
+N243:5 PASS_CHANGE_IDEX Global USED WHEN
+N243:6 MAX_USER_NUMBER Global THE MAX NUMBER
+N243:7 SCREEN_FORCE Global used to force the
+N243:8 CODE_ACCESS_CODE Global Access code when
+N243:9 P_1_RANDOM_NUM Global part 1 of random
+N243:10 P_2_RANDOM_NUM Global part 2 of random
+N248:0 RTC Bits
+N248:0/0 Populate Staging
+N248:0/1 Populate RTC
+N248:0/2
+N248:0/3
+N248:1 From RTC YR Year
+N248:2 From RTC MO Month
+N248:3 From RTC DAY Day
+N248:4 From RTC HR Hour
+N248:5 From RTC MIN Minute
+Page 48 Saturday, January 03, 2026 - 15:05:47
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+N248:6 From RTC SEC Second
+N248:7 From RTC DOW Day of Week
+N248:8
+N248:9
+N248:10
+N248:11 Staging YR Year
+N248:12 Staging MO Month
+N248:13 Staging DAY Day
+N248:14 Staging HR Hour
+N248:15 Staging MIN Minute
+N248:16 Staging SEC Second
+N248:17 Staging DOW Day of Week
+N248:18
+N248:19
+O:0/0 DO 0.0 SHUNT 1=arm
+O:0/1 HW_VFD1_START Global DO 0.1 VFD1 P102 Hardwired Run Command
+O:0/2 DO 0.2 SAMPLER 1=Open
+O:0/3 DO 0.3 Spare
+O:0/4 DO 0.4 DIVERT VALVE 0=Divert 1=Open
+O:0/5 DO 0.5 EXHAUST FAN 1=On
+O:0/6 DO 0.6 SUMP PUMP 1=On
+O:0/7 DO 0.7 ALARM BEACON 1=On
+O:0/8 DO 0.8 SDV-104 Actuate 1=open
+O:0/9 DO 0.9 SHUNT Trip
+O:0/10 DO 0.10
+O:0/11 DO 0.11
+O:0.4 VFD1_HZ_SP Global VFD1 Speed (Hz) SP Hardwired to AB drive
+RI24:0
+RI24:1 COMM_VFD1_ST_1_RI Global COMM VFD1 State 1
+RI24:2 COMM_VFD1_ST_2_RI Global COMM VFD1 State 2
+RI24:3 COMM_VFD1_ST_3_RI Global COMM VFD1 State 3
+RI24:4 COMM_VFD1_ST_4_RI Global COMM VFD1 State 4
+RI24:5 COMM_VFD1_ST_5_RI Global COMM VFD1 State 5
+RI24:6 COMM_VFD1_ST_6_RI Global COMM VFD1 State 6
+RI24:7 COMM_VFD1_ST_7_RI Global COMM VFD1 State 7
+RI24:8
+RI24:9
+RI24:10
+RI24:11 COMM_VFD2_ST_1_RI Global COMM VFD2 State 1
+RI24:12 COMM_VFD2_ST_2_RI Global COMM VFD2 State 2
+RI24:13 COMM_VFD2_ST_3_RI Global COMM VFD2 State 3
+RI24:14 COMM_VFD2_ST_4_RI Global COMM VFD2 State 4
+RI24:15 COMM_VFD2_ST_5_RI Global COMM VFD2 State 5
+RI24:16 COMM_VFD2_ST_6_RI Global COMM VFD2 State 6
+RI24:17 COMM_VFD2_ST_7_RI Global COMM VFD2 State 7
+RI24:18
+RI24:19
+RI24:20
+RI24:21 COMM_ROC_ST_1_RI Global COMM ROC State 1
+RI24:22 COMM_ROC_ST_2_RI Global COMM ROC State 2
+RI24:23 COMM_ROC_ST_3_RI Global COMM ROC State 3
+RI24:24 COMM_ROC_ST_4_RI Global COMM ROC State 4
+RI24:25 COMM_ROC_ST_5_RI Global COMM ROC State 5
+RI24:26 COMM_ROC_ST_6_RI Global COMM ROC State 6
+RI24:27 COMM_ROC_ST_7_RI Global COMM ROC State 7
+RI24:28
+RI24:29
+RI24:30
+RI24:31
+S:1/15 First Pass
+ST65:0
+ST240:3
+ST241:0
+ST244:0 ENTERED_USER_NAME Global user name
+ST244:1 ENTERED_PASSWORD Global PASSWORD
+ST244:2 CURRENT_USER Global CURRENTLY
+ST249:0 DateTime Delimiter
+ST249:1 DateTime Staging
+ST249:2 DateTime Current
+ST250:0 Site Name
+ST250:1 Customer
+ST250:2 Startup Date
+ST250:3 Designed Max Flowrate
+ST250:4 Designed Max Pressure
+ST250:19
+T4:0 ACK_HOLD_TMR Global ACK Hold on Timer
+T4:1 MAINT_MODE_TMR Global Maintenance Mode Off Timer
+T4:2 Initialize
+T4:3 PERM_DEBOUNCE Global Permissive Debounce
+T4:4 AC_POWER_LOCKOUT Global AC Power Fail Lockout
+T4:5 LL_SUCTION_RESTART Global LL Suction Restart Delay
+T4:6 LL_SUCTION_RESET Global LL Suction Reset Counter
+T4:7 HH_BSW_RESTART Global HH BSW Restart Delay
+T4:8 HH_BSW_RESET Global HH BSW Reset Counter
+T4:9 SUMP_LATCH_ON Global Sump Latch On
+Page 49 Saturday, January 03, 2026 - 15:05:47
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+T4:10 SIM Mode Reset Timer
+T4:11 PIT-102 Arm Tmr
+T4:11/DN
+T4:12 PIT-103 ARM Tmr
+T4:13 Charge Pump Hold
+T4:14 Shunt ARM Delay Tmr (Keeps Shunt Latched & Armed during a Shunt Trip)
+T4:14/DN
+T4:15 SHUNT ARM UNLATCH DELAY Tmr (2sec) Allows Shunt Trip to Occur before Unlatch
+T4:16 LACT STARTUP PURGE (30 sec) Timer
+T4:17 FT-101 OOR ARM Tmr (10 Sec) [Arm OOR 10 sec after P-102 Run Cmd]
+T4:18 FT-101 ARM Tmr (90 Sec Max) [Arm ALM/SD after Startup Delay]
+T4:19 SUMP_PIT_NOT_EMPTY_1 Global Sump Pit Not Empty SD Re-Alarm to SCADA (Alarm Delay)Tmr
+T4:20 SUMP_PIT_NOT_EMPTY_2 Global Sump Pit Not Empty SD Re-Alarm to SCADA (Scan Delay)Tmr
+T4:21 SUMP_PMP_RUN_POST_SD Global Timed P-103 Sump Pump RUN after Sump Pit SD & SDV-104 is Closed
+T4:22 Heartbeat (FRC 0- 32000)
+T21:0 COMM_VFD1_LOOP_WAIT Global COMM VFD1 Loop Wait
+T21:1 COMM_VFD2_LOOP_WAIT Global COMM VFD2 Loop Wait
+T21:2 COMM_ROC_LOOP_WAIT Global COMM ROC Loop Wait
+T21:3 COMM_ROC_HTBT_TMOUT Global COMM ROC Heartbeat Stale
+T21:4
+T21:5
+T21:6
+T21:7
+T21:8
+T21:9
+T21:10
+T21:11
+T21:12
+T21:13
+T21:14
+T21:15
+T21:16
+T21:17
+T21:18
+T21:19
+T21:20
+T21:21
+T21:22
+T21:23
+T21:24
+T21:25
+T21:26
+T21:27
+T21:28
+T21:29
+T21:30
+T21:31
+T41:0 STW1_WAIT_TMR Global STW1 Wait Timer
+T41:1 STW2_WAIT_TMR Global STW2 Wait Timer
+T52:0 SAMPLER_ON Global
+T52:1 SAMPLER_LOOP Global
+T52:3 Flowrate Order Error Hold
+T52:4 Flowrate Minimum Error Hold
+T52:5 Proving Name or Company or Witness too short
+T52:6 Proving Submitted Success
+T52:8 Grind Out Name or Company or Witness too short
+T52:9 Grind Out Values Outside Min/Max
+T52:10 Grind Out Submitted Success
+T52:11 Grind Out Batch End Cmd
+T52:12 Grind Out Recalculate Cmd
+T52:14 RVP Name or Company or Witness too short
+T52:15 RVP Value Outside Min/Max
+T52:16 RVP Submitted Success
+T201:0 DIG TMR ESD Input
+T201:1 DIG TMR Site Permissive
+T201:2 DIG TMR Divert Valve
+T201:3 DIG TMR Sump Pit
+T201:4 DIG TMR Sample Pot
+T201:5 DIG TMR Exhaust Fan SW
+T201:6 DIG TMR Sump Pump Running
+T201:7 DIG TMR SDV-104 Closed
+T201:8 DIG TMR SDV-104 Open
+T201:9 DIG TMR AC Power
+T201:10 DIG TMR COMM ROC
+T201:11 DIG TMR LL Suction
+T201:12 DIG TMR SMADA Permissive
+T201:13 DIG TMR Terminal Permissive
+T201:14 DIG TMR VFD1 Fault
+T201:15 DIG TMR VFD1 Comm Fault
+T201:16 DIG TMR VFD2 Fault
+T201:17 DIG TMR VFD2 Comm Fault
+T201:18 DIG TMR
+T201:19 DIG TMR
+T201:20 DIG TMR
+T201:21 DIG TMR
+Page 50 Saturday, January 03, 2026 - 15:05:47
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+T201:22 DIG TMR
+T201:23 DIG TMR
+T201:24 DIG TMR
+T201:25 DIG TMR
+T201:26 DIG TMR
+T201:27 DIG TMR
+T201:28 DIG TMR
+T201:29 DIG TMR
+T201:30 DIG TMR
+T201:31 DIG TMR
+T220:0 HH TMR FT-101
+T220:1 HH TMR PIT-102
+T220:2 HH TMR PIT-103
+T220:3 HH TMR P-102
+T220:4 HH TMR P-101
+T220:5 HH TMR PIT-100A
+T220:6 HH TMR PIT-100
+T220:7 HH TMR DPIT-101
+T220:8 HH TMR AIT-102
+T220:8/DN AIT-102 HH Alarm Debounce Timer (1=Done)
+T220:9 HH TMR AIT-103
+T220:10 HH TMR AIT-101
+T220:11 HH TMR PIT-101
+T220:12 HH TMR TIT-101
+T220:13 HH TMR PIT-104
+T220:14 HH TMR
+T220:15 HH TMR
+T220:16 HH TMR
+T220:17 HH TMR
+T220:18 HH TMR
+T220:19 HH TMR
+T220:20 HH TMR
+T220:21 HH TMR
+T220:22 HH TMR
+T220:23 HH TMR
+T220:24 HH TMR
+T220:25 HH TMR
+T220:26 HH TMR
+T220:27 HH TMR
+T220:28 HH TMR
+T220:29 HH TMR
+T220:30 HH TMR
+T220:31 HH TMR
+T222:0 H TMR FT-101
+T222:1 H TMR PIT-102
+T222:2 H TMR PIT-103
+T222:3 H TMR P-102
+T222:4 H TMR P-101
+T222:5 H TMR PIT-100A
+T222:6 H TMR PIT-100
+T222:7 H TMR DPIT-101
+T222:8 H TMR AIT-102
+T222:8/DN AIT-102 H Alarm Debounce Timer (1=Done)
+T222:9 H TMR AIT-103
+T222:10 H TMR AIT-101
+T222:11 H TMR PIT-101
+T222:12 H TMR TIT-101
+T222:13 H TMR PIT-104
+T222:14 H TMR
+T222:15 H TMR
+T222:16 H TMR
+T222:17 H TMR
+T222:18 H TMR
+T222:19 H TMR
+T222:20 H TMR
+T222:21 H TMR
+T222:22 H TMR
+T222:23 H TMR
+T222:24 H TMR
+T222:25 H TMR
+T222:26 H TMR
+T222:27 H TMR
+T222:28 H TMR
+T222:29 H TMR
+T222:30 H TMR
+T222:31 H TMR
+T224:0 L TMR FT-101
+T224:1 L TMR PIT-102
+T224:2 L TMR PIT-103
+T224:3 L TMR P-102
+T224:4 L TMR P-101
+T224:5 L TMR PIT-100A
+T224:6 L TMR PIT-100
+T224:7 L TMR DPIT-101
+T224:8 L TMR AIT-102
+Page 51 Saturday, January 03, 2026 - 15:05:47
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+T224:9 L TMR AIT-103
+T224:10 L TMR AIT-101
+T224:11 L TMR PIT-101
+T224:12 L TMR TIT-101
+T224:13 L TMR PIT-104
+T224:14 L TMR
+T224:15 L TMR
+T224:16 L TMR
+T224:17 L TMR
+T224:18 L TMR
+T224:19 L TMR
+T224:20 L TMR
+T224:21 L TMR
+T224:22 L TMR
+T224:23 L TMR
+T224:24 L TMR
+T224:25 L TMR
+T224:26 L TMR
+T224:27 L TMR
+T224:28 L TMR
+T224:29 L TMR
+T224:30 L TMR
+T224:31 L TMR
+T226:0 LL TMR FT-101
+T226:1 LL TMR PIT-102
+T226:2 LL TMR PIT-103
+T226:3 LL TMR P-102
+T226:4 LL TMR P-101
+T226:5 LL TMR PIT-100A
+T226:6 LL TMR PIT-100
+T226:7 LL TMR DPIT-101
+T226:8 LL TMR AIT-102
+T226:9 LL TMR AIT-103
+T226:10 LL TMR AIT-101
+T226:11 LL TMR PIT-101
+T226:12 LL TMR TIT-101
+T226:13 LL TMR PIT-104
+T226:14 LL TMR
+T226:15 LL TMR
+T226:16 LL TMR
+T226:17 LL TMR
+T226:18 LL TMR
+T226:19 LL TMR
+T226:20 LL TMR
+T226:21 LL TMR
+T226:22 LL TMR
+T226:23 LL TMR
+T226:24 LL TMR
+T226:25 LL TMR
+T226:26 LL TMR
+T226:27 LL TMR
+T226:28 LL TMR
+T226:29 LL TMR
+T226:30 LL TMR
+T226:31 LL TMR
+T229:0 OOR TMR FT-101
+T229:1 OOR TMR PIT-102
+T229:2 OOR TMR PIT-103
+T229:3 OOR TMR P-102
+T229:4 OOR TMR P-101
+T229:5 OOR TMR PIT-100A
+T229:6 OOR TMR PIT-100
+T229:7 OOR TMR DPIT-101
+T229:8 OOR TMR AIT-102
+T229:8/DN
+T229:9 OOR TMR AIT-103
+T229:9.PRE
+T229:10 OOR TMR AIT-101
+T229:11 OOR TMR PIT-101
+T229:12 OOR TMR TIT-101
+T229:13 OOR TMR PIT-104
+T229:14 OOR TMR
+T229:15 OOR TMR
+T229:16 OOR TMR
+T229:17 OOR TMR
+T229:18 OOR TMR
+T229:19 OOR TMR
+T229:20 OOR TMR
+T229:21 OOR TMR
+T229:22 OOR TMR
+T229:23 OOR TMR
+T229:24 OOR TMR
+T229:25 OOR TMR
+T229:26 OOR TMR
+T229:27 OOR TMR
+Page 52 Saturday, January 03, 2026 - 15:05:47
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+T229:28 OOR TMR
+T229:29 OOR TMR
+T229:30 OOR TMR
+T229:31 OOR TMR
+T245:0 AUTO_LOGOUT_TMR Global AUTOMATIC
+T245:1 SCREEN_FORCE_TMR Global Timer to hold the
+U:2 MAIN
+U:3 TIME
+U:4 INITIALIZE
+U:5 PRESETS
+U:6 PERMISSIVE
+U:7 START
+U:8 SHUNT
+U:9 SUB
+U:10 IO MAIN
+U:11 IO DI MAP
+U:12 IO AI MAP
+U:13 IO DO MAP
+U:14 IO AO MAP
+U:15
+U:16
+U:17
+U:18
+U:19
+U:20 COMM MAIN
+U:21 COMM VFD 1
+U:22 COMM VFD 2
+U:23 COMM MEAS
+U:24 COMM SMADA
+U:25 COMM CUST
+U:26
+U:27
+U:28
+U:29
+U:30 ALM MAIN
+U:31 ALM FORCES
+U:32 ALM PRE
+U:33 ALM DIGITL
+U:34 ALM ANALOG
+U:35 ALM ARESET
+U:36
+U:37
+U:38
+U:39
+U:40 CTRL MAIN
+U:41 CTRL LOOP1
+U:42 CTRL LOOP2
+U:43
+U:44
+U:45
+U:46
+U:47
+U:48
+U:49
+U:50 MEAS SAMPL
+U:51 MEAS PRVR
+U:52 MEAS GRIND
+U:53 MEAS RVP
+U:54
+U:55
+U:56
+U:57
+U:58
+U:59
+U:60
+U:61
+U:62
+U:63
+U:64
+U:65
+U:66
+U:67
+U:68
+U:69
+U:70
+U:71
+U:72
+U:73
+U:74
+U:75
+U:76
+U:77
+U:78
+U:79
+U:80
+Page 53 Saturday, January 03, 2026 - 15:05:47
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+U:81
+U:82
+U:83
+U:84
+U:85
+U:86
+U:87
+U:88
+U:89
+U:90
+U:91
+U:92
+U:93
+U:94
+U:95
+U:96
+U:97
+U:98
+U:99
+U:100
+U:101
+U:102
+U:103
+U:104
+U:105
+U:106
+U:107
+U:108
+U:109
+U:110
+U:111
+U:112
+U:113
+U:114
+U:115
+U:116
+U:117
+U:118
+U:119
+U:120
+U:121
+U:122
+U:123
+U:124
+U:125
+U:126
+U:127
+U:128
+U:129
+U:130
+U:131
+U:132
+U:133
+U:134
+U:135
+U:136
+U:137
+U:138
+U:139
+U:140
+U:141
+U:142
+U:143
+U:144
+U:145
+U:146
+U:147
+U:148
+U:149
+U:150
+U:151
+U:152
+U:153
+U:154
+U:155
+U:156
+U:157
+U:158
+U:159
+U:160
+U:161
+U:162
+U:163
+U:164
+U:165
+Page 54 Saturday, January 03, 2026 - 15:05:47
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+U:166
+U:167
+U:168
+U:169
+U:170
+U:171
+U:172
+U:173
+U:174
+U:175
+U:176
+U:177
+U:178
+U:179
+U:180
+U:181
+U:182
+U:183
+U:184
+U:185
+U:186
+U:187
+U:188
+U:189
+U:190
+U:191
+U:192
+U:193
+U:194
+U:195
+U:196
+U:197
+U:198
+U:199
+U:200
+U:201
+U:202
+U:203
+U:204
+U:205
+U:206
+U:207
+U:208
+U:209
+U:210
+U:211
+U:212
+U:213
+U:214
+U:215
+U:216
+U:217
+U:218
+U:219
+U:220
+U:221
+U:222
+U:223
+U:224
+U:225
+U:226
+U:227
+U:228
+U:229
+U:230
+U:231
+U:232
+U:233
+U:234
+U:235
+U:236
+U:237
+U:238
+U:239
+U:240 LOG MAIN
+U:241 LOG P-101
+U:242 LOG P-102
+U:243 LOG SUMP
+U:244 LOG DIVERT
+U:245 LOG SAMPLE
+U:246 LOG LOGINS
+U:247
+U:248
+U:249
+U:250
+Page 55 Saturday, January 03, 2026 - 15:05:47
+HUNGENBURG 250707.RSS
+Address/Symbol Database
+Address Symbol Scope Description
+U:251
+U:252
+U:253
+U:254 USER PERM
+Page 56 Saturday, January 03, 2026 - 15:05:47
+HUNGENBURG 250707.RSS
+Instruction Comment Database
+Address Instruction Description
+Page 1 Saturday, January 03, 2026 - 15:05:48
+HUNGENBURG 250707.RSS
+Symbol Group Database
+Group_Name Description
+Page 1 Saturday, January 03, 2026 - 15:05:49
