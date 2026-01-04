@@ -95,11 +95,17 @@ def _dismiss_activation_popup(timeout=5):
 # Core lifecycle logic
 # ------------------------------------------------------------------
 
-def ensure_rslogix_running():
+def ensure_rslogix_running(resume_event=None, stop_event=None, restart_event=None):
     """
     Ensure RSLogix is running.
-    Never intentionally starts a second instance.
+    Cooperative: honor resume_event (block while paused) and stop_event (abort).
     """
+    def _maybe_block():
+        if resume_event is not None:
+            resume_event.wait()
+        if stop_event is not None and stop_event.is_set():
+            raise RuntimeError("Stop requested")
+
     pid = _find_rslogix_process()
 
     if pid:
@@ -108,6 +114,7 @@ def ensure_rslogix_running():
 
         end = time.time() + START_TIMEOUT
         while time.time() < end:
+            _maybe_block()
             _dismiss_activation_popup(timeout=1)
             win = _find_rslogix_window(timeout=0.2)
             if win:
@@ -133,6 +140,7 @@ def ensure_rslogix_running():
 
     end = time.time() + START_TIMEOUT
     while time.time() < end:
+        _maybe_block()
         _dismiss_activation_popup(timeout=1)
         win = _find_rslogix_window(timeout=0.2)
         if win:
@@ -181,13 +189,13 @@ def _set_open_filename(dlg, path):
     dlg.type_keys(path, with_spaces=True)
 
 
-def open_program(rss_path: str):
+def open_program(rss_path: str, resume_event=None, stop_event=None, restart_event=None):
     if not os.path.exists(rss_path):
         raise FileNotFoundError(rss_path)
 
     dbg(f"Preparing to open RSS: {rss_path}")
 
-    app, main_win = ensure_rslogix_running()
+    app, main_win = ensure_rslogix_running(resume_event=resume_event, stop_event=stop_event, restart_event=restart_event)
 
     dbg("Sending Ctrl+O to open file")
     try:

@@ -95,9 +95,13 @@ def resolve_template_path(template_path: str) -> str:
 # Dialog helpers
 # ------------------------------------------------------------
 
-def _find_dialog(title_re, timeout=20):
+def _find_dialog(title_re, timeout=20, resume_event=None, stop_event=None):
     end = time.time() + timeout
     while time.time() < end:
+        if resume_event is not None:
+            resume_event.wait()
+        if stop_event is not None and stop_event.is_set():
+            raise RuntimeError("Stop requested")
         dlg = Desktop(backend="win32").window(
             class_name="#32770",
             title_re=title_re
@@ -123,12 +127,16 @@ def _set_file_dialog_filename(dlg, full_path: str):
 # File stability
 # ------------------------------------------------------------
 
-def _wait_for_file_stable(path: str, timeout=180, stable_secs=2.0):
+def _wait_for_file_stable(path: str, timeout=180, stable_secs=2.0, resume_event=None, stop_event=None):
     end = time.time() + timeout
     last_size = -1
     last_change = time.time()
 
     while time.time() < end:
+        if resume_event is not None:
+            resume_event.wait()
+        if stop_event is not None and stop_event.is_set():
+            raise RuntimeError("Stop requested")
         if os.path.exists(path):
             size = os.path.getsize(path)
             if size != last_size:
@@ -218,7 +226,7 @@ def apply_report_template(main_win, template_path: str):
 # Print sequence (VERIFIED)
 # ------------------------------------------------------------
 
-def run(app, main_win, pdf_out_path: str, template_path: str) -> str:
+def run(app, main_win, pdf_out_path: str, template_path: str, resume_event=None, stop_event=None, restart_event=None) -> str:
     pdf_out_path = os.path.abspath(pdf_out_path)
     os.makedirs(os.path.dirname(pdf_out_path), exist_ok=True)
 
@@ -246,6 +254,10 @@ def run(app, main_win, pdf_out_path: str, template_path: str) -> str:
         time.sleep(0.2)
 
         _dbg("[PRINT] Ctrl+R (Print)")
+        if resume_event is not None:
+            resume_event.wait()
+        if stop_event is not None and stop_event.is_set():
+            raise RuntimeError("Stop requested")
         _key("^r", "Ctrl+R")
         time.sleep(0.6)
 
@@ -254,6 +266,10 @@ def run(app, main_win, pdf_out_path: str, template_path: str) -> str:
         time.sleep(0.2)
 
         _dbg("[PRINT] Confirm Print dialog")
+        if resume_event is not None:
+            resume_event.wait()
+        if stop_event is not None and stop_event.is_set():
+            raise RuntimeError("Stop requested")
         _key("{ENTER}", "Enter")
         time.sleep(0.6)
 
@@ -262,11 +278,15 @@ def run(app, main_win, pdf_out_path: str, template_path: str) -> str:
         time.sleep(0.2)
 
         _dbg("[PRINT] Saving PDF")
+        if resume_event is not None:
+            resume_event.wait()
+        if stop_event is not None and stop_event.is_set():
+            raise RuntimeError("Stop requested")
         _set_file_dialog_filename(save_dlg, pdf_out_path)
         _key("{ENTER}", "Enter")
 
         _dbg("[PRINT] Waiting for PDF to stabilize")
-        _wait_for_file_stable(pdf_out_path)
+        _wait_for_file_stable(pdf_out_path, resume_event=resume_event, stop_event=stop_event)
 
         _dbg("[PRINT] Report print complete")
         return pdf_out_path

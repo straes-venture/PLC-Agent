@@ -1,16 +1,26 @@
+from typing import Callable, Optional
+import os
+
 """
 Simple unified logger used by the PLC Agent modules.
 
 Provides:
 - set_debug_sink(fn): route log lines into a UI (callable that accepts a single str)
-- dbg(msg): emit a debug line (forwards to sink or stdout)
-
-This mirrors the small logger API used across the codebase (modules call `logger.dbg(...)`
-and the UI calls `logger.set_debug_sink(...)`).
+- dbg(msg): emit a debug line (forwards to sink or stdout) and append to durable log file.
 """
-from typing import Callable, Optional
-
 _debug_sink: Optional[Callable[[str], None]] = None
+
+LOG_PATH = r"C:\PLC_Agent\plc-agent.log"
+
+
+def _append_to_file(msg: str) -> None:
+    try:
+        os.makedirs(os.path.dirname(LOG_PATH), exist_ok=True)
+        with open(LOG_PATH, "a", encoding="utf-8") as fh:
+            fh.write(msg + "\n")
+    except Exception:
+        # best-effort only; never raise
+        pass
 
 
 def set_debug_sink(fn: Optional[Callable[[str], None]]) -> None:
@@ -34,12 +44,12 @@ def dbg(msg: str) -> None:
     if _debug_sink:
         try:
             _debug_sink(msg)
-            return
         except Exception:
-            # Fail-safe to ensure logging never raises
+            # Fail-safe; fall back to printing
             pass
     try:
         print(msg, flush=True)
     except Exception:
-        # Last resort: ignore any printing errors
         pass
+    # Always append a durable log copy
+    _append_to_file(msg)

@@ -8,9 +8,11 @@ import util.logger as logger
 SETTLE = 0.25
 
 
-def dump_ladders_from_snapshot(snapshot: dict, out_dir: str):
+def dump_ladders_from_snapshot(snapshot: dict, out_dir: str, progress_callback=None):
     """
     Dump ladder logic using snapshot data.
+
+    progress_callback(current_index, total_count) is called after each ladder is processed.
 
     HARD RULES:
     - ONLY type == 'LADDER'
@@ -30,9 +32,10 @@ def dump_ladders_from_snapshot(snapshot: dict, out_dir: str):
         and pf.get("name", "").upper() != "[SYSTEM]"
     ]
 
+    total = len(ladders)
     dumped = []
 
-    for lad in ladders:
+    for idx, lad in enumerate(ladders, start=1):
         lad_num = lad["number"]
         lad_name = lad["name"]
 
@@ -66,6 +69,12 @@ def dump_ladders_from_snapshot(snapshot: dict, out_dir: str):
 
         if not text.strip():
             logger.dbg(f"[WARN] Empty clipboard for LAD {lad_num}")
+            # still report progress even if empty
+            if progress_callback:
+                try:
+                    progress_callback(idx, total)
+                except Exception:
+                    pass
             continue
 
         fname = f"LAD{lad_num:03d}.raw.txt"
@@ -80,5 +89,12 @@ def dump_ladders_from_snapshot(snapshot: dict, out_dir: str):
             "file": fname,
             "bytes": len(text)
         })
+
+        # progress notification
+        if progress_callback:
+            try:
+                progress_callback(idx, total)
+            except Exception:
+                pass
 
     return dumped

@@ -25,12 +25,26 @@ def normalize_unit_name(name: str) -> str:
 
 
 def parse_unit_and_revision_from_filename(rss_path: str):
+    """
+    Parse a filename stem into (unit, revision).
+
+    Supports forms like:
+      - ERIE_251217_STARTUP -> unit='ERIE', revision='251217_STARTUP'
+      - BROSS_W_210101       -> unit='BROSS_W', revision='210101'
+      - UNIT251217           -> unit='UNIT', revision='251217'
+    Falls back to returning the normalized stem as unit and a timestamp revision.
+    """
     base = Path(rss_path).stem
 
-    for pat in (r"(\d{6})$", r"(\d{8})$"):
-        m = re.search(pat, base)
-        if m:
-            return normalize_unit_name(base[: m.start(1)]), m.group(1)
+    # Match: <unit><optional-sep><date6|date8><optional-sep><optional-suffix>
+    m = re.match(r"^(?P<unit>.*?)(?:[_\-]?)(?P<date>\d{6}|\d{8})(?:[_\-]?(?P<suffix>.*))?$", base)
+    if m and m.group("date"):
+        unit_raw = m.group("unit") or ""
+        date = m.group("date")
+        suffix = m.group("suffix")
+        unit = normalize_unit_name(unit_raw) if unit_raw else normalize_unit_name(base[: m.start("date")])
+        revision = date + (f"_{suffix}" if suffix else "")
+        return unit, revision
 
     return normalize_unit_name(base), datetime.now().strftime("%Y%m%d%H%M%S")
 
